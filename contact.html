@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-20 py-4 bg-white dark:bg-slate-900/50">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">hub</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Public Site</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">TOP</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">SERVICES</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">COMPANY</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">CONTACT</a>
+</nav>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-xl h-10 px-5 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all">
+                        Login
+                    </button>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center">
+<div class="w-full max-w-[960px] px-6 md:px-10 py-10">
+<!-- Breadcrumbs -->
+<nav class="flex flex-wrap gap-2 items-center mb-8">
+<a class="text-primary/70 dark:text-primary/60 text-sm font-medium hover:text-primary" href="#">公開サイト</a>
+<span class="text-slate-400 dark:text-slate-600 material-symbols-outlined text-xs">chevron_right</span>
+<a class="text-primary/70 dark:text-primary/60 text-sm font-medium hover:text-primary" href="#">TOP</a>
+<span class="text-slate-400 dark:text-slate-600 material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-slate-900 dark:text-white text-sm font-bold">CONTACT</span>
+</nav>
+<!-- Page Header -->
+<div class="mb-12">
+<h1 class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] mb-4 uppercase">
+                            CONTACT / お問い合わせ
+                        </h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-2xl">
+                            サービスに関するご質問、導入のご相談など、お気軽にお問い合わせください。
+                        </p>
+</div>
+<!-- Contact Form Container -->
+<div class="bg-white dark:bg-slate-900/40 rounded-2xl border border-slate-200 dark:border-slate-800 p-8 md:p-12 shadow-sm">
+<form class="flex flex-col gap-8">
+<!-- Name -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-800 dark:text-slate-200 text-base font-bold flex items-center gap-2">
+                                    お名前 <span class="bg-primary/10 text-primary text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider">必須</span>
+</label>
+<input class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-background-light dark:bg-slate-800/50 p-4 text-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="例：山田 太郎" type="text"/>
+</div>
+<!-- Email -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-800 dark:text-slate-200 text-base font-bold flex items-center gap-2">
+                                    メールアドレス <span class="bg-primary/10 text-primary text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider">必須</span>
+</label>
+<input class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-background-light dark:bg-slate-800/50 p-4 text-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="example@domain.com" type="email"/>
+</div>
+<!-- Category -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-800 dark:text-slate-200 text-base font-bold flex items-center gap-2">
+                                    お問い合わせ項目
+                                </label>
+<div class="relative">
+<select class="w-full appearance-none rounded-xl border border-slate-200 dark:border-slate-700 bg-background-light dark:bg-slate-800/50 p-4 pr-10 text-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all">
+<option value="">項目を選択してください</option>
+<option value="service">サービス導入について</option>
+<option value="pricing">料金・プランについて</option>
+<option value="support">技術的なサポート</option>
+<option value="other">その他</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">expand_more</span>
+</div>
+</div>
+<!-- Content -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-800 dark:text-slate-200 text-base font-bold flex items-center gap-2">
+                                    お問い合わせ内容 <span class="bg-primary/10 text-primary text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider">必須</span>
+</label>
+<textarea class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-background-light dark:bg-slate-800/50 p-4 text-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none" placeholder="具体的な内容をご記入ください" rows="6"></textarea>
+</div>
+<!-- Consent -->
+<div class="flex items-start gap-3 py-4">
+<div class="flex h-6 items-center">
+<input class="h-5 w-5 rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary bg-background-light dark:bg-slate-800 cursor-pointer" id="consent" type="checkbox"/>
+</div>
+<label class="text-sm text-slate-600 dark:text-slate-400 cursor-pointer select-none" for="consent">
+<a class="text-primary hover:underline" href="#">個人情報の取り扱い</a>について同意する
+                                </label>
+</div>
+<!-- Submit Button -->
+<div class="flex justify-center pt-4">
+<button class="w-full md:w-auto min-w-[240px] flex items-center justify-center gap-2 bg-primary text-white rounded-xl py-4 px-8 text-lg font-bold hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all" type="submit">
+                                    送信する
+                                    <span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Secondary Actions -->
+<div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+<a class="group flex items-center justify-between p-6 bg-slate-100 dark:bg-slate-900/20 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-primary/50 transition-all" href="#">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-white dark:bg-slate-800 text-primary">
+<span class="material-symbols-outlined">help</span>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-white font-bold">よくあるご質問</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">解決策をすぐに見つけることができます</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_forward</span>
+</a>
+<a class="group flex items-center justify-between p-6 bg-slate-100 dark:bg-slate-900/20 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-primary/50 transition-all" href="#">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-white dark:bg-slate-800 text-primary">
+<span class="material-symbols-outlined">person_search</span>
+</div>
+<div>
+<h3 class="text-slate-900 dark:text-white font-bold">採用担当者向けガイド</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">スムーズな導入のためのガイドライン</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_forward</span>
+</a>
+</div>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="border-t border-slate-200 dark:border-slate-800 py-10 px-6 md:px-20 text-center">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">© 2024 Public Site Inc. All rights reserved.</p>
+</footer>
+</div>
+</div>
+</body></html>

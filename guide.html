@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">psychology_alt</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">ひととなり.ai</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">サービス紹介</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">導入事例</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">利用ガイド</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">料金プラン</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="hidden sm:flex h-10 px-4 items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-800 text-sm font-bold hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+                        資料請求
+                    </button>
+<button class="flex h-10 px-4 items-center justify-center rounded-lg bg-primary text-white text-sm font-bold hover:opacity-90 transition-opacity">
+                        お問い合わせ
+                    </button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-5xl mx-auto px-4 py-8">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 mb-8 text-sm text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary" href="#">公開サイト</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary" href="#">TOP</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="font-semibold text-slate-900 dark:text-slate-100 uppercase tracking-wider">Guide</span>
+</nav>
+<!-- Hero Section -->
+<section class="mb-16">
+<div class="max-w-3xl">
+<h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight">採用担当向け利用ガイド</h2>
+<p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                    ひととなり.aiを活用した、価値観を重視する効率的な選考フローをご提案します。
+                    ミスマッチを減らし、共感ベースの採用を実現するためのステップをご紹介します。
+                </p>
+</div>
+</section>
+<!-- Steps Section -->
+<section class="space-y-24 mb-24">
+<div class="flex flex-col gap-12">
+<div class="flex items-center gap-4">
+<span class="text-primary font-bold text-lg px-3 py-1 bg-primary/10 rounded-full">Process</span>
+<h3 class="text-2xl font-bold">活用ステップ</h3>
+</div>
+<!-- Step 01 -->
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1">
+<div class="flex items-center gap-3 mb-4">
+<span class="text-4xl font-black text-slate-200 dark:text-slate-800">01</span>
+<h4 class="text-xl font-bold">候補者を探す</h4>
+</div>
+<p class="text-slate-600 dark:text-slate-400 mb-6">
+                            スキルや経歴だけでなく、組織文化への適合度を「価値観フィルター」で抽出します。自社のカルチャーに紐づくキーワードや行動特性から、潜在的なマッチ度の高い候補者を瞬時に特定できます。
+                        </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span>カルチャーキーワードの設定</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span>行動特性（Soft Skills）での絞り込み</span>
+</li>
+</ul>
+</div>
+<div class="order-1 md:order-2 bg-slate-100 dark:bg-slate-900 rounded-xl p-8 border border-slate-200 dark:border-slate-800 aspect-video flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-6xl text-slate-300 dark:text-slate-700 mb-4">filter_alt</span>
+<p class="text-sm font-medium text-slate-400">価値観フィルター操作イメージ</p>
+<div class="mt-4 w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-2/3"></div>
+</div>
+</div>
+</div>
+<!-- Step 02 -->
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="bg-slate-100 dark:bg-slate-900 rounded-xl p-8 border border-slate-200 dark:border-slate-800 aspect-video flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-6xl text-slate-300 dark:text-slate-700 mb-4">auto_stories</span>
+<p class="text-sm font-medium text-slate-400">プロフィール詳細・ストーリー確認画面</p>
+<div class="mt-6 grid grid-cols-3 gap-2 w-full max-w-xs">
+<div class="h-12 bg-slate-200 dark:bg-slate-800 rounded"></div>
+<div class="h-12 bg-slate-200 dark:bg-slate-800 rounded"></div>
+<div class="h-12 bg-slate-200 dark:bg-slate-800 rounded"></div>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="text-4xl font-black text-slate-200 dark:text-slate-800">02</span>
+<h4 class="text-xl font-bold">「人となり」を読み解く</h4>
+</div>
+<p class="text-slate-600 dark:text-slate-400 mb-6">
+                            AIが解析した候補者の「ストーリー」から、過去の決断の背景や将来の展望を深く理解します。履歴書からは見えない人間味や、仕事に対する誠実さを事前に把握することが可能です。
+                        </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span>AI解析によるパーソナリティ要約</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span>過去の経験に対する「想い」の確認</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Step 03 -->
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1">
+<div class="flex items-center gap-3 mb-4">
+<span class="text-4xl font-black text-slate-200 dark:text-slate-800">03</span>
+<h4 class="text-xl font-bold">コンタクトを取る</h4>
+</div>
+<p class="text-slate-600 dark:text-slate-400 mb-6">
+                            理解した価値観に基づいて、一人ひとりに最適化されたスカウトメッセージを送信します。カジュアル面談を設定し、双方向の対話を通じてさらなる相互理解を深めます。
+                        </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span>パーソナライズされたスカウト作成補助</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span>スムーズな日程調整・面談設定</span>
+</li>
+</ul>
+</div>
+<div class="order-1 md:order-2 bg-slate-100 dark:bg-slate-900 rounded-xl p-8 border border-slate-200 dark:border-slate-800 aspect-video flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-6xl text-slate-300 dark:text-slate-700 mb-4">send</span>
+<p class="text-sm font-medium text-slate-400">メッセージ・面談設定インターフェース</p>
+<div class="mt-4 flex gap-2">
+<div class="w-24 h-8 rounded bg-primary/30"></div>
+<div class="w-24 h-8 rounded bg-slate-200 dark:bg-slate-800"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="mb-24">
+<h3 class="text-2xl font-bold mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">help</span>
+                よくあるご質問
+            </h3>
+<div class="grid gap-4">
+<details class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+<span class="font-bold">料金プランについて教えてください</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-slate-600 dark:text-slate-400">
+                        採用規模に応じた月額固定プランをご用意しています。詳細な見積もりについては「資料請求」よりお問い合わせください。
+                    </div>
+</details>
+<details class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+<span class="font-bold">AIによる「ひととなり」解析の仕組みは？</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-slate-600 dark:text-slate-400">
+                        候補者が入力した過去の経験やストーリーに基づき、独自のアルゴリズムで思考プロセスや価値観を言語化します。客観的な分析により、バイアスを排除した評価を支援します。
+                    </div>
+</details>
+<details class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+<span class="font-bold">チーム内での候補者情報の共有方法は？</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-slate-600 dark:text-slate-400">
+                        ダッシュボードからリンク一つで選考メンバーに情報を共有できます。コメント機能を使って、チーム内での評価の擦り合わせも簡単に行えます。
+                    </div>
+</details>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-primary/5 dark:bg-primary/10 rounded-2xl p-8 md:p-12 text-center border border-primary/20">
+<h3 class="text-2xl md:text-3xl font-bold mb-4">より詳細な活用方法をご案内します</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-10 max-w-xl mx-auto">
+                貴社の採用課題に合わせた最適なプランニングをサポートいたします。お気軽にご相談ください。
+            </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="h-14 px-10 rounded-xl bg-primary text-white font-bold text-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">mail</span>
+                    お問い合わせ
+                </button>
+<button class="h-14 px-10 rounded-xl bg-white dark:bg-slate-800 border-2 border-primary text-primary font-bold text-lg hover:bg-primary/5 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">description</span>
+                    資料請求
+                </button>
+</div>
+</section>
+</main>
+<footer class="border-t border-slate-200 dark:border-slate-800 py-12">
+<div class="max-w-7xl mx-auto px-4 text-center">
+<div class="flex items-center justify-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">psychology_alt</span>
+<span class="text-lg font-bold tracking-tight">ひととなり.ai</span>
+</div>
+<p class="text-sm text-slate-500">© 2024 ひととなり.ai - 価値観でつながる採用プラットフォーム</p>
+</div>
+</footer>
+</body></html>

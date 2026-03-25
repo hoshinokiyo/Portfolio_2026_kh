@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface": "#1b1c1a",
+              "on-primary-fixed": "#261900",
+              "surface-variant": "#e4e2de",
+              "surface-container-highest": "#e4e2de",
+              "on-tertiary-fixed-variant": "#00419d",
+              "inverse-surface": "#30312e",
+              "on-secondary": "#ffffff",
+              "outline": "#807664",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-container": "#9ab6ff",
+              "on-error": "#ffffff",
+              "surface-bright": "#fbf9f5",
+              "primary-container": "#e0b14b",
+              "on-surface-variant": "#4e4636",
+              "on-tertiary-fixed": "#001946",
+              "on-primary-fixed-variant": "#5c4300",
+              "on-secondary-fixed-variant": "#55451e",
+              "primary": "#7a5900",
+              "on-error-container": "#93000a",
+              "surface-tint": "#7a5900",
+              "secondary": "#6e5c33",
+              "on-primary-container": "#5e4400",
+              "inverse-primary": "#f0bf58",
+              "surface-container-low": "#f5f3ef",
+              "error": "#ba1a1a",
+              "on-secondary-fixed": "#251a00",
+              "tertiary-fixed-dim": "#b1c5ff",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#0043a1",
+              "primary-fixed-dim": "#f0bf58",
+              "on-secondary-container": "#746238",
+              "inverse-on-surface": "#f2f0ed",
+              "secondary-fixed": "#f8e0ab",
+              "primary-fixed": "#ffdea1",
+              "secondary-container": "#f8e0ab",
+              "tertiary": "#2359be",
+              "error-container": "#ffdad6",
+              "surface-dim": "#dbdad6",
+              "surface-container-high": "#eae8e4",
+              "surface-container": "#efeeea",
+              "secondary-fixed-dim": "#dbc491",
+              "on-primary": "#ffffff",
+              "outline-variant": "#d2c5b1",
+              "tertiary-fixed": "#d9e2ff",
+              "background": "#fbf9f5",
+              "on-background": "#1b1c1a",
+              "surface": "#fbf9f5"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .editorial-text {
+        letter-spacing: -0.02em;
+        line-height: 1.6;
+      }
+      .glass-nav {
+        background: rgba(251, 249, 245, 0.8);
+        backdrop-filter: blur(12px);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 glass-nav shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-6 py-3 max-w-7xl mx-auto font-['Plus_Jakarta_Sans'] text-sm tracking-tight">
+<div class="flex items-center gap-8">
+<div class="bg-[#E0B14B] px-3 py-1 rounded-sm text-lg font-bold text-white">
+                    ひとなとり.ai
+                </div>
+<nav class="hidden md:flex gap-6">
+<a class="text-[#7a5900] font-bold border-b-2 border-[#e0b14b] pb-1" href="#">サービス紹介</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] transition-colors" href="#">候補者一覧</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] transition-colors" href="#">利用ガイド</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] transition-colors" href="#">お問い合わせ</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-4 py-2 text-stone-600 hover:bg-stone-100 transition-colors rounded-lg">ログイン</button>
+<button class="px-5 py-2.5 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded-lg shadow-sm hover:opacity-90 active:scale-95 transition-all">
+                    無料登録
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-20">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-6 mb-24 grid md:grid-cols-2 gap-12 items-center">
+<div>
+<span class="inline-block px-4 py-1 bg-secondary-container text-on-secondary-fixed-variant rounded-full text-sm font-semibold mb-6">
+                    企業の採用を、もっと「人間らしく」
+                </span>
+<h1 class="text-5xl md:text-6xl font-extrabold text-on-surface editorial-text mb-8">
+                    書類では見えない<br/>
+<span class="text-primary">「ひととなり」</span>を<br/>
+                    可視化する。
+                </h1>
+<p class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-lg">
+                    ひとなとり.aiは、スキルや経歴という「点」のデータだけでなく、価値観や仕事への向き合い方といった「線」の情報をAIで抽出し、ミスマッチのない出会いを創出します。
+                </p>
+<div class="flex gap-4">
+<button class="px-8 py-4 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all">
+                        資料をダウンロードする
+                    </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square bg-surface-container-low rounded-[2rem] overflow-hidden rotate-3 shadow-sm border-outline-variant/15 border">
+<img alt="笑顔で話すビジネスパーソン" class="w-full h-full object-cover" data-alt="Warm profile of a professional person smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdMMxR9goY8HlHDyCelgUeD--Hcfso4AtcV1CWTiOZoaaDOAMhDPR8tMycLkBCTnhpj-UeoIDHS0EH832IySAppEgX0mGdc9QvKFyYr61332aVKOJytk6YT_Rxg_4O-FLZ6csshOtb3iudnB-cVPU-pjJjPbgqgNnCByOH3DvNSmlewBhQdTZZrYyn3wLDjEjBIqUoeAZ4qfbKIxKPZf4IU4W0X98zyb5Bk-vWfEL8aJA0Wa-BjaRKmitDWbYjFXA7aE9tuiEmybZA"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-xs -rotate-2">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<span class="font-bold text-primary">AI 性格分析レポート</span>
+</div>
+<p class="text-sm text-on-surface-variant">「主体的に課題を発見し、チームの調和を保ちながら改善を推進するタイプです」</p>
+</div>
+</div>
+</section>
+<!-- Problem Section -->
+<section class="bg-surface-container-low py-24 mb-24">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">こんな採用の課題はありませんか？</h2>
+<div class="w-20 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/15">
+<div class="w-12 h-12 bg-error-container text-error rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">description</span>
+</div>
+<h3 class="text-xl font-bold mb-4">レジュメだけでは<br/>相性が分からない</h3>
+<p class="text-on-surface-variant leading-relaxed">経歴は立派だが、カルチャーフィットするかどうかは面接するまで謎のまま。</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/15">
+<div class="w-12 h-12 bg-error-container text-error rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">hourglass_empty</span>
+</div>
+<h3 class="text-xl font-bold mb-4">面接のミスマッチで<br/>工数が削られる</h3>
+<p class="text-on-surface-variant leading-relaxed">期待して面接したが、話し始めて5分で「何かが違う」と感じてしまう。</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/15">
+<div class="w-12 h-12 bg-error-container text-error rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">person_off</span>
+</div>
+<h3 class="text-xl font-bold mb-4">優秀層ほど<br/>既存媒体に現れない</h3>
+<p class="text-on-surface-variant leading-relaxed">転職意欲は高くなくても「良い縁があれば」と考えている層へリーチできない。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Solution: Bento Grid -->
+<section class="max-w-7xl mx-auto px-6 mb-24">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<div class="md:col-span-8 bg-surface-container-lowest rounded-3xl p-10 border border-outline-variant/15 flex flex-col justify-between">
+<div>
+<h2 class="text-4xl font-bold mb-6 editorial-text">面接前に、<br/><span class="text-primary">本当の「人となり」</span>を知る。</h2>
+<p class="text-lg text-on-surface-variant max-w-md">独自のAIインタビューにより、候補者の価値観や行動特性を抽出。レジュメの裏側にあるストーリーを可視化します。</p>
+</div>
+<div class="mt-12 grid grid-cols-2 gap-4">
+<div class="p-4 bg-secondary-container/30 rounded-xl">
+<span class="block text-2xl font-bold text-primary mb-1">94%</span>
+<span class="text-sm text-on-surface-variant">面接満足度の向上</span>
+</div>
+<div class="p-4 bg-secondary-container/30 rounded-xl">
+<span class="block text-2xl font-bold text-primary mb-1">40%</span>
+<span class="text-sm text-on-surface-variant">採用リードタイム短縮</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 bg-primary text-white rounded-3xl p-8 flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-6xl mb-6">verified_user</span>
+<h3 class="text-2xl font-bold mb-4">信頼できる<br/>データ精度</h3>
+<p class="text-white/80">行動心理学に基づいたアルゴリズムが、嘘偽りのない特性を分析します。</p>
+</div>
+<div class="md:col-span-4 bg-tertiary-fixed rounded-3xl p-8 flex flex-col border border-outline-variant/15">
+<h3 class="text-xl font-bold mb-4 text-on-tertiary-fixed">カジュアルな接点</h3>
+<p class="text-on-tertiary-fixed-variant mb-8 text-sm">スカウトの前にまずは「カジュアル面談」から。候補者の心理的ハードルを下げ、母集団の質を高めます。</p>
+<div class="mt-auto">
+<img alt="チームミーティング" class="rounded-xl w-full h-32 object-cover" data-alt="Team collaborating in a bright office space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw4rIDNwUhTwKeMGM05tbsFaXRfr9WC8X755N7xfI2YGGOj_0F_X4lHgqMxb2LTyuutaoZiV_E88QrfUhAcK_Htyixv12TR8d8XDcLDn85lxRqjfD3rAEw2_gF_-gPs7-EsHgMInw4X0ylD8yj0F7dMYY-nHyVeS-AUfB87-zqMZD8ckXToBjHHp0Ol-GmJDzjtlZ1P-FII4jtxjLEOnZgfdP3iNqBWVOiDfpuQBYtiOsE139bEygWnVB0XNdAemV4ZBtn5OwKe9ZI"/>
+</div>
+</div>
+<div class="md:col-span-8 bg-surface-container-highest rounded-3xl p-10 flex items-center gap-8 border border-outline-variant/15">
+<div class="flex-1">
+<h3 class="text-2xl font-bold mb-4">パーソナリティレーダー</h3>
+<p class="text-on-surface-variant text-sm">柔軟性、責任感、創造性など、複数の軸から組織との相性を一目で把握。あなたのチームに必要な「ピース」が見つかります。</p>
+</div>
+<div class="w-48 h-48 bg-white rounded-full flex items-center justify-center shadow-inner relative">
+<!-- Simulated Radar Chart -->
+<div class="absolute inset-4 bg-tertiary-container/40 rounded-full" style="clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);"></div>
+<div class="w-full h-px bg-stone-200 absolute"></div>
+<div class="h-full w-px bg-stone-200 absolute"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Comparison Table -->
+<section class="max-w-7xl mx-auto px-6 mb-24">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">他サービスとの違い</h2>
+<p class="text-on-surface-variant">なぜ「ひとなとり.ai」が選ばれるのか</p>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b-2 border-primary-container">
+<th class="py-6 px-4 font-bold text-stone-400">比較項目</th>
+<th class="py-6 px-4 font-bold text-primary text-lg bg-primary-container/10">ひとなとり.ai</th>
+<th class="py-6 px-4 font-bold">人材紹介エージェント</th>
+<th class="py-6 px-4 font-bold">求人広告媒体</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-stone-100">
+<tr>
+<td class="py-6 px-4 font-medium">情報の内容</td>
+<td class="py-6 px-4 bg-primary-container/10 font-bold">性格・価値観・行動特性</td>
+<td class="py-6 px-4">経歴・希望条件</td>
+<td class="py-6 px-4">経歴・スキル</td>
+</tr>
+<tr>
+<td class="py-6 px-4 font-medium">マッチング精度</td>
+<td class="py-6 px-4 bg-primary-container/10 font-bold">極めて高い（相性重視）</td>
+<td class="py-6 px-4">エージェントの腕次第</td>
+<td class="py-6 px-4">低い（条件検索のみ）</td>
+</tr>
+<tr>
+<td class="py-6 px-4 font-medium">採用コスト</td>
+<td class="py-6 px-4 bg-primary-container/10 font-bold">定額・低コスト</td>
+<td class="py-6 px-4">年収の30〜35%</td>
+<td class="py-6 px-4">掲載課金（成果不問）</td>
+</tr>
+<tr>
+<td class="py-6 px-4 font-medium">手間</td>
+<td class="py-6 px-4 bg-primary-container/10 font-bold">AIがスクリーニング</td>
+<td class="py-6 px-4">面談・調整が多い</td>
+<td class="py-6 px-4">大量の応募を捌く必要</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Flow Section -->
+<section class="max-w-7xl mx-auto px-6 mb-24">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">ご利用の流れ</h2>
+<div class="w-20 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="relative flex flex-col md:flex-row gap-8 justify-between">
+<!-- Step 1 -->
+<div class="flex-1 relative">
+<div class="bg-surface-container-low p-8 rounded-2xl h-full border-b-4 border-primary">
+<span class="text-5xl font-black text-primary/20 absolute top-4 right-6">01</span>
+<h3 class="text-xl font-bold mb-4">企業登録</h3>
+<p class="text-sm text-on-surface-variant">会社のビジョンや求める人物像の「空気感」を入力します。</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex-1 relative">
+<div class="bg-surface-container-low p-8 rounded-2xl h-full border-b-4 border-primary">
+<span class="text-5xl font-black text-primary/20 absolute top-4 right-6">02</span>
+<h3 class="text-xl font-bold mb-4">候補者検索</h3>
+<p class="text-sm text-on-surface-variant">AIが相性の良い候補者をレコメンド。詳細な分析レポートを確認。</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex-1 relative">
+<div class="bg-surface-container-low p-8 rounded-2xl h-full border-b-4 border-primary">
+<span class="text-5xl font-black text-primary/20 absolute top-4 right-6">03</span>
+<h3 class="text-xl font-bold mb-4">スカウト・打診</h3>
+<p class="text-sm text-on-surface-variant">気になる候補者にメッセージを送信。AIが最適な文面を提案します。</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex-1 relative">
+<div class="bg-surface-container-low p-8 rounded-2xl h-full border-b-4 border-primary">
+<span class="text-5xl font-black text-primary/20 absolute top-4 right-6">04</span>
+<h3 class="text-xl font-bold mb-4">カジュアル面談</h3>
+<p class="text-sm text-on-surface-variant">相互理解を深める対話を。すでに「ひとなとり」を知っているのでスムーズです。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-5xl mx-auto px-6">
+<div class="bg-on-surface text-white rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-tertiary/20 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
+<h2 class="text-4xl md:text-5xl font-bold mb-8 relative z-10 editorial-text">
+                    理想の「ひととなり」に<br/>出会いましょう。
+                </h2>
+<p class="text-white/70 text-lg mb-12 relative z-10 max-w-2xl mx-auto">
+                    まずは無料でアカウントを作成し、あなたのチームにぴったりの候補者を探してみませんか？
+                </p>
+<div class="flex flex-col md:flex-row gap-4 justify-center relative z-10">
+<button class="px-10 py-5 bg-primary text-white font-bold rounded-xl text-lg hover:bg-primary-container transition-colors shadow-lg">
+                        無料で今すぐ始める
+                    </button>
+<button class="px-10 py-5 border border-white/20 text-white font-bold rounded-xl text-lg hover:bg-white/10 transition-colors">
+                        お問い合わせはこちら
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#EFD7A3]/20 dark:bg-stone-900/40">
+<div class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto font-['Plus_Jakarta_Sans'] text-xs leading-relaxed">
+<div class="mb-8 md:mb-0">
+<div class="text-lg font-bold text-[#7a5900] dark:text-[#e0b14b] mb-4">ひとなとり.ai</div>
+<p class="text-stone-600 dark:text-stone-400">© ひとなとり.ai All Rights Reserved.</p>
+</div>
+<div class="flex flex-wrap gap-8 justify-center">
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity" href="#">会社情報</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity" href="#">利用規約</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity underline font-medium" href="#">プライバシーポリシー</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity" href="#">お問い合わせ</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity" href="#">公式SNS</a>
+</div>
+</div>
+</footer>
+</body></html>

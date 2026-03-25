@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface": "#1b1c1a",
+              "on-primary-fixed": "#261900",
+              "surface-variant": "#e4e2de",
+              "surface-container-highest": "#e4e2de",
+              "on-tertiary-fixed-variant": "#00419d",
+              "inverse-surface": "#30312e",
+              "on-secondary": "#ffffff",
+              "outline": "#807664",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-container": "#9ab6ff",
+              "on-error": "#ffffff",
+              "surface-bright": "#fbf9f5",
+              "primary-container": "#e0b14b",
+              "on-surface-variant": "#4e4636",
+              "on-tertiary-fixed": "#001946",
+              "on-primary-fixed-variant": "#5c4300",
+              "on-secondary-fixed-variant": "#55451e",
+              "primary": "#7a5900",
+              "on-error-container": "#93000a",
+              "surface-tint": "#7a5900",
+              "secondary": "#6e5c33",
+              "on-primary-container": "#5e4400",
+              "inverse-primary": "#f0bf58",
+              "surface-container-low": "#f5f3ef",
+              "error": "#ba1a1a",
+              "on-secondary-fixed": "#251a00",
+              "tertiary-fixed-dim": "#b1c5ff",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#0043a1",
+              "primary-fixed-dim": "#f0bf58",
+              "on-secondary-container": "#746238",
+              "inverse-on-surface": "#f2f0ed",
+              "secondary-fixed": "#f8e0ab",
+              "primary-fixed": "#ffdea1",
+              "secondary-container": "#f8e0ab",
+              "tertiary": "#2359be",
+              "error-container": "#ffdad6",
+              "surface-dim": "#dbdad6",
+              "surface-container-high": "#eae8e4",
+              "surface-container": "#efeeea",
+              "secondary-fixed-dim": "#dbc491",
+              "on-primary": "#ffffff",
+              "outline-variant": "#d2c5b1",
+              "tertiary-fixed": "#d9e2ff",
+              "background": "#fbf9f5",
+              "on-background": "#1b1c1a",
+              "surface": "#fbf9f5"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans", "sans-serif"],
+              "body": ["Plus Jakarta Sans", "sans-serif"],
+              "label": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .editorial-shadow {
+        box-shadow: 0 12px 32px rgba(122, 89, 0, 0.06);
+      }
+      .bg-soft-blue {
+        background-color: #8EABEC15;
+      }
+      .glass-nav {
+        background: rgba(251, 249, 245, 0.8);
+        backdrop-filter: blur(12px);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 z-50 w-full glass-nav shadow-sm">
+<div class="flex justify-between items-center w-full px-6 py-3 max-w-7xl mx-auto font-['Plus_Jakarta_Sans'] text-sm tracking-tight">
+<div class="flex items-center gap-8">
+<div class="bg-[#E0B14B] px-3 py-1 rounded-sm text-lg font-bold text-white">ひととなり.ai</div>
+<nav class="hidden md:flex gap-6">
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] transition-colors" href="#">サービス紹介</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] transition-colors" href="#">候補者一覧</a>
+<a class="text-[#7a5900] font-bold border-b-2 border-[#e0b14b] pb-1" href="#">利用ガイド</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] transition-colors" href="#">お問い合わせ</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-4 py-2 text-stone-600 hover:bg-stone-100 rounded-lg transition-all active:opacity-80 active:scale-95">ログイン</button>
+<button class="px-5 py-2 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded-lg editorial-shadow hover:opacity-90 transition-all active:scale-95">無料登録</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-20">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-6 mb-24 flex flex-col items-center text-center">
+<div class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest mb-6">FOR JOB SEEKER</div>
+<h1 class="text-5xl md:text-6xl font-black text-on-surface tracking-tight mb-6 leading-tight">
+                ひととなり.aiの使い方
+            </h1>
+<p class="text-xl md:text-2xl text-primary font-medium mb-8">自分らしさの伝え方がわかるガイド</p>
+<div class="max-w-2xl bg-surface-container-low p-8 md:p-12 rounded-3xl relative">
+<div class="absolute -top-4 -left-4 w-12 h-12 bg-primary-container rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<p class="text-lg text-on-surface-variant leading-relaxed text-left">
+                    「これまでの経歴やスキルだけでは、自分の本当の良さが伝わらない…」<br/>
+                    そんな不安を感じていませんか？大丈夫、あなたの価値は履歴書の行間にあるはずです。<br/><br/>
+                    ひととなり.aiは、あなたの「人となり」を丁寧にすくい上げ、企業に届けるためのパートナー。
+                    AIとの対話を通じて、自分でも気づかなかった強みを見つける旅をここから始めましょう。
+                </p>
+</div>
+</section>
+<!-- Util Flow (Bento Grid Style) -->
+<section class="bg-surface-container-low py-24 mb-24 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-3xl font-bold mb-16 text-center">3つのステップで、あなたの魅力を最大化</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] editorial-shadow flex flex-col items-start transform hover:-translate-y-2 transition-transform duration-300">
+<div class="w-14 h-14 rounded-2xl bg-tertiary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary" style="font-size: 32px;">chat_bubble</span>
+</div>
+<span class="text-sm font-bold text-tertiary mb-2">STEP 01</span>
+<h3 class="text-xl font-bold mb-4">AIと楽しくチャット</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                            これまでの経験や、大切にしている価値観について、AIが優しく質問します。友人と話すような感覚で答えるだけでOKです。
+                        </p>
+<div class="w-full h-40 bg-stone-50 rounded-xl flex items-center justify-center overflow-hidden border border-outline-variant/10">
+<img alt="Chat Interface" class="w-full h-full object-cover" data-alt="Modern mobile chat interface showing friendly messages" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyRJYqfCwb0FLJBsis6qETgmMGZvbG_-ElXtZSLsqeL-brhIsx_jWsn7UjfYhoUcW6A7E2TefBzdFFZ-OhEPq7whT4DU01fQ0DQv-E330v07pVLyHlCgSWXU6j7rHJxCuoTwKjxLVlKCYC7qbkHVWKTgZWF_p_L2VsmMCbsHXIwQDAsS5GAuf9FXYwrGwyz9jAXEc3M3mq-gyAA0d27SZuMsLYFTjzmNFD5nhyvQY1m-A9mgtsATMhBJcEVn4_CzDO9baRN-ckqxjp"/>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] editorial-shadow flex flex-col items-start transform hover:-translate-y-2 transition-transform duration-300 mt-0 md:mt-8">
+<div class="w-14 h-14 rounded-2xl bg-secondary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-secondary-fixed-variant" style="font-size: 32px;">psychology</span>
+</div>
+<span class="text-sm font-bold text-on-secondary-fixed-variant mb-2">STEP 02</span>
+<h3 class="text-xl font-bold mb-4">強みの言語化</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                            対話の内容から、AIがあなたの「言語化しにくい魅力」を抽出し、企業に響くエピソードとして整理します。
+                        </p>
+<div class="w-full h-40 bg-stone-50 rounded-xl flex items-center justify-center overflow-hidden border border-outline-variant/10">
+<img alt="Writing Concept" class="w-full h-full object-cover" data-alt="Abstract visualization of words forming connections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZJVq6YQ_7alsnfp-Lc4f_UKC5BvGS7qKgWS6sVIu8slpFzxYXy1kbm17Bv-ABG-0yXTgRuWFxAuLTy91Dcu96zaqb_7BCHIMGeTBlZt6Bk7OYNNCxKlgeHSsl-bWZBpH0zQQqlbrPOhyRY6YMZjvHhG--x6RBVXMSH-uYGK4sqbVNDiTKiFoWg_Fdam273dnpJ35qVw2obb2OFzNp44P7OF2L31fr4EhLYeEUW9420GxTZCCLTLG17GHP8dCvkv7fQcYrA3o5vB1h"/>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] editorial-shadow flex flex-col items-start transform hover:-translate-y-2 transition-transform duration-300 mt-0 md:mt-16">
+<div class="w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">verified_user</span>
+</div>
+<span class="text-sm font-bold text-primary mb-2">STEP 03</span>
+<h3 class="text-xl font-bold mb-4">プロフィール完成</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                            自分専用の「ポートフォリオ型プロフィール」が完成。そのまま企業への応募や、SNSでの自己紹介に使えます。
+                        </p>
+<div class="w-full h-40 bg-stone-50 rounded-xl flex items-center justify-center overflow-hidden border border-outline-variant/10">
+<img alt="Profile Layout" class="w-full h-full object-cover" data-alt="Modern editorial style digital resume mockup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBmvvlv8WZmn5koCNibIzFpahbybllG2_Dwqmli9oJQL7bcb6N8MEZRBqf9-WopuAYwsD1Qgc4nzgRrTdv02__ImvvOzi7DSguczFVXLSzRzOXKj0IfqPoqBLc-FcwmeHqPts0f0wwKJBCdHDH9JkNAEMUmNi0ANNPuTSt6lKznWfYbY9gbLueY9qvMLP0g44Ucied35H6UqiF1oS8jkr0-xsCWcsqgD83wVxJsbAUn234m_9Bntbxx3XzYhEDIsyS9g5iYNt8cltZ"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Content Introduction -->
+<section class="max-w-7xl mx-auto px-6 mb-32">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">伝えるのは「スペック」ではなく「あなた自身」</h2>
+<p class="text-on-surface-variant">従来の履歴書では表現しきれなかった、3つのコアコンテンツをご紹介します。</p>
+</div>
+<div class="space-y-12">
+<!-- Item 1 -->
+<div class="flex flex-col md:flex-row items-center gap-12 bg-white p-12 rounded-[3rem] shadow-sm">
+<div class="w-full md:w-1/2">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-soft-blue text-tertiary rounded-full text-xs font-bold mb-4 uppercase tracking-wider">01. Human Nature</div>
+<h3 class="text-3xl font-bold mb-4 text-[#1b1c1a]">人となりスコア</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            思考のクセや対人スタイル、モチベーションの源泉を、多角的なデータで可視化。言葉では説明しづらい「相性」のミスマッチを防ぎます。
+                        </p>
+</div>
+<div class="w-full md:w-1/2 rounded-2xl overflow-hidden bg-surface-container aspect-video">
+<img alt="Data Visualization" class="w-full h-full object-cover" data-alt="Soft blue radar chart visualizing personality traits" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbnUe_fWTaabIC-GC93DSipR3KHnvnJjoQ9f4wd8PTm7pwr66hNVywEER_ZqQY2MQzYc0m7NIHsDTV5Um7kF99u386MMyGf7NNNFP96v0ZgRbNKSnZHOj3OZaU2qCdJmn8J-zLAEvcgBLo5sgajss5R_Wb6OOS92zR6ycyd09hLuuEtH7ATBuHO-e_ndH0bqFuaYbtGgxAo_VQwqB_ZzbjQUuPK4NRsvd30MBTtPW8kvpv3qrYUQr7jzwa3mRZ0b8hccfNRd1L2vMC"/>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col md:flex-row-reverse items-center gap-12 bg-white p-12 rounded-[3rem] shadow-sm">
+<div class="w-full md:w-1/2">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold mb-4 uppercase tracking-wider">02. Story-telling</div>
+<h3 class="text-3xl font-bold mb-4 text-[#1b1c1a]">自分史ストーリー</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            成功体験だけでなく、葛藤や失敗から学んだこと。あなたの価値観を形成した決定的な瞬間を、読み応えのあるストーリーに昇華させます。
+                        </p>
+</div>
+<div class="w-full md:w-1/2 rounded-2xl overflow-hidden bg-surface-container aspect-video">
+<img alt="Storytelling" class="w-full h-full object-cover" data-alt="Hand holding a vintage pen over a journal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6TE3U7RQm1SutjoJaYSmHbv8E6ydVUIiC1jqOPbi6B_VygMK1mSLdQ2aAkfH9SFjKHtQBBZOX2PYH20_zCf9lN_U43fbha3x0au8Bsh34QAMnaAnAFdXQTq_Cww10iW39QxL9tlj3KTucYvgxZpkAobslLzsv8lQFQjf5etsObSBq19gB98nI2_0i0qA_5WWCnLG5JSaIfFye8Gr-rjqBGmIRatJHvUmYyZQsrGVEYNpKGn9zEk3mDiWpNLG7nT8VKj-xBvLKboLC"/>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex flex-col md:flex-row items-center gap-12 bg-white p-12 rounded-[3rem] shadow-sm">
+<div class="w-full md:w-1/2">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-xs font-bold mb-4 uppercase tracking-wider">03. Visual Portfolio</div>
+<h3 class="text-3xl font-bold mb-4 text-[#1b1c1a]">実績ポートフォリオ</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            プロジェクトでの役割や成果を、視覚的に分かりやすく配置。クリエイティブ職だけでなく、すべての職種の方に対応した洗練されたレイアウト。
+                        </p>
+</div>
+<div class="w-full md:w-1/2 rounded-2xl overflow-hidden bg-surface-container aspect-video">
+<img alt="Portfolio Display" class="w-full h-full object-cover" data-alt="Clean digital portfolio dashboard showing creative works" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcTRdzyA_VEfOQetyLSggBXrV4OxDUxvVd_dnUdjrovihb-Bb8bjZUeU_eDd-D6LjvVEid8ZHoDK_rUHKUPCIsOTff41lGM__4VfXXpdxbQCnSRCfyDQrjWmtiJhA-hMRd67Zf5JD5FFpsrUXoqjdvrswuvbhjTnML_jOuqbQymHqEH-Tl2koKxtswqkziYnFn0p7L4Qws10pcOBMvcn5xkh8gadQNtsGaoMMa85o4uzYKHvJS286Ypdme_NjCqUL_cYqE-XwIyGYj"/>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-5xl mx-auto px-6">
+<div class="bg-[#EFD7A3] p-12 md:p-20 rounded-[4rem] text-center relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="text-3xl md:text-4xl font-black text-on-primary-fixed mb-6 tracking-tight">
+                        あなただけの「物語」を、<br class="hidden md:block"/>世界に見つけさせてあげませんか？
+                    </h2>
+<p class="text-on-primary-fixed-variant mb-10 text-lg opacity-80">
+                        登録は無料です。まずはAIと1分間の挨拶からはじめましょう。
+                    </p>
+<button class="px-10 py-5 bg-primary text-white text-xl font-bold rounded-2xl editorial-shadow hover:scale-105 active:scale-95 transition-all inline-flex items-center gap-3">
+                        さっそく自分を整理してみる
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Abstract Decorative Circles -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-white/20 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -left-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto bg-[#EFD7A3]/20 font-['Plus_Jakarta_Sans'] text-xs leading-relaxed border-t border-stone-100">
+<div class="mb-8 md:mb-0">
+<div class="text-lg font-bold text-[#7a5900] mb-2">ひととなり.ai</div>
+<p class="text-stone-600">© ひととなり.ai All Rights Reserved.</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="text-stone-600 hover:text-[#AA7D1D] transition-opacity" href="#">会社情報</a>
+<a class="text-stone-600 hover:text-[#AA7D1D] transition-opacity" href="#">利用規約</a>
+<a class="text-stone-600 hover:text-[#AA7D1D] transition-opacity" href="#">プライバシーポリシー</a>
+<a class="text-stone-600 hover:text-[#AA7D1D] transition-opacity" href="#">お問い合わせ</a>
+<a class="text-stone-600 hover:text-[#AA7D1D] transition-opacity" href="#">公式SNS</a>
+</nav>
+</footer>
+</body></html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>公開サイト | REGISTER</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 py-4 lg:px-20">
+<div class="flex items-center gap-4 flex-shrink-0">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight">公開サイト</h2>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">サービスについて</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">求人検索</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">ログイン</a>
+</nav>
+<button class="bg-primary text-white text-sm font-bold px-5 py-2 rounded-xl hover:opacity-90 transition-opacity">
+                新規登録
+            </button>
+</div>
+</header>
+<main class="mx-auto w-full px-6 py-12 max-w-6xl">
+<!-- Breadcrumb -->
+<div class="mb-8">
+<span class="text-primary/80 text-xs font-bold tracking-widest uppercase">公開サイト &gt; REGISTER</span>
+<h1 class="text-3xl md:text-5xl font-black leading-tight mt-2 text-slate-900 dark:text-slate-50">あなたの本当の価値、ここで見つけませんか？</h1>
+</div>
+<!-- Benefits Grid -->
+<div class="mb-16 lg:mb-24">
+<h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">verified</span>
+                選ばれる3つの理由
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Reason 1 -->
+<div class="flex flex-col gap-4 p-6 rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-size: 28px;">person_search</span>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-2">書類で伝わらない部分が届く</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            経歴だけでは見えない、あなたの人間性やポテンシャルを可視化。相性の良い企業に直接アピールできます。
+                        </p>
+</div>
+</div>
+<!-- Reason 2 -->
+<div class="flex flex-col gap-4 p-6 rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-size: 28px;">psychology</span>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-2">AIが強みを整理してくれる</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            自己分析が苦手でも大丈夫。AIとの対話形式で、あなたの隠れた強みを自然に引き出します。
+                        </p>
+</div>
+</div>
+<!-- Reason 3 -->
+<div class="flex flex-col gap-4 p-6 rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-size: 28px;">handshake</span>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-2">相性の良い企業から声がかかる</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            価値観の合う企業からのスカウトが届きます。ミスマッチのない、納得感のある転職を実現。
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Call to Action Section -->
+<div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
+<!-- Registration Form Area -->
+<div class="bg-primary/5 dark:bg-primary/10 p-8 md:p-12 rounded-3xl border border-primary/20 flex flex-col justify-center">
+<div class="mb-8">
+<h2 class="text-2xl font-bold mb-2">まずは3つの質問に答えるだけ</h2>
+<p class="text-slate-600 dark:text-slate-400">
+                        後からいつでも編集できるので、まずは保存しましょう。
+                    </p>
+</div>
+<div class="flex flex-col gap-4">
+<button class="flex items-center justify-center gap-3 w-full bg-primary text-white font-bold py-4 rounded-xl hover:opacity-90 transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">mail</span>
+                        メールアドレスで登録
+                    </button>
+<div class="relative py-4 flex items-center">
+<div class="flex-grow border-t border-slate-300 dark:border-slate-700"></div>
+<span class="flex-shrink mx-4 text-xs text-slate-400 font-bold uppercase tracking-wider">またはSNSで連携</span>
+<div class="flex-grow border-t border-slate-300 dark:border-slate-700"></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 py-3 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+<img alt="" class="w-5 h-5" data-alt="Google icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBppebEumrZdN4g5Y86-zhCzURbkEDfgF2RjHB8RO8VcZ2l6VBIx80X0wtJL0OHYPrFa7VJp8Ne5FGyAU8AWNdsbJ04RBXmOzAVNWnMw3My52Y0i34UABISSn9qcyjOZ-OiujPkH22kYrzuaaT2L1ZAo0mwd-EEmYirmMtur1NJgrHpHJFqsQQR64iOXqAi_GULriOz7LDMR_Bpz8rq23r-k9efA2i19yYmy_4NhMj1ub_QfFGdCSUoqWx76hhXmGkztEwywumBRkhD"/>
+<span class="text-sm font-bold">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-3 border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+<img alt="" class="w-5 h-5" data-alt="LinkedIn icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB92AKajnyfQZS3uXqTwwmw8t8gsfDlvkXPENiXwiUAuDqUB3tOsNA2DCEO0GW4B_oPSiJ1UochOzP000J_9txo8qr8Y0kU84D23d8CtennB5qW6J1BZm_ve6nEmMnfp4rAuUsJLnZV6KBrl3GV28RnNWx8ITZk0hkW-RK1LbV0jfH9EJuJnsxWppC2FZFRlvYt9uGsZFt907v6_ZCHFs7DQizqgrWNcw1IYf27YGMQ7UN8NdWLq-VEm2J2fyFxYWiK2KKPsWezaRV"/>
+<span class="text-sm font-bold">LinkedIn</span>
+</button>
+</div>
+</div>
+<p class="text-[10px] text-center mt-6 text-slate-500 dark:text-slate-400 px-4">
+                    登録することで、利用規約およびプライバシーポリシーに同意したものとみなされます。
+                </p>
+</div>
+<!-- Preview / Next Step -->
+<div class="relative">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<div class="relative z-10 bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden">
+<div class="p-4 border-b border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/50 flex items-center gap-2">
+<div class="flex gap-1.5">
+<div class="w-3 h-3 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="w-3 h-3 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="w-3 h-3 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+</div>
+<div class="mx-auto text-[10px] font-bold text-slate-400 uppercase tracking-widest">Next Step: Profile Creation</div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-16 h-16 rounded-full bg-slate-200 dark:bg-slate-800 animate-pulse" data-alt="Profile placeholder"></div>
+<div class="flex-1">
+<div class="h-4 w-32 bg-slate-200 dark:bg-slate-800 rounded mb-2"></div>
+<div class="h-3 w-48 bg-slate-100 dark:bg-slate-800/50 rounded"></div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="h-10 w-full bg-primary/5 rounded-lg border border-primary/10 flex items-center px-4">
+<span class="text-primary text-xs font-bold">Q1. あなたの仕事での「やりがい」は？</span>
+</div>
+<div class="h-20 w-full bg-slate-50 dark:bg-slate-800/50 rounded-lg"></div>
+<div class="flex justify-end"><div class="h-9 w-28 bg-primary/20 rounded-xl"></div></div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="text-sm">登録後はAIと一緒にプロフィールを作成します</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="mt-auto border-t border-slate-200 dark:border-slate-800 py-10 px-6 lg:px-20 text-center">
+<p class="text-sm text-slate-500 dark:text-slate-400">© 2024 公開サイト. All rights reserved.</p>
+</footer>
+</div>
+</body></html>
