@@ -29,30 +29,22 @@
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
 <!-- Top Navigation Bar -->
-<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between h-16">
+<!-- TopNavBar -->
+<header class="bg-[#fbf9f5] dark:bg-stone-950 shadow-sm dark:shadow-none docked full-width top-0 z-50 sticky transition-all">
+<div class="flex justify-between items-center w-full px-6 py-3 max-w-7xl mx-auto">
 <div class="flex items-center gap-8">
-<div class="flex items-center gap-2 text-primary">
-<span class="material-symbols-outlined text-3xl font-bold">query_stats</span>
-<h1 class="text-xl font-black tracking-tight">Career Match</h1>
-</div>
-<nav class="hidden md:flex items-center gap-6">
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">TOP</a>
-<a class="text-sm font-semibold text-primary" href="#">PROFILE LIST</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">SAVED</a>
+<a class="bg-[#E0B14B] px-3 py-1 rounded-sm text-lg font-bold text-white font-['Plus_Jakarta_Sans']" href="toppage.html">
+                    ひととなり.ai
+                </a>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-[#7a5900] font-bold border-b-2 border-[#e0b14b] pb-1 font-['Plus_Jakarta_Sans'] text-sm tracking-tight transition-all" href="service.html">サービス紹介</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] font-['Plus_Jakarta_Sans'] text-sm tracking-tight hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors px-2 py-1 rounded" href="guide.html">採用担当の方へ</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] font-['Plus_Jakarta_Sans'] text-sm tracking-tight hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors px-2 py-1 rounded" href="for job seeker service.html">求職者の方へ</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] font-['Plus_Jakarta_Sans'] text-sm tracking-tight hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors px-2 py-1 rounded" href="contact.html">お問い合わせ</a>
 </nav>
 </div>
 <div class="flex items-center gap-4">
-<div class="relative hidden sm:block">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
-<input class="pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary/50 w-64" placeholder="キーワード検索" type="text"/>
-</div>
-<button class="bg-primary text-white px-5 py-2 rounded-xl text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">Login</button>
-<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center border border-slate-300 dark:border-slate-600 overflow-hidden">
-<span class="material-symbols-outlined text-slate-500">person</span>
-</div>
-</div>
+<button class="text-[#7a5900] dark:text-[#e0b14b] font-['Plus_Jakarta_Sans'] text-sm tracking-tight px-4 py-2 hover:bg-stone-100 transition-colors rounded-lg">ログイン</button>
 </div>
 </div>
 </header>
@@ -333,13 +325,15 @@
 </button>
 </div>
 </main>
-<footer class="mt-20 border-t border-slate-200 dark:border-slate-800 py-10 bg-white dark:bg-background-dark">
-<div class="max-w-7xl mx-auto px-4 text-center">
-<div class="flex items-center justify-center gap-2 text-slate-400 mb-4">
-<span class="material-symbols-outlined text-2xl font-bold">query_stats</span>
-<span class="text-lg font-black tracking-tight">Career Match</span>
+<footer class="bg-[#EFD7A3]/20 dark:bg-stone-900/40 w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto font-['Plus_Jakarta_Sans'] text-xs leading-relaxed">
+<div class="mb-8 md:mb-0">
+<div class="text-lg font-bold text-[#7a5900] dark:text-[#e0b14b] mb-4">ひととなり.ai</div>
+<p class="text-stone-600 dark:text-stone-400">© ひととなり.ai All Rights Reserved.</p>
 </div>
-<p class="text-slate-500 text-sm">© 2024 Career Match Inc. All rights reserved.</p>
+<div class="flex flex-wrap justify-center gap-6 md:gap-10">
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity" href="contact.html">お問い合わせ</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity" href="#">利用規約</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity underline font-medium" href="#">プライバシーポリシー</a>
 </div>
 </footer>
 </body></html>

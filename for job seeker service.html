@@ -89,20 +89,21 @@
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-secondary-container">
 <!-- TopNavBar -->
-<header class="fixed top-0 z-50 w-full glass-nav shadow-sm">
-<div class="flex justify-between items-center w-full px-6 py-3 max-w-7xl mx-auto font-['Plus_Jakarta_Sans'] text-sm tracking-tight">
+<header class="bg-[#fbf9f5] dark:bg-stone-950 shadow-sm dark:shadow-none docked full-width top-0 z-50 sticky transition-all">
+<div class="flex justify-between items-center w-full px-6 py-3 max-w-7xl mx-auto">
 <div class="flex items-center gap-8">
-<div class="bg-[#E0B14B] px-3 py-1 rounded-sm text-lg font-bold text-white">ひととなり.ai</div>
-<nav class="hidden md:flex gap-6">
-<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] transition-colors" href="#">サービス紹介</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] transition-colors" href="#">候補者一覧</a>
-<a class="text-[#7a5900] font-bold border-b-2 border-[#e0b14b] pb-1" href="#">利用ガイド</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] transition-colors" href="#">お問い合わせ</a>
+<a class="bg-[#E0B14B] px-3 py-1 rounded-sm text-lg font-bold text-white font-['Plus_Jakarta_Sans']" href="toppage.html">
+                    ひととなり.ai
+                </a>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-[#7a5900] font-bold border-b-2 border-[#e0b14b] pb-1 font-['Plus_Jakarta_Sans'] text-sm tracking-tight transition-all" href="service.html">サービス紹介</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] font-['Plus_Jakarta_Sans'] text-sm tracking-tight hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors px-2 py-1 rounded" href="guide.html">採用担当の方へ</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] font-['Plus_Jakarta_Sans'] text-sm tracking-tight hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors px-2 py-1 rounded" href="for job seeker service.html">求職者の方へ</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] font-['Plus_Jakarta_Sans'] text-sm tracking-tight hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors px-2 py-1 rounded" href="contact.html">お問い合わせ</a>
 </nav>
 </div>
 <div class="flex items-center gap-4">
-<button class="px-4 py-2 text-stone-600 hover:bg-stone-100 rounded-lg transition-all active:opacity-80 active:scale-95">ログイン</button>
-<button class="px-5 py-2 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded-lg editorial-shadow hover:opacity-90 transition-all active:scale-95">無料登録</button>
+<button class="text-[#7a5900] dark:text-[#e0b14b] font-['Plus_Jakarta_Sans'] text-sm tracking-tight px-4 py-2 hover:bg-stone-100 transition-colors rounded-lg">ログイン</button>
 </div>
 </div>
 </header>
@@ -246,17 +247,15 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto bg-[#EFD7A3]/20 font-['Plus_Jakarta_Sans'] text-xs leading-relaxed border-t border-stone-100">
+<footer class="bg-[#EFD7A3]/20 dark:bg-stone-900/40 w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto font-['Plus_Jakarta_Sans'] text-xs leading-relaxed">
 <div class="mb-8 md:mb-0">
-<div class="text-lg font-bold text-[#7a5900] mb-2">ひととなり.ai</div>
-<p class="text-stone-600">© ひととなり.ai All Rights Reserved.</p>
+<div class="text-lg font-bold text-[#7a5900] dark:text-[#e0b14b] mb-4">ひととなり.ai</div>
+<p class="text-stone-600 dark:text-stone-400">© ひととなり.ai All Rights Reserved.</p>
 </div>
-<nav class="flex flex-wrap justify-center gap-6">
-<a class="text-stone-600 hover:text-[#AA7D1D] transition-opacity" href="#">会社情報</a>
-<a class="text-stone-600 hover:text-[#AA7D1D] transition-opacity" href="#">利用規約</a>
-<a class="text-stone-600 hover:text-[#AA7D1D] transition-opacity" href="#">プライバシーポリシー</a>
-<a class="text-stone-600 hover:text-[#AA7D1D] transition-opacity" href="#">お問い合わせ</a>
-<a class="text-stone-600 hover:text-[#AA7D1D] transition-opacity" href="#">公式SNS</a>
-</nav>
+<div class="flex flex-wrap justify-center gap-6 md:gap-10">
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity" href="contact.html">お問い合わせ</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity" href="#">利用規約</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity underline font-medium" href="#">プライバシーポリシー</a>
+</div>
 </footer>
 </body></html>

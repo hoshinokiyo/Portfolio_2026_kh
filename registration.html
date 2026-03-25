@@ -30,24 +30,23 @@
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
 <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
 <!-- Navigation -->
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 py-4 lg:px-20">
-<div class="flex items-center gap-4 flex-shrink-0">
-<div class="size-6 text-primary">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
-</svg>
-</div>
-<h2 class="text-lg font-bold leading-tight tracking-tight">公開サイト</h2>
-</div>
-<div class="flex items-center gap-6">
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#">サービスについて</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#">求人検索</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#">ログイン</a>
+<!-- TopNavBar -->
+<header class="bg-[#fbf9f5] dark:bg-stone-950 shadow-sm dark:shadow-none docked full-width top-0 z-50 sticky transition-all">
+<div class="flex justify-between items-center w-full px-6 py-3 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<a class="bg-[#E0B14B] px-3 py-1 rounded-sm text-lg font-bold text-white font-['Plus_Jakarta_Sans']" href="toppage.html">
+                    ひととなり.ai
+                </a>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-[#7a5900] font-bold border-b-2 border-[#e0b14b] pb-1 font-['Plus_Jakarta_Sans'] text-sm tracking-tight transition-all" href="service.html">サービス紹介</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] font-['Plus_Jakarta_Sans'] text-sm tracking-tight hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors px-2 py-1 rounded" href="guide.html">採用担当の方へ</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] font-['Plus_Jakarta_Sans'] text-sm tracking-tight hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors px-2 py-1 rounded" href="for job seeker service.html">求職者の方へ</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] font-['Plus_Jakarta_Sans'] text-sm tracking-tight hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors px-2 py-1 rounded" href="contact.html">お問い合わせ</a>
 </nav>
-<button class="bg-primary text-white text-sm font-bold px-5 py-2 rounded-xl hover:opacity-90 transition-opacity">
-                新規登録
-            </button>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#7a5900] dark:text-[#e0b14b] font-['Plus_Jakarta_Sans'] text-sm tracking-tight px-4 py-2 hover:bg-stone-100 transition-colors rounded-lg">ログイン</button>
+</div>
 </div>
 </header>
 <main class="mx-auto w-full px-6 py-12 max-w-6xl">
@@ -173,8 +172,16 @@
 </div>
 </main>
 <!-- Footer -->
-<footer class="mt-auto border-t border-slate-200 dark:border-slate-800 py-10 px-6 lg:px-20 text-center">
-<p class="text-sm text-slate-500 dark:text-slate-400">© 2024 公開サイト. All rights reserved.</p>
+<footer class="bg-[#EFD7A3]/20 dark:bg-stone-900/40 w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto font-['Plus_Jakarta_Sans'] text-xs leading-relaxed">
+<div class="mb-8 md:mb-0">
+<div class="text-lg font-bold text-[#7a5900] dark:text-[#e0b14b] mb-4">ひととなり.ai</div>
+<p class="text-stone-600 dark:text-stone-400">© ひととなり.ai All Rights Reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 md:gap-10">
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity" href="contact.html">お問い合わせ</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity" href="#">利用規約</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity underline font-medium" href="#">プライバシーポリシー</a>
+</div>
 </footer>
 </div>
 </body></html>
