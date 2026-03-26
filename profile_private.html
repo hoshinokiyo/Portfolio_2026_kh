@@ -3,7 +3,7 @@
 <html lang="ja"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>プロフィール詳細 | ひととなり.ai</title>
+<title>完成プロフィール | ひととなり.ai</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -110,9 +110,9 @@
 <nav class="flex items-center gap-2 mb-8 text-xs font-medium text-stone-500">
 <a class="hover:text-tertiary" href="#">TOP</a>
 <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-<a class="hover:text-tertiary" href="#">候補者一覧</a>
+<a class="hover:text-tertiary" href="#">プロフィール作成</a>
 <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-<span class="text-on-surface">プロフィール詳細</span>
+<span class="text-on-surface">完成プロフィール</span>
 </nav>
 <!-- Hero Section: Editorial Layout -->
 <section class="mb-16">
@@ -125,39 +125,38 @@
 <div class="lg:col-span-5 flex flex-col justify-center h-full">
 <div class="inline-block w-fit px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold rounded-full mb-6 tracking-widest uppercase">PERSONALITY PROFILE</div>
 <div class="flex items-baseline gap-4 mb-2">
-<h1 class="text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight">佐藤 結衣</h1>
-<span class="text-xl font-normal text-stone-400">28歳</span>
+<h1 class="text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight">山本 美咲</h1>
 </div>
-<p class="text-primary text-lg font-semibold mb-6">UI/UX デザイナー / プロダクトマネージャー</p>
+<p class="text-primary text-lg font-semibold mb-6">マーケティング・企画職志望</p>
 <blockquote class="text-stone-600 text-lg leading-relaxed mb-8 border-l-4 border-[#EFD7A3] pl-4 italic">
-                    「言葉にできない想いを、誰もが使いこなせる形へ昇華させる。」
+                    「人の気持ちに向き合い、信頼を積み重ねながら価値を生み出す。」
                 </blockquote>
 <div class="flex flex-wrap gap-2 mb-10">
-<span class="px-4 py-1.5 bg-[#f8e0ab] text-[#55451e] text-xs font-bold rounded-full">#共感力重視</span>
-<span class="px-4 py-1.5 bg-[#f8e0ab] text-[#55451e] text-xs font-bold rounded-full">#越境するデザイン</span>
-<span class="px-4 py-1.5 bg-[#f8e0ab] text-[#55451e] text-xs font-bold rounded-full">#本質的な対話</span>
+<span class="px-4 py-1.5 bg-[#f8e0ab] text-[#55451e] text-xs font-bold rounded-full">#信頼関係を大切にする</span>
+<span class="px-4 py-1.5 bg-[#f8e0ab] text-[#55451e] text-xs font-bold rounded-full">#人の気持ちに寄り添う</span>
+<span class="px-4 py-1.5 bg-[#f8e0ab] text-[#55451e] text-xs font-bold rounded-full">#自分らしく働きたい</span>
 </div>
 <!-- Integrated Action Buttons -->
 <div class="flex flex-wrap gap-3 items-center mt-auto">
-<button class="flex-1 min-w-[160px] px-6 py-3 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary/5 transition-colors flex items-center justify-center gap-2">
-<span class="material-symbols-outlined text-[20px]">bookmark</span>
-                        保存する
-                    </button>
-<button class="flex-[1.5] min-w-[200px] px-8 py-3.5 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded-xl shadow-md hover:opacity-90 active:scale-95 transition-all flex items-center justify-center gap-2">
-<span class="material-symbols-outlined text-[20px]">calendar_today</span>
-                        面談を申し込む
-                    </button>
+<a class="flex-1 min-w-[160px] px-6 py-3 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary/5 transition-colors flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+                        プロフィールを編集する
+                    </a>
+<a class="flex-[1.5] min-w-[200px] px-8 py-3.5 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded-xl shadow-md hover:opacity-90 active:scale-95 transition-all flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">collections_bookmark</span>
+                        ポートフォリオを見る
+                    </a>
 </div>
 <a class="mt-6 text-stone-500 font-medium flex items-center gap-2 hover:text-primary transition-colors text-sm w-fit" href="#">
 <span class="material-symbols-outlined text-sm">arrow_back</span>
-                    候補者一覧へ戻る
+                    プロフィール作成へ戻る
                 </a>
 </div>
 </div>
 </section>
 <!-- Main Content Area: Bento Grid Style -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-32">
-<!-- Left: Human Essence (AI Summary) -->
+<!-- Left: Human Essence -->
 <div class="md:col-span-2 space-y-12">
 <section>
 <div class="flex items-center gap-3 mb-6">
@@ -166,8 +165,11 @@
 </div>
 <div class="bg-surface-container-low p-8 rounded-2xl relative overflow-hidden">
 <div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<p class="text-lg text-on-surface-variant leading-loose relative z-10 mb-6">
+                            山本さんは、人との関係性の中で価値を発揮してきたタイプです。相手の気持ちをよく見ながら動き、信頼を少しずつ積み重ねて成果につなげる力があります。ブライダル営業の現場では、詳細な見積もりやクロージング前の段階で「あなたにお願いしたい」と言われた経験があり、相手に安心感を持ってもらえる関わり方が強みとして表れています。
+                        </p>
 <p class="text-lg text-on-surface-variant leading-loose relative z-10">
-                            佐藤さんは、単なる意匠設計に留まらず、ユーザーの深層心理にある「不便」を言語化し、解決策を提示することに長けた方です。インタビューを通じて見えてきたのは、他者の感情に対する並外れた感受性と、それを客観的なデータやプロトタイプに落とし込む冷静な分析力の同居です。チームにおいては、意見の衝突を創造的なエネルギーへと変えるファシリテーターとしての素養も高く評価されています。
+                            周囲からはコミュニケーション能力が高いと言われる一方で、本人には人と接することへの怖さや不安があるそうです。ただ、その繊細さがあるからこそ、相手を傷つけないように気持ちを考え、表面的ではない寄り添い方につながっています。見えない努力まで丁寧に積み重ねる姿勢に、人としての信頼感があります。
                         </p>
 </div>
 </section>
@@ -178,35 +180,45 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="bg-white p-6 rounded-xl border-l-4 border-primary shadow-sm">
-<h3 class="font-bold text-primary mb-2">問いを立て直す</h3>
-<p class="text-sm text-stone-600">依頼されたものを作るのではなく、なぜそれが必要なのか、本当に解決すべき課題は何かをチームと共に深掘りすることを大切にしています。</p>
+<h3 class="font-bold text-primary mb-2">自分らしく、無理なく働きたい</h3>
+<p class="text-sm text-stone-600">息苦しさのない環境で、ワークライフバランスや健康も大切にしながら長く働きたいと考えています。強みを活かしつつ、親のことも考えながら無理なく続けられる働き方が理想です。</p>
 </div>
 <div class="bg-white p-6 rounded-xl border-l-4 border-primary shadow-sm">
-<h3 class="font-bold text-primary mb-2">プロトタイプで話す</h3>
-<p class="text-sm text-stone-600">言葉の定義で迷うよりも、実際に触れるものを作り、フィードバックを得ることでプロジェクトの解像度を高速で上げる姿勢を貫いています。</p>
+<h3 class="font-bold text-primary mb-2">信頼関係の中で力を発揮したい</h3>
+<p class="text-sm text-stone-600">一方的な指示だけで進む環境よりも、お互いにコミュニケーションを取ろうと努力できる人たちと働きたいタイプです。人の笑顔や気持ちを大切にできる関係性の中で、持ち味がより発揮されます。</p>
+</div>
+<div class="bg-white p-6 rounded-xl border-l-4 border-primary shadow-sm md:col-span-2">
+<h3 class="font-bold text-primary mb-2">努力や過程もきちんと見てもらいたい</h3>
+<p class="text-sm text-stone-600">成果だけでなく、その背景にある工夫や見えない努力も理解してもらえる環境を大切にしています。人として評価されることが、より前向きに仕事へ向き合う力につながると考えています。</p>
 </div>
 </div>
 </section>
 </div>
-<!-- Right: Experience Timeline -->
+<!-- Right: Experience and Strengths -->
 <div class="md:col-span-1">
 <div class="sticky top-24">
 <div class="flex items-center gap-3 mb-6">
 <span class="material-symbols-outlined text-primary" data-weight="fill">history_edu</span>
-<h2 class="text-2xl font-bold text-on-surface">経歴・スキル</h2>
+<h2 class="text-2xl font-bold text-on-surface">強み・経験</h2>
 </div>
 <div class="space-y-8 pl-4 border-l-2 border-surface-container-highest">
 <div class="relative">
 <div class="absolute -left-[21px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-background"></div>
-<span class="text-xs font-bold text-stone-400">2020 - 現在</span>
-<h4 class="font-bold text-on-surface mt-1">株式会社リテラルデザイン</h4>
-<p class="text-xs text-stone-500">シニアUIデザイナー / リードPM</p>
+<span class="text-xs font-bold text-stone-400">STRENGTH 01</span>
+<h4 class="font-bold text-on-surface mt-1">プレゼン資料作成と提案</h4>
+<p class="text-xs text-stone-500">資料作成とプレゼンを通じて、伝え方そのものの才能を評価された経験があります。</p>
 </div>
 <div class="relative">
 <div class="absolute -left-[21px] top-1 w-4 h-4 rounded-full bg-surface-container-highest border-4 border-background"></div>
-<span class="text-xs font-bold text-stone-400">2017 - 2020</span>
-<h4 class="font-bold text-on-surface mt-1">StartUp Hub Inc.</h4>
-<p class="text-xs text-stone-500">UIデザイナー（0→1フェーズ）</p>
+<span class="text-xs font-bold text-stone-400">STRENGTH 02</span>
+<h4 class="font-bold text-on-surface mt-1">接客・営業での信頼構築</h4>
+<p class="text-xs text-stone-500">ブライダル営業の場面で、詳細な見積もりやクロージング前に「あなたにお願いしたい」と言われた経験があります。</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[21px] top-1 w-4 h-4 rounded-full bg-surface-container-highest border-4 border-background"></div>
+<span class="text-xs font-bold text-stone-400">STRENGTH 03</span>
+<h4 class="font-bold text-on-surface mt-1">後輩育成やサポート</h4>
+<p class="text-xs text-stone-500">後輩から「あなたに出会わなければこの仕事を楽しいと思えなかったかも」と言われたことがあり、支える力にも強みがあります。</p>
 </div>
 </div>
 <div class="mt-12 bg-surface-container-lowest p-6 rounded-2xl editorial-shadow">
@@ -215,10 +227,15 @@
                             得意な領域
                         </h4>
 <div class="flex flex-wrap gap-2">
-<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded">UXリサーチ</span>
-<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded">Figma</span>
-<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded">プロダクト戦略</span>
-<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded">React/CSS</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded">プレゼン</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded">提案力</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded">関係構築</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded">共感力</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded">資料作成</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded">営業経験</span>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-high">
+<p class="text-xs text-stone-500">希望職種: マーケティング・企画職志望</p>
 </div>
 </div>
 </div>
@@ -229,17 +246,20 @@
 <div class="max-w-4xl mx-auto">
 <div class="text-center mb-12">
 <span class="text-primary font-bold tracking-widest text-sm block mb-2">MY STORY</span>
-<h2 class="text-3xl font-black text-on-surface">なぜ私は、デザインの道を歩むのか</h2>
+<h2 class="text-3xl font-black text-on-surface">なぜ私は、人との関係性を大切にして働きたいのか</h2>
 </div>
 <div class="prose prose-stone lg:prose-lg mx-auto">
 <p class="text-lg text-on-surface-variant leading-relaxed italic mb-8 border-l-4 border-primary pl-6">
-                        「10年前、父がスマートフォンを使いこなせずに困っている姿を見て、テクノロジーの恩恵を受けられない人がいることに憤りを感じました。」
+                        人と関わることは好きですが、実は怖さを感じることもあります。自分が傷つくことも、人を知らないうちに傷つけてしまうことも怖いからこそ、相手の気持ちをよく考えながら関わるようになりました。
                     </p>
 <p class="text-stone-700 leading-loose mb-6">
-                        私のキャリアの原点は、身近な人の小さな「困りごと」にあります。どれほど高度な技術が裏側にあったとしても、使う人が「自分のためのものだ」と感じられなければ意味がありません。
+                        その姿勢は、仕事の中でも自然と表れてきました。ブライダル営業では、条件だけを伝えるのではなく、お客様が本当に大切にしたいことをくみ取るようにしてきました。その結果として「あなたにお願いしたい」と言っていただけた経験や、「あなたに出会わなければ、このホテルとの縁はなかった」と言っていただけた経験があります。信頼関係をつくる中で、自分の価値が発揮されるのだと感じています。
+                    </p>
+<p class="text-stone-700 leading-loose mb-6">
+                        だからこそ、一方的に指示が下りてくるだけの環境や、対話をあきらめてしまうような関係性には苦しさを感じます。お互いに理解しようと努力できる人たちと働きたいですし、人の笑顔や気持ちを大切にできる環境に身を置きたいと思っています。
                     </p>
 <p class="text-stone-700 leading-loose">
-                        デザイナーとして、そして人間として。私は、作り手と使い手の間にある「心の距離」を埋める存在でありたいと考えています。それは単なる仕事ではなく、私の生き方そのものです。
+                        私は、成果だけでなく、その背景にある努力や姿勢も見てもらえる場所で働きたいと考えています。経歴や表面的な印象だけで判断されるのではなく、人としてどのように周囲と関わり、どんな思いで仕事に向き合ってきたのかまで知ってもらえたとき、マーケティングや企画の仕事でも自分らしく力を発揮できると思っています。
                     </p>
 </div>
 </div>
@@ -253,7 +273,7 @@
 <div class="flex justify-between items-end mb-10">
 <div>
 <h2 class="text-2xl font-bold text-on-surface">ポートフォリオ</h2>
-<p class="text-stone-500 text-sm mt-1">過去に携わったプロジェクトの一部です</p>
+<p class="text-stone-500 text-sm mt-1">制作物だけでなく、これまでの経験や考え方が伝わる内容をまとめています</p>
 </div>
 <a class="text-tertiary font-bold flex items-center gap-1 hover:underline text-sm" href="#">
                     すべて見る <span class="material-symbols-outlined">arrow_right_alt</span>
@@ -264,26 +284,25 @@
 <div class="aspect-video rounded-xl overflow-hidden bg-surface-container-highest mb-3 relative">
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern analytics dashboard interface design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuj84ObXSmTufzc2VxnykWdejarXI7NbuQX2MtNPXTdgCC1F4eJJJGo_BUoPL-RYW-Z3KzYTjweJgRcpZm4yAm4Qk6sJSNDzkBBB2kZAmHxikWIHMk21y9IQ-ozUNCp6FSQZ7BDpdETM4EGjE4rJD441n8SQSc0QodmK6Mas1IlQVhMXgJ8ieKihW3eZQ9r-7iflLJI-Aqi2pqGkv_IIpMSZsxwqeG81KFSojT0HdRhBqPoInpBYjFFMQzxPfPwXXPVf6MAsZnzNj0"/>
 </div>
-<h4 class="font-bold text-on-surface">FinTech アプリ刷新プロジェクト</h4>
-<p class="text-xs text-stone-500 mt-1">UI/UX Design, User Interview</p>
+<h4 class="font-bold text-on-surface">接客・提案で大切にしてきたこと</h4>
+<p class="text-xs text-stone-500 mt-1">Relation Building, Proposal</p>
 </div>
 <div class="group cursor-pointer">
 <div class="aspect-video rounded-xl overflow-hidden bg-surface-container-highest mb-3 relative">
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="E-commerce website UI design on a laptop screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6CtgAQJYZPZh8PFY_sSLx6vev3Cd0_tEU-rMO7ADNBWWZkXGLWReVjQrX4NbpKU_-nqNqCbVta2Nj3Zte93YL0sxemWejEIeRTymzZ_RD3KHuwfgtHEBSxvjVe3n8Ju2lT7hZ5DEDKrY5hk0_bLvmnObX8rc1kvSIfJX8S1fEyBWxlOQ3bFcP79hyjc1pay4Yck4Wy-w8ybE2mcx0Hb99fmRyHtMZHhtYKCYA3a4qLCEzZoglP-9X1lyCXvJhtS70L3I64joA4mRg"/>
 </div>
-<h4 class="font-bold text-on-surface">ECプラットフォーム 0→1 構築</h4>
-<p class="text-xs text-stone-500 mt-1">Product Management, Information Architecture</p>
+<h4 class="font-bold text-on-surface">資料作成で工夫したこと</h4>
+<p class="text-xs text-stone-500 mt-1">Presentation, Communication</p>
 </div>
 <div class="group cursor-pointer">
 <div class="aspect-video rounded-xl overflow-hidden bg-surface-container-highest mb-3 relative">
 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Creative workshop materials and sticky notes on a wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHxYQDnRUgDscTsWXgwAqYVFUmA1yHy1GEGo39Gf2cRPkrMd9uAgOXRVemhYfUG_zL2uyoicbcfSCLwbW5s2hljHilHLm2hUtcwLaVAwhKMphbzM_RE04GoFcw8UGoXqLg4h0A0Pqve-c4OmzeMWt4kbFgSdiCPLVEVUzrMM5-WV7yHGo8_Om1-U2UF4ja62vkPccpJaCGxBunq4Ve4fq87YwtEsi4JMVznjsTj_HhSYkyKB4K7nfzJjlRSsjCDm01VofZ2Cqn1fiR"/>
 </div>
-<h4 class="font-bold text-on-surface">デザインシステム構築ガイド</h4>
-<p class="text-xs text-stone-500 mt-1">Design System, Guidelines</p>
+<h4 class="font-bold text-on-surface">人との関わりの中で培った強み</h4>
+<p class="text-xs text-stone-500 mt-1">Support, Empathy</p>
 </div>
 </div>
 </section>
-<!-- Floating Actions Bar (Bottom) -->
 </main>
 <!-- Footer -->
 <footer class="bg-[#EFD7A3]/20 dark:bg-stone-900/40 w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto font-['Plus_Jakarta_Sans'] text-xs leading-relaxed">
