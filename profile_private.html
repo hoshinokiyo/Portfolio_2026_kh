@@ -83,9 +83,142 @@
         background: rgba(251, 249, 245, 0.8);
         backdrop-filter: blur(12px);
       }
+      body.theme-travel {
+        background:
+          radial-gradient(circle at top right, rgba(142, 171, 236, 0.28), transparent 28%),
+          linear-gradient(180deg, #fbfdff 0%, #f1f7ff 100%);
+      }
+      body.theme-flower {
+        background:
+          radial-gradient(circle at top right, rgba(239, 215, 163, 0.32), transparent 28%),
+          linear-gradient(180deg, #fffdf8 0%, #fbf6ee 100%);
+      }
+      body.theme-book {
+        background:
+          radial-gradient(circle at top right, rgba(142, 171, 236, 0.16), transparent 26%),
+          linear-gradient(180deg, #fcfdff 0%, #f3f6fb 100%);
+      }
+      .theme-hero {
+        position: relative;
+      }
+      body.theme-travel .theme-hero::before,
+      body.theme-flower .theme-hero::before,
+      body.theme-book .theme-hero::before {
+        content: "";
+        position: absolute;
+        inset: -18px -12px auto auto;
+        width: 180px;
+        height: 180px;
+        border-radius: 9999px;
+        filter: blur(24px);
+        opacity: 0.55;
+        pointer-events: none;
+      }
+      body.theme-travel .theme-hero::before {
+        background: rgba(142, 171, 236, 0.34);
+      }
+      body.theme-flower .theme-hero::before {
+        background: rgba(239, 215, 163, 0.42);
+      }
+      body.theme-book .theme-hero::before {
+        background: rgba(76, 123, 225, 0.14);
+      }
+      body.theme-travel .theme-heading-main,
+      body.theme-travel .theme-heading-section,
+      body.theme-travel .theme-icon {
+        color: #4C7BE1 !important;
+      }
+      body.theme-flower .theme-heading-main,
+      body.theme-flower .theme-heading-section,
+      body.theme-flower .theme-icon {
+        color: #AA7D1D !important;
+      }
+      body.theme-book .theme-heading-main,
+      body.theme-book .theme-heading-section {
+        color: #AA7D1D !important;
+      }
+      body.theme-book .theme-icon {
+        color: #4C7BE1 !important;
+      }
+      body.theme-travel .theme-label {
+        color: #AA7D1D !important;
+      }
+      body.theme-flower .theme-label {
+        color: #E0B14B !important;
+      }
+      body.theme-book .theme-label {
+        color: #4C7BE1 !important;
+      }
+      body.theme-travel .theme-tag {
+        background: #E0B14B !important;
+        color: #111111 !important;
+      }
+      body.theme-flower .theme-tag {
+        background: #EFD7A3 !important;
+        color: #AA7D1D !important;
+      }
+      body.theme-book .theme-tag {
+        background: rgba(142, 171, 236, 0.20) !important;
+        color: #4C7BE1 !important;
+      }
+      body.theme-travel .theme-work-card {
+        background: rgba(255, 255, 255, 0.98) !important;
+        box-shadow: 0 10px 24px rgba(76, 123, 225, 0.08);
+        border-color: rgba(142, 171, 236, 0.55) !important;
+      }
+      body.theme-flower .theme-work-card {
+        background: rgba(255, 255, 255, 0.98) !important;
+        box-shadow: 0 10px 24px rgba(224, 177, 75, 0.08);
+        border-color: rgba(239, 215, 163, 0.72) !important;
+      }
+      body.theme-book .theme-work-card {
+        background: rgba(255, 255, 255, 0.98) !important;
+        box-shadow: 0 8px 18px rgba(76, 123, 225, 0.06);
+        border-color: rgba(142, 171, 236, 0.36) !important;
+      }
+      body.theme-travel .theme-skill-tag {
+        background: rgba(255, 255, 255, 0.98) !important;
+        color: #4C7BE1 !important;
+        box-shadow: inset 0 0 0 1px rgba(142, 171, 236, 0.55);
+      }
+      body.theme-flower .theme-skill-tag {
+        background: rgba(239, 215, 163, 0.28) !important;
+        color: #111111 !important;
+      }
+      body.theme-book .theme-skill-tag {
+        background: rgba(142, 171, 236, 0.16) !important;
+        color: #111111 !important;
+      }
+      body.theme-travel .theme-portfolio-card {
+        background: rgba(255, 255, 255, 0.96);
+        border-radius: 0.75rem;
+        box-shadow: 0 12px 28px rgba(76, 123, 225, 0.07);
+      }
+      body.theme-flower .theme-portfolio-card {
+        background: rgba(255, 255, 255, 0.98);
+        border-radius: 0.75rem;
+        box-shadow: 0 12px 28px rgba(224, 177, 75, 0.07);
+      }
+      body.theme-book .theme-portfolio-card {
+        background: rgba(255, 255, 255, 0.98);
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 22px rgba(17, 17, 17, 0.05);
+      }
+      .theme-hero-media {
+        transition: filter 0.25s ease, transform 0.25s ease;
+      }
+      body.theme-travel .theme-hero-media {
+        filter: saturate(1.05) brightness(1.02);
+      }
+      body.theme-flower .theme-hero-media {
+        filter: saturate(0.96) brightness(1.04);
+      }
+      body.theme-book .theme-hero-media {
+        filter: saturate(0.88) brightness(0.98);
+      }
     </style>
 </head>
-<body class="bg-background text-on-surface font-body leading-relaxed">
+<body class="bg-background text-on-surface font-body leading-relaxed theme-flower">
 <!-- TopNavBar -->
 <header class="bg-[#fbf9f5] dark:bg-stone-950 shadow-sm dark:shadow-none docked full-width top-0 z-50 sticky transition-all">
 <div class="flex justify-between items-center w-full px-6 py-3 max-w-7xl mx-auto">
@@ -115,26 +248,26 @@
 <span class="text-on-surface">完成プロフィール</span>
 </nav>
 <!-- Hero Section: Editorial Layout -->
-<section class="mb-16">
+<section class="mb-16 theme-hero">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 <!-- Background Image Frame -->
 <div class="lg:col-span-7 h-[300px] md:h-[400px] lg:h-[480px] rounded-2xl overflow-hidden shadow-sm">
-<img class="w-full h-full object-cover" data-alt="Calm lake landscape at dawn chosen by candidate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8AD1VvymFS86T-8s7QVaBXy4tZwe0sfKrfenWymh7S-C0DNll5yEbWjnlmFtOr2U9FS8YA8LZLK9DpljJVZk-fw6e8jI19PEDjVQ1ypYEJBEOO5dTwKevK2aOL2SIfLZ-GqmCr3wCI8TxpV3fUQqjK4AcvNRtn8B72x_YTnEoxL8_lhpLSRMhbo7NCG5OxInPy0ck9DbKdXKdGxhZhgNq_np8pyeVCkEcptyFArMSbyKoIRxuRsF8DZA3vUR5ixBv9nRmLtHKKohd"/>
+<img class="w-full h-full object-cover theme-hero-media" data-alt="Calm lake landscape at dawn chosen by candidate" data-src-book="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=1200&q=80" data-src-flower="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=80" data-src-travel="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8AD1VvymFS86T-8s7QVaBXy4tZwe0sfKrfenWymh7S-C0DNll5yEbWjnlmFtOr2U9FS8YA8LZLK9DpljJVZk-fw6e8jI19PEDjVQ1ypYEJBEOO5dTwKevK2aOL2SIfLZ-GqmCr3wCI8TxpV3fUQqjK4AcvNRtn8B72x_YTnEoxL8_lhpLSRMhbo7NCG5OxInPy0ck9DbKdXKdGxhZhgNq_np8pyeVCkEcptyFArMSbyKoIRxuRsF8DZA3vUR5ixBv9nRmLtHKKohd"/>
 </div>
 <!-- Identity Card -->
 <div class="lg:col-span-5 flex flex-col items-start h-full py-2">
-<div class="inline-block w-fit px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold rounded-full mb-5 tracking-widest uppercase">PERSONALITY PROFILE</div>
+<div class="inline-block w-fit px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold rounded-full mb-5 tracking-widest uppercase theme-label">PERSONALITY PROFILE</div>
 <div class="flex items-baseline gap-4 mb-2">
-<h1 class="text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight">山本 美咲</h1>
+<h1 class="text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight theme-heading-main">山本 美咲</h1>
 </div>
 <p class="text-primary text-lg font-semibold mb-5">マーケティング・企画職志望</p>
 <blockquote class="text-stone-600 text-lg leading-relaxed mb-6 border-l-4 border-[#EFD7A3] pl-4 italic">
                     「人の気持ちに向き合い、信頼を積み重ねながら価値を生み出す。」
                 </blockquote>
 <div class="flex flex-wrap gap-2 mt-4 mb-6">
-<a class="px-3 py-1 bg-[#f8e0ab] text-[#55451e] text-sm font-bold rounded-full hover:opacity-90 transition-opacity" href="#trust-building">信頼関係を構築する力</a>
-<a class="px-3 py-1 bg-[#f8e0ab] text-[#55451e] text-sm font-bold rounded-full hover:opacity-90 transition-opacity" href="#proposal-skill">相手理解をもとにした提案力</a>
-<a class="px-3 py-1 bg-[#f8e0ab] text-[#55451e] text-sm font-bold rounded-full hover:opacity-90 transition-opacity" href="#work-style">強みを活かして価値を発揮する働き方</a>
+<a class="px-3 py-1 bg-[#f8e0ab] text-[#55451e] text-sm font-bold rounded-full hover:opacity-90 transition-opacity theme-tag" href="#trust-building">信頼関係を構築する力</a>
+<a class="px-3 py-1 bg-[#f8e0ab] text-[#55451e] text-sm font-bold rounded-full hover:opacity-90 transition-opacity theme-tag" href="#proposal-skill">相手理解をもとにした提案力</a>
+<a class="px-3 py-1 bg-[#f8e0ab] text-[#55451e] text-sm font-bold rounded-full hover:opacity-90 transition-opacity theme-tag" href="#work-style">強みを活かして価値を発揮する働き方</a>
 </div>
 <p class="text-base text-on-surface-variant leading-relaxed">
                     相手の意図や気持ちを丁寧に汲み取り、状況に応じた伝え方や提案に落とし込むことで、信頼関係の構築と行動につながる価値提供を行うタイプです。関係性を大切にしながら調整・提案を進めることで、チームや顧客双方にとって納得感のある成果を生み出すことを強みとしています。
@@ -148,8 +281,8 @@
 <div class="md:col-span-2 space-y-12">
 <section id="trust-building">
 <div class="flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined text-primary" data-weight="fill">psychology</span>
-<h2 class="text-2xl font-bold text-on-surface">人となり紹介</h2>
+<span class="material-symbols-outlined text-primary theme-icon" data-icon-book="menu_book" data-icon-flower="local_florist" data-icon-travel="travel_explore" data-weight="fill">psychology</span>
+<h2 class="text-2xl font-bold text-on-surface theme-heading-section">人となり紹介</h2>
 </div>
 <div class="bg-surface-container-low p-8 rounded-2xl relative overflow-hidden">
 <div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
@@ -163,19 +296,19 @@
 </section>
 <section id="work-style">
 <div class="flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined text-primary" data-weight="fill">lightbulb</span>
-<h2 class="text-2xl font-bold text-on-surface">仕事観</h2>
+<span class="material-symbols-outlined text-primary theme-icon" data-icon-book="edit_note" data-icon-flower="spa" data-icon-travel="flight_takeoff" data-weight="fill">lightbulb</span>
+<h2 class="text-2xl font-bold text-on-surface theme-heading-section">仕事観</h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="bg-white p-6 rounded-xl border-l-4 border-primary shadow-sm">
+<div class="bg-white p-6 rounded-xl border-l-4 border-primary shadow-sm theme-work-card">
 <h3 class="font-bold text-primary mb-2">相手理解を起点に価値をつくる</h3>
 <p class="text-sm text-stone-600">相手の意図や状況を丁寧に汲み取り、表面的な要望だけでなく本質的なニーズを整理することを大切にしています。ヒアリングを通じて得た情報をもとに、相手に伝わる形へと落とし込むことで、納得感のある提案につなげることができます。</p>
 </div>
-<div class="bg-white p-6 rounded-xl border-l-4 border-primary shadow-sm">
+<div class="bg-white p-6 rounded-xl border-l-4 border-primary shadow-sm theme-work-card">
 <h3 class="font-bold text-primary mb-2">周囲を巻き込みながら前に進める</h3>
 <p class="text-sm text-stone-600">相手や関係者とのコミュニケーションを重ねながら、状況に応じて調整を行い、全体として前に進む状態をつくることを得意としています。一方的に進めるのではなく、関係性を大切にしながら合意形成を図ることで、チームや顧客双方にとって最適な方向へ導きます。</p>
 </div>
-<div class="bg-white p-6 rounded-xl border-l-4 border-primary shadow-sm md:col-span-2">
+<div class="bg-white p-6 rounded-xl border-l-4 border-primary shadow-sm md:col-span-2 theme-work-card">
 <h3 class="font-bold text-primary mb-2">理解と調整を成果につなげる</h3>
 <p class="text-sm text-stone-600">相手理解と関係構築を土台にした提案と調整を行うことで、最終的には売上や成果といった結果につなげることを意識しています。単発の対応で終わらせるのではなく、再現性のある形で価値提供を積み重ねていくことで、継続的に成果を生み出していきたいと考えています。</p>
 </div>
@@ -186,8 +319,8 @@
 <div class="md:col-span-1" id="proposal-skill">
 <div class="sticky top-24">
 <div class="flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined text-primary" data-weight="fill">history_edu</span>
-<h2 class="text-2xl font-bold text-on-surface">強み・経験</h2>
+<span class="material-symbols-outlined text-primary theme-icon" data-icon-book="auto_stories" data-icon-flower="emoji_nature" data-icon-travel="luggage" data-weight="fill">history_edu</span>
+<h2 class="text-2xl font-bold text-on-surface theme-heading-section">強み・経験</h2>
 </div>
 <div class="space-y-8 pl-4 border-l-2 border-surface-container-highest">
 <div class="relative">
@@ -211,16 +344,16 @@
 </div>
 <div class="mt-12 bg-surface-container-lowest p-6 rounded-2xl editorial-shadow">
 <h4 class="text-sm font-bold mb-4 flex items-center gap-2">
-<span class="material-symbols-outlined text-tertiary text-lg">verified</span>
+<span class="material-symbols-outlined text-tertiary text-lg theme-icon" data-icon-book="bookmark" data-icon-flower="yard" data-icon-travel="map">verified</span>
                             得意な領域
                         </h4>
 <div class="flex flex-wrap gap-2">
-<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded">ヒアリング力</span>
-<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded">提案設計</span>
-<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded">関係構築</span>
-<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded">合意形成</span>
-<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded">資料作成</span>
-<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded">プレゼン力</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded theme-skill-tag">ヒアリング力</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded theme-skill-tag">提案設計</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded theme-skill-tag">関係構築</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded theme-skill-tag">合意形成</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded theme-skill-tag">資料作成</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-1 rounded theme-skill-tag">プレゼン力</span>
 </div>
 <div class="mt-6 pt-4 border-t border-surface-container-high">
 <p class="text-xs text-stone-500">希望職種: マーケティング・企画職志望</p>
@@ -233,8 +366,8 @@
 <section class="mt-32 -mx-6 px-6 py-20 bg-[#EFD7A3]/20 relative overflow-hidden">
 <div class="max-w-4xl mx-auto">
 <div class="text-center mb-12">
-<span class="text-primary font-bold tracking-widest text-sm block mb-2">MY STORY</span>
-<h2 class="text-3xl font-black text-on-surface">相手理解を起点に、提案と改善を積み重ねてきたこれまでの仕事</h2>
+<span class="text-primary font-bold tracking-widest text-sm block mb-2 theme-label">MY STORY</span>
+<h2 class="text-3xl font-black text-on-surface theme-heading-section">相手理解を起点に、提案と改善を積み重ねてきたこれまでの仕事</h2>
 </div>
 <div class="prose prose-stone lg:prose-lg mx-auto">
 <p class="text-lg text-on-surface-variant leading-relaxed italic mb-8 border-l-4 border-primary pl-6">
@@ -256,14 +389,14 @@
 </div>
 <!-- Decorative Element -->
 <div class="absolute bottom-0 right-0 opacity-10">
-<span class="material-symbols-outlined text-[300px]" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<span class="material-symbols-outlined text-[300px] theme-icon" data-icon-book="menu_book" data-icon-flower="local_florist" data-icon-travel="flight_takeoff" style="font-variation-settings: 'FILL' 1;">format_quote</span>
 </div>
 </section>
 <!-- Subsection: Portfolio -->
 <section class="mt-32 mb-40">
 <div class="flex justify-between items-end mb-10">
 <div>
-<h2 class="text-2xl font-bold text-on-surface">ポートフォリオ</h2>
+<h2 class="text-2xl font-bold text-on-surface theme-heading-section">ポートフォリオ</h2>
 <p class="text-stone-500 text-sm mt-1">制作物だけでなく、これまでの経験や考え方が伝わる内容をまとめています</p>
 </div>
 <a class="text-tertiary font-bold flex items-center gap-1 hover:underline text-sm" href="#">
@@ -271,23 +404,23 @@
 </a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<div class="group cursor-pointer">
+<div class="group cursor-pointer theme-portfolio-card">
 <div class="aspect-video rounded-xl overflow-hidden bg-surface-container-highest mb-3 relative">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern analytics dashboard interface design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuj84ObXSmTufzc2VxnykWdejarXI7NbuQX2MtNPXTdgCC1F4eJJJGo_BUoPL-RYW-Z3KzYTjweJgRcpZm4yAm4Qk6sJSNDzkBBB2kZAmHxikWIHMk21y9IQ-ozUNCp6FSQZ7BDpdETM4EGjE4rJD441n8SQSc0QodmK6Mas1IlQVhMXgJ8ieKihW3eZQ9r-7iflLJI-Aqi2pqGkv_IIpMSZsxwqeG81KFSojT0HdRhBqPoInpBYjFFMQzxPfPwXXPVf6MAsZnzNj0"/>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern analytics dashboard interface design" data-src-book="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80" data-src-flower="https://images.unsplash.com/photo-1463320726281-696a485928c7?auto=format&fit=crop&w=1200&q=80" data-src-travel="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuj84ObXSmTufzc2VxnykWdejarXI7NbuQX2MtNPXTdgCC1F4eJJJGo_BUoPL-RYW-Z3KzYTjweJgRcpZm4yAm4Qk6sJSNDzkBBB2kZAmHxikWIHMk21y9IQ-ozUNCp6FSQZ7BDpdETM4EGjE4rJD441n8SQSc0QodmK6Mas1IlQVhMXgJ8ieKihW3eZQ9r-7iflLJI-Aqi2pqGkv_IIpMSZsxwqeG81KFSojT0HdRhBqPoInpBYjFFMQzxPfPwXXPVf6MAsZnzNj0"/>
 </div>
 <h4 class="font-bold text-on-surface">接客・提案で大切にしてきたこと</h4>
 <p class="text-xs text-stone-500 mt-1">Relation Building, Proposal</p>
 </div>
-<div class="group cursor-pointer">
+<div class="group cursor-pointer theme-portfolio-card">
 <div class="aspect-video rounded-xl overflow-hidden bg-surface-container-highest mb-3 relative">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="E-commerce website UI design on a laptop screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6CtgAQJYZPZh8PFY_sSLx6vev3Cd0_tEU-rMO7ADNBWWZkXGLWReVjQrX4NbpKU_-nqNqCbVta2Nj3Zte93YL0sxemWejEIeRTymzZ_RD3KHuwfgtHEBSxvjVe3n8Ju2lT7hZ5DEDKrY5hk0_bLvmnObX8rc1kvSIfJX8S1fEyBWxlOQ3bFcP79hyjc1pay4Yck4Wy-w8ybE2mcx0Hb99fmRyHtMZHhtYKCYA3a4qLCEzZoglP-9X1lyCXvJhtS70L3I64joA4mRg"/>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="E-commerce website UI design on a laptop screen" data-src-book="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=1200&q=80" data-src-flower="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=80" data-src-travel="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6CtgAQJYZPZh8PFY_sSLx6vev3Cd0_tEU-rMO7ADNBWWZkXGLWReVjQrX4NbpKU_-nqNqCbVta2Nj3Zte93YL0sxemWejEIeRTymzZ_RD3KHuwfgtHEBSxvjVe3n8Ju2lT7hZ5DEDKrY5hk0_bLvmnObX8rc1kvSIfJX8S1fEyBWxlOQ3bFcP79hyjc1pay4Yck4Wy-w8ybE2mcx0Hb99fmRyHtMZHhtYKCYA3a4qLCEzZoglP-9X1lyCXvJhtS70L3I64joA4mRg"/>
 </div>
 <h4 class="font-bold text-on-surface">資料作成で工夫したこと</h4>
 <p class="text-xs text-stone-500 mt-1">Presentation, Communication</p>
 </div>
-<div class="group cursor-pointer">
+<div class="group cursor-pointer theme-portfolio-card">
 <div class="aspect-video rounded-xl overflow-hidden bg-surface-container-highest mb-3 relative">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Creative workshop materials and sticky notes on a wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHxYQDnRUgDscTsWXgwAqYVFUmA1yHy1GEGo39Gf2cRPkrMd9uAgOXRVemhYfUG_zL2uyoicbcfSCLwbW5s2hljHilHLm2hUtcwLaVAwhKMphbzM_RE04GoFcw8UGoXqLg4h0A0Pqve-c4OmzeMWt4kbFgSdiCPLVEVUzrMM5-WV7yHGo8_Om1-U2UF4ja62vkPccpJaCGxBunq4Ve4fq87YwtEsi4JMVznjsTj_HhSYkyKB4K7nfzJjlRSsjCDm01VofZ2Cqn1fiR"/>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Creative workshop materials and sticky notes on a wall" data-src-book="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=1200&q=80" data-src-flower="https://images.unsplash.com/photo-1455656678494-4d1b5f3e7ad1?auto=format&fit=crop&w=1200&q=80" data-src-travel="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHxYQDnRUgDscTsWXgwAqYVFUmA1yHy1GEGo39Gf2cRPkrMd9uAgOXRVemhYfUG_zL2uyoicbcfSCLwbW5s2hljHilHLm2hUtcwLaVAwhKMphbzM_RE04GoFcw8UGoXqLg4h0A0Pqve-c4OmzeMWt4kbFgSdiCPLVEVUzrMM5-WV7yHGo8_Om1-U2UF4ja62vkPccpJaCGxBunq4Ve4fq87YwtEsi4JMVznjsTj_HhSYkyKB4K7nfzJjlRSsjCDm01VofZ2Cqn1fiR"/>
 </div>
 <h4 class="font-bold text-on-surface">人との関わりの中で培った強み</h4>
 <p class="text-xs text-stone-500 mt-1">Support, Empathy</p>
@@ -295,6 +428,28 @@
 </div>
 </section>
 </main>
+<script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        const requestedTheme = params.get("theme");
+        const allowedThemes = ["travel", "flower", "book"];
+        const theme = allowedThemes.includes(requestedTheme) ? requestedTheme : "flower";
+        const body = document.body;
+
+        body.classList.remove("theme-travel", "theme-flower", "theme-book");
+        body.classList.add(`theme-${theme}`);
+
+        document.querySelectorAll("[data-src-travel][data-src-flower][data-src-book]").forEach((image) => {
+          const nextSrc = image.getAttribute(`data-src-${theme}`);
+          if (nextSrc) image.src = nextSrc;
+        });
+
+        document.querySelectorAll("[data-icon-travel][data-icon-flower][data-icon-book]").forEach((icon) => {
+          const nextIcon = icon.getAttribute(`data-icon-${theme}`);
+          if (nextIcon) icon.textContent = nextIcon;
+        });
+      })();
+    </script>
 <!-- Footer -->
 <footer class="bg-[#EFD7A3]/20 dark:bg-stone-900/40 w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto font-['Plus_Jakarta_Sans'] text-xs leading-relaxed">
 <div class="mb-8 md:mb-0">
