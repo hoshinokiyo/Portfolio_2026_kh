@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>プロフィール作成デモ | ひととなり.ai</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#E0B14B",
+              secondary: "#EFD7A3",
+              accent: "#4C7BE1",
+              accentSoft: "#8EABEC",
+              heading: "#AA7D1D",
+              body: "#111111"
+            },
+            fontFamily: {
+              body: ["Plus Jakarta Sans", "sans-serif"]
+            },
+            boxShadow: {
+              soft: "0 12px 32px rgba(17, 17, 17, 0.06)"
+            }
+          }
+        }
+      }
+    </script>
+<style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        color: #111111;
+        background:
+          radial-gradient(circle at top right, rgba(224, 177, 75, 0.18), transparent 28%),
+          linear-gradient(180deg, #fffdf8 0%, #f8f4ea 100%);
+      }
+      .chat-bubble-ai {
+        background: #ffffff;
+        border: 1px solid rgba(142, 171, 236, 0.35);
+      }
+      .chat-bubble-user {
+        background: #EFD7A3;
+      }
+      .fade-in {
+        animation: fadeIn 0.35s ease forwards;
+      }
+      .loading-dot {
+        animation: pulse 1.2s ease-in-out infinite;
+      }
+      .loading-dot:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .loading-dot:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes pulse {
+        0%, 80%, 100% { opacity: 0.35; transform: scale(0.9); }
+        40% { opacity: 1; transform: scale(1); }
+      }
+    </style>
+</head>
+<body class="font-body">
+<main class="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+<section class="max-w-3xl mx-auto text-center mb-10 sm:mb-12">
+<h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-heading mb-5">AIと一緒に、あなたらしいプロフィールを整理する</h1>
+<p class="text-base sm:text-lg leading-relaxed text-body mb-5">質問に答えていくことで、履歴書では伝わりにくい「人となり」や強みを整理し、プロフィールとしてまとめていく体験デモです。</p>
+<div class="inline-block max-w-2xl rounded-2xl bg-secondary/35 px-5 py-4 text-sm sm:text-base leading-relaxed text-body">※このページはデモページです。プロフィール作成の流れを体験していただくため、途中で1ヶ所だけ操作をお願いしています。</div>
+</section>
+
+<section class="mb-8">
+<div class="bg-white rounded-3xl shadow-soft border border-slate-200/80 p-6 sm:p-8">
+<div class="mb-6">
+<h2 class="text-2xl font-bold text-heading mb-2">基本情報</h2>
+<p class="text-sm sm:text-base text-body">この内容をもとに、プロフィール作成体験を進めます。</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+<div>
+<label class="block text-xs font-semibold tracking-wide text-heading mb-2">名前</label>
+<div class="rounded-xl bg-slate-50 border border-slate-200 px-4 py-3 text-body">山本 美咲</div>
+</div>
+<div>
+<label class="block text-xs font-semibold tracking-wide text-heading mb-2">居住地</label>
+<div class="rounded-xl bg-slate-50 border border-slate-200 px-4 py-3 text-body">東京都</div>
+</div>
+<div>
+<label class="block text-xs font-semibold tracking-wide text-heading mb-2">メールアドレス</label>
+<div class="rounded-xl bg-slate-50 border border-slate-200 px-4 py-3 text-body">sample@example.com</div>
+</div>
+<div>
+<label class="block text-xs font-semibold tracking-wide text-heading mb-2">希望職種</label>
+<div class="rounded-xl bg-slate-50 border border-slate-200 px-4 py-3 text-body">マーケティング・企画職</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="text-center mb-8" id="start-area">
+<h2 class="text-xl sm:text-2xl font-bold text-body mb-5">あなたのことを教えてください</h2>
+<button class="inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 font-bold text-body shadow-soft hover:opacity-95 transition-opacity" id="startButton" type="button">はい</button>
+</section>
+
+<section class="hidden mb-8" id="chatArea">
+<div class="bg-white rounded-3xl shadow-soft border border-slate-200/80 p-5 sm:p-7">
+<div class="space-y-5" id="chatMessages">
+<div class="flex justify-start fade-in">
+<div class="chat-bubble-ai max-w-[85%] rounded-2xl rounded-tl-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm">まずは、仕事をするうえで大切にしていることを教えてください。</div>
+</div>
+<div class="flex justify-end fade-in">
+<div class="chat-bubble-user max-w-[85%] rounded-2xl rounded-tr-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm">自分らしく働けること、人との関係性、そして成果や貢献が正しく評価されることを大切にしています。</div>
+</div>
+<div class="flex justify-start fade-in">
+<div class="chat-bubble-ai max-w-[85%] rounded-2xl rounded-tl-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm">どんな人たちと働くと、働きやすいと感じますか？</div>
+</div>
+<div class="flex justify-end fade-in">
+<div class="chat-bubble-user max-w-[85%] rounded-2xl rounded-tr-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm">互いにコミュニケーションを取りながら進められる人、人の笑顔を大切にできる人、相手の気持ちを理解しようとする人たちです。</div>
+</div>
+<div class="flex justify-start fade-in">
+<div class="chat-bubble-ai max-w-[85%] rounded-2xl rounded-tl-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm">これまでの経験の中で、やりがいや手応えを感じた場面を教えてください。</div>
+</div>
+<div class="flex justify-end fade-in">
+<div class="chat-bubble-user max-w-[85%] rounded-2xl rounded-tr-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm">プレゼンで評価された経験や、提案を通じて信頼を得て成約につながった経験、後輩に良い影響を与えられた経験です。</div>
+</div>
+<div class="flex justify-start fade-in">
+<div class="chat-bubble-ai max-w-[85%] rounded-2xl rounded-tl-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm">その経験の中で、どんな工夫や意識をしていましたか？</div>
+</div>
+<div class="flex justify-end fade-in">
+<div class="chat-bubble-user max-w-[85%] rounded-2xl rounded-tr-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm">相手に合わせて提案を変えること、角が立たないようにまとめること、そして未来でも「良かった」と思ってもらえる提案を意識していました。</div>
+</div>
+<div class="flex justify-start fade-in">
+<div class="chat-bubble-ai max-w-[85%] rounded-2xl rounded-tl-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm">山本さんのことをいろいろ教えてくれて、ありがとうございます。最後に、もう1つだけ教えてください。</div>
+</div>
+<div class="flex justify-start fade-in">
+<div class="chat-bubble-ai max-w-[85%] rounded-2xl rounded-tl-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm">仕事以外で大切にしている時間に近いものを選んでください。</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="hidden mb-8" id="choiceArea">
+<div class="bg-white rounded-3xl shadow-soft border border-slate-200/80 p-6 sm:p-8">
+<div class="text-center mb-6">
+<h2 class="text-xl sm:text-2xl font-bold text-heading mb-2">5問目の回答を選んでください</h2>
+<p class="text-sm sm:text-base text-body">もっとも近いものを1つ選択してください。</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+<button class="choice-button rounded-2xl border border-slate-200 bg-white px-5 py-4 text-left transition-all hover:border-accent hover:bg-accentSoft/10" data-theme="travel" type="button">
+<span class="block text-sm font-semibold text-heading mb-1">A</span>
+<span class="text-base font-medium text-body">旅行</span>
+</button>
+<button class="choice-button rounded-2xl border border-slate-200 bg-white px-5 py-4 text-left transition-all hover:border-accent hover:bg-accentSoft/10" data-theme="flower" type="button">
+<span class="block text-sm font-semibold text-heading mb-1">B</span>
+<span class="text-base font-medium text-body">フラワーアレンジ</span>
+</button>
+<button class="choice-button rounded-2xl border border-slate-200 bg-white px-5 py-4 text-left transition-all hover:border-accent hover:bg-accentSoft/10" data-theme="book" type="button">
+<span class="block text-sm font-semibold text-heading mb-1">C</span>
+<span class="text-base font-medium text-body">読書</span>
+</button>
+</div>
+</div>
+</section>
+
+<section class="hidden text-center mb-8" id="confirmArea">
+<div class="bg-white rounded-3xl shadow-soft border border-slate-200/80 p-8 sm:p-10 max-w-3xl mx-auto">
+<h2 class="text-2xl sm:text-3xl font-bold text-heading mb-5">この内容でプロフィールをまとめてもよろしいですか？</h2>
+<button class="inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 font-bold text-body shadow-soft hover:opacity-95 transition-opacity" id="generateButton" type="button">はい</button>
+</div>
+</section>
+</main>
+
+<div class="hidden fixed inset-0 z-50 bg-white/90 backdrop-blur-sm" id="loadingOverlay">
+<div class="min-h-full flex items-center justify-center px-4">
+<div class="w-full max-w-md rounded-3xl bg-white border border-slate-200 shadow-soft p-8 text-center">
+<div class="flex justify-center gap-2 mb-6">
+<span class="loading-dot w-3 h-3 rounded-full bg-accent"></span>
+<span class="loading-dot w-3 h-3 rounded-full bg-accent"></span>
+<span class="loading-dot w-3 h-3 rounded-full bg-accent"></span>
+</div>
+<div class="space-y-4 text-body">
+<p class="text-xl font-bold text-heading">プロフィールを整理しています</p>
+<p class="text-base">価値観や強みをまとめています</p>
+<p class="text-base">あなたらしさをプロフィールに反映しています</p>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+      const startButton = document.getElementById("startButton");
+      const chatArea = document.getElementById("chatArea");
+      const choiceArea = document.getElementById("choiceArea");
+      const confirmArea = document.getElementById("confirmArea");
+      const generateButton = document.getElementById("generateButton");
+      const loadingOverlay = document.getElementById("loadingOverlay");
+      const choiceButtons = document.querySelectorAll(".choice-button");
+
+      let selectedTheme = "";
+
+      startButton.addEventListener("click", () => {
+        chatArea.classList.remove("hidden");
+        choiceArea.classList.remove("hidden");
+        startButton.disabled = true;
+        startButton.classList.add("opacity-60", "cursor-not-allowed");
+        chatArea.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+
+      choiceButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          selectedTheme = button.dataset.theme;
+
+          choiceButtons.forEach((item) => {
+            item.classList.remove("border-accent", "bg-accent", "text-white", "shadow-soft");
+            item.classList.add("border-slate-200", "bg-white");
+            item.querySelectorAll("span").forEach((span) => {
+              span.classList.remove("text-white");
+              if (span.classList.contains("font-semibold")) {
+                span.classList.add("text-heading");
+              } else {
+                span.classList.add("text-body");
+              }
+            });
+          });
+
+          button.classList.remove("border-slate-200", "bg-white");
+          button.classList.add("border-accent", "bg-accent", "text-white", "shadow-soft");
+          button.querySelectorAll("span").forEach((span) => {
+            span.classList.remove("text-heading", "text-body");
+            span.classList.add("text-white");
+          });
+
+          confirmArea.classList.remove("hidden");
+          confirmArea.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+      });
+
+      generateButton.addEventListener("click", () => {
+        if (!selectedTheme) return;
+        loadingOverlay.classList.remove("hidden");
+        setTimeout(() => {
+          window.location.href = `profile_private.html?theme=${selectedTheme}`;
+        }, 1600);
+      });
+    </script>
+</body>
+</html>
