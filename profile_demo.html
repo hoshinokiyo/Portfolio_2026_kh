@@ -204,7 +204,7 @@
 </div>
 </section>
 
-<div class="mb-8 text-center">
+<div class="mb-8 mt-2 flex justify-end">
 <a class="text-xs sm:text-sm text-accent underline-offset-2 hover:underline hover:text-heading transition-colors" href="" onclick="window.location.reload(); return false;">デモ初期状態に戻る</a>
 </div>
 
@@ -427,6 +427,8 @@
         if (rawValue.length !== 1 || !["A", "B", "C"].includes(normalizedValue)) {
           chatError.textContent = "デモにつき A / B / C のいずれかを入力して送信してください";
           chatError.classList.remove("hidden");
+          chatInput.value = "";
+          chatInput.focus();
           return;
         }
 
@@ -456,6 +458,8 @@
         if (rawValue !== "はい") {
           chatError.textContent = "デモにつき「はい」と入力して送信してください";
           chatError.classList.remove("hidden");
+          chatInput.value = "";
+          chatInput.focus();
           return;
         }
 
