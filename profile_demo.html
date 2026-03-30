@@ -34,7 +34,7 @@
         color: #111111;
         background:
           radial-gradient(circle at top right, rgba(224, 177, 75, 0.18), transparent 28%),
-          linear-gradient(180deg, #fffdf8 0%, #f8f4ea 100%);
+          linear-gradient(180deg, #ffffff 0%, #fdf9ef 100%);
       }
       .chat-bubble-ai {
         background: #ffffff;
@@ -42,6 +42,84 @@
       }
       .chat-bubble-user {
         background: #EFD7A3;
+      }
+      .chat-shell {
+        background: rgba(239, 215, 163, 0.18);
+      }
+      .chat-messages-window {
+        height: 360px;
+        overflow-y: auto;
+        padding-right: 0.25rem;
+      }
+      @media (min-width: 640px) {
+        .chat-messages-window {
+          height: 420px;
+        }
+      }
+      .chat-avatar {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 9999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .chat-avatar-ai {
+        background: #E0B14B;
+        color: #111111;
+      }
+      .chat-avatar-user {
+        background: #AA7D1D;
+        color: #ffffff;
+      }
+      .chat-bubble {
+        position: relative;
+      }
+      .chat-bubble-ai::before {
+        content: "";
+        position: absolute;
+        left: -7px;
+        bottom: 10px;
+        width: 12px;
+        height: 12px;
+        background: #ffffff;
+        border-left: 1px solid rgba(142, 171, 236, 0.35);
+        border-bottom: 1px solid rgba(142, 171, 236, 0.35);
+        transform: rotate(45deg);
+      }
+      .chat-bubble-user::before {
+        content: "";
+        position: absolute;
+        right: -6px;
+        bottom: 10px;
+        width: 12px;
+        height: 12px;
+        background: #EFD7A3;
+        transform: rotate(45deg);
+      }
+      #chatMessages > .flex > div {
+        gap: 0.375rem;
+        align-items: flex-end;
+      }
+      .typing-bubble {
+        min-width: 90px;
+      }
+      .typing-dots span {
+        width: 0.4rem;
+        height: 0.4rem;
+        border-radius: 9999px;
+        background: #8EABEC;
+        display: inline-block;
+        animation: pulse 1.2s ease-in-out infinite;
+      }
+      .typing-dots span:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .typing-dots span:nth-child(3) {
+        animation-delay: 0.4s;
       }
       .fade-in {
         animation: fadeIn 0.35s ease forwards;
@@ -66,11 +144,15 @@
     </style>
 </head>
 <body class="font-body">
-<main class="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
-<section class="max-w-3xl mx-auto text-center mb-10 sm:mb-12">
-<h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-heading mb-5">AIと一緒に、あなたらしいプロフィールを整理する</h1>
-<p class="text-base sm:text-lg leading-relaxed text-body mb-5">質問に答えていくことで、履歴書では伝わりにくい「人となり」や強みを整理し、プロフィールとしてまとめていく体験デモです。</p>
-<div class="inline-block max-w-2xl rounded-2xl bg-secondary/35 px-5 py-4 text-sm sm:text-base leading-relaxed text-body">※このページはデモページです。プロフィール作成の流れを体験していただくため、途中で1ヶ所だけ操作をお願いしています。</div>
+<main class="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+<div class="mb-8 flex items-center justify-start text-sm sm:text-base">
+<a class="font-semibold text-heading transition-colors hover:opacity-80" href="toppage.html">ひととなり.ai</a>
+<a class="ml-4 text-accent underline-offset-2 hover:underline hover:text-heading transition-colors" href="for job seeker service.html">for job seeker serviceへ戻る</a>
+</div>
+<section class="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
+<h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight text-heading mb-5">AIと一緒に<br/>あなたらしいプロフィールを見つけていく</h1>
+<p class="text-base sm:text-lg leading-relaxed text-body mb-4">はじめまして、ひととなり.aiの.ai（ドットアイ）です。<br/><br/>私は、あなたへの質問を通して、あなたの考え方や大切にしていることを分析し、<br/>整理しながら、あなたらしいプロフィールづくりをお手伝いしています。<br/><br/>履歴書だけでは伝わりにくい部分も、採用者の方に少しでも伝わるかたちにしていきます。</p>
+<p class="text-xs sm:text-sm leading-relaxed text-body/60">※このページはデモです。体験のため、途中で2ヶ所ほど操作をお願いしています。</p>
 </section>
 
 <section class="mb-8">
@@ -105,42 +187,26 @@
 <button class="inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 font-bold text-body shadow-soft hover:opacity-95 transition-opacity" id="startButton" type="button">はい</button>
 </section>
 
-<section class="hidden mb-8" id="chatArea">
-<div class="bg-white rounded-3xl shadow-soft border border-slate-200/80 p-5 sm:p-7">
-<div class="space-y-5" id="chatMessages">
-<div class="flex justify-start fade-in">
-<div class="chat-bubble-ai max-w-[85%] rounded-2xl rounded-tl-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm">まずは、仕事をするうえで大切にしていることを教えてください。</div>
+<section class="mb-8 mt-2" id="chatArea">
+<div class="chat-shell rounded-3xl shadow-soft border border-slate-200/80 p-5 sm:p-7">
+<div class="chat-messages-window">
+<div class="space-y-5" id="chatMessages"></div>
 </div>
-<div class="flex justify-end fade-in">
-<div class="chat-bubble-user max-w-[85%] rounded-2xl rounded-tr-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm">自分らしく働けること、人との関係性、そして成果や貢献が正しく評価されることを大切にしています。</div>
+<div class="mt-6 border-t border-slate-200 pt-5">
+<div class="flex items-center gap-3">
+<input autocomplete="off" class="flex-1 rounded-2xl border border-slate-200 px-4 py-3 text-sm sm:text-base text-body placeholder:text-slate-400 focus:border-accent focus:ring-accent" id="chatInput" placeholder="AIとの対話は「はい」を押すと始まります" type="text"/>
+<button class="inline-flex h-12 min-w-12 items-center justify-center rounded-2xl bg-primary px-4 text-body shadow-soft transition-opacity hover:opacity-95 disabled:cursor-not-allowed disabled:opacity-50" id="chatSendButton" type="button">
+<span class="text-sm font-bold">送信</span>
+</button>
 </div>
-<div class="flex justify-start fade-in">
-<div class="chat-bubble-ai max-w-[85%] rounded-2xl rounded-tl-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm">どんな人たちと働くと、働きやすいと感じますか？</div>
-</div>
-<div class="flex justify-end fade-in">
-<div class="chat-bubble-user max-w-[85%] rounded-2xl rounded-tr-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm">互いにコミュニケーションを取りながら進められる人、人の笑顔を大切にできる人、相手の気持ちを理解しようとする人たちです。</div>
-</div>
-<div class="flex justify-start fade-in">
-<div class="chat-bubble-ai max-w-[85%] rounded-2xl rounded-tl-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm">これまでの経験の中で、やりがいや手応えを感じた場面を教えてください。</div>
-</div>
-<div class="flex justify-end fade-in">
-<div class="chat-bubble-user max-w-[85%] rounded-2xl rounded-tr-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm">プレゼンで評価された経験や、提案を通じて信頼を得て成約につながった経験、後輩に良い影響を与えられた経験です。</div>
-</div>
-<div class="flex justify-start fade-in">
-<div class="chat-bubble-ai max-w-[85%] rounded-2xl rounded-tl-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm">その経験の中で、どんな工夫や意識をしていましたか？</div>
-</div>
-<div class="flex justify-end fade-in">
-<div class="chat-bubble-user max-w-[85%] rounded-2xl rounded-tr-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm">相手に合わせて提案を変えること、角が立たないようにまとめること、そして未来でも「良かった」と思ってもらえる提案を意識していました。</div>
-</div>
-<div class="flex justify-start fade-in">
-<div class="chat-bubble-ai max-w-[85%] rounded-2xl rounded-tl-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm">山本さんのことをいろいろ教えてくれて、ありがとうございます。最後に、もう1つだけ教えてください。</div>
-</div>
-<div class="flex justify-start fade-in">
-<div class="chat-bubble-ai max-w-[85%] rounded-2xl rounded-tl-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm">仕事以外で大切にしている時間に近いものを選んでください。</div>
-</div>
+<p class="mt-3 hidden text-sm text-red-600" id="chatError">デモにつき A / B / C のいずれかを入力して送信してください</p>
 </div>
 </div>
 </section>
+
+<div class="mb-8 text-center">
+<a class="text-xs sm:text-sm text-accent underline-offset-2 hover:underline hover:text-heading transition-colors" href="" onclick="window.location.reload(); return false;">デモ初期状態に戻る</a>
+</div>
 
 <section class="hidden mb-8" id="choiceArea">
 <div class="bg-white rounded-3xl shadow-soft border border-slate-200/80 p-6 sm:p-8">
@@ -193,6 +259,11 @@
 <script>
       const startButton = document.getElementById("startButton");
       const chatArea = document.getElementById("chatArea");
+      const chatMessages = document.getElementById("chatMessages");
+      const chatMessagesWindow = chatArea.querySelector(".chat-messages-window");
+      const chatInput = document.getElementById("chatInput");
+      const chatSendButton = document.getElementById("chatSendButton");
+      const chatError = document.getElementById("chatError");
       const choiceArea = document.getElementById("choiceArea");
       const confirmArea = document.getElementById("confirmArea");
       const generateButton = document.getElementById("generateButton");
@@ -200,42 +271,244 @@
       const choiceButtons = document.querySelectorAll(".choice-button");
 
       let selectedTheme = "";
+      let inputMode = "disabled";
+      let typingMessage = null;
+      let hasStartedConversation = false;
+
+      const scriptedMessages = [
+        {
+          type: "ai",
+          text: "こんにちは、山本さん。プロフィール作成をサポートします。\n\nこれからお仕事のことだけでなく、あなたらしさが伝わるように、いくつか質問させていただきます。\n\n転職に直接関係ないことも伺うことがありますが、よりあなたらしいプロフィールを作るための参考にさせていただきます。\n\n答えにくいことは無理にお答えいただかなくて大丈夫ですので、安心してお話しください。\n\nそれでは、はじめていきますね。"
+        },
+        {
+          type: "ai",
+          text: "まずは、仕事をするうえで大切にしていることを教えてください。"
+        },
+        {
+          type: "user",
+          text: "自分らしく働けること、人との関係性、そして成果や貢献が正しく評価されることを大切にしています。"
+        },
+        {
+          type: "ai",
+          text: "どんな人たちと働くと、働きやすいと感じますか？"
+        },
+        {
+          type: "user",
+          text: "互いにコミュニケーションを取りながら進められる人、人の笑顔を大切にできる人、相手の気持ちを理解しようとする人たちです。"
+        },
+        {
+          type: "ai",
+          text: "これまでの経験の中で、やりがいや手応えを感じた場面を教えてください。"
+        },
+        {
+          type: "user",
+          text: "プレゼンで評価された経験や、提案を通じて信頼を得て成約につながった経験、後輩に良い影響を与えられた経験です。"
+        },
+        {
+          type: "ai",
+          text: "その経験の中で、どんな工夫や意識をしていましたか？"
+        },
+        {
+          type: "user",
+          text: "相手に合わせて提案を変えること、角が立たないようにまとめること、そして未来でも「良かった」と思ってもらえる提案を意識していました。"
+        },
+        {
+          type: "ai",
+          text: "山本さんのことをいろいろ教えてくれて、ありがとうございます。最後に、もう1つだけ教えてください。"
+        },
+        {
+          type: "ai",
+          text: "仕事以外で大切にしている時間に近いものを選んでください。\nA：旅行\nB：フラワーアレンジ\nC：読書\n\n入力欄に A / B / C を入力して送信してください。"
+        }
+      ];
+
+      function addMessage(type, text) {
+        const wrapper = document.createElement("div");
+        wrapper.className = `flex ${type === "ai" ? "justify-start" : "justify-end"} fade-in`;
+
+        const row = document.createElement("div");
+        row.className = `flex max-w-[92%] items-end gap-2 ${type === "ai" ? "" : "flex-row-reverse"}`;
+
+        const avatar = document.createElement("div");
+        avatar.className = `chat-avatar ${type === "ai" ? "chat-avatar-ai" : "chat-avatar-user"}`;
+        avatar.textContent = type === "ai" ? ".ai" : "山本";
+
+        const bubble = document.createElement("div");
+        bubble.className = `chat-bubble ${type === "ai" ? "chat-bubble-ai rounded-2xl rounded-tl-md" : "chat-bubble-user rounded-2xl rounded-tr-md"} px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm whitespace-pre-line`;
+        bubble.textContent = text;
+
+        row.appendChild(avatar);
+        row.appendChild(bubble);
+        wrapper.appendChild(row);
+        chatMessages.appendChild(wrapper);
+        chatMessagesWindow.scrollTo({
+          top: chatMessagesWindow.scrollHeight,
+          behavior: "smooth"
+        });
+      }
+
+      function addTyping() {
+        removeTyping();
+
+        const wrapper = document.createElement("div");
+        wrapper.className = "flex justify-start fade-in";
+
+        const row = document.createElement("div");
+        row.className = "flex max-w-[92%] items-end gap-2";
+
+        const avatar = document.createElement("div");
+        avatar.className = "chat-avatar chat-avatar-ai";
+        avatar.textContent = ".ai";
+
+        const bubble = document.createElement("div");
+        bubble.className = "chat-bubble chat-bubble-ai typing-bubble rounded-2xl rounded-tl-md px-4 py-3 text-sm sm:text-base leading-relaxed shadow-sm";
+        bubble.innerHTML = '<div class="flex items-center gap-2"><span class="text-body">入力中</span><div class="typing-dots flex items-center gap-1"><span></span><span></span><span></span></div></div>';
+
+        row.appendChild(avatar);
+        row.appendChild(bubble);
+        wrapper.appendChild(row);
+        chatMessages.appendChild(wrapper);
+        chatMessagesWindow.scrollTo({
+          top: chatMessagesWindow.scrollHeight,
+          behavior: "smooth"
+        });
+        typingMessage = wrapper;
+      }
+
+      function removeTyping() {
+        if (typingMessage) {
+          typingMessage.remove();
+          typingMessage = null;
+        }
+      }
+
+      function enableChoiceInput() {
+        inputMode = "choice";
+        chatInput.disabled = false;
+        chatSendButton.disabled = false;
+        chatInput.placeholder = "A / B / C を入力";
+        chatInput.value = "";
+        chatInput.focus();
+      }
+
+      function runConversation() {
+        scriptedMessages.forEach((message, index) => {
+          setTimeout(() => {
+            if (message.type === "ai") {
+              addTyping();
+              setTimeout(() => {
+                removeTyping();
+                addMessage(message.type, message.text);
+
+                if (index === scriptedMessages.length - 1) {
+                  enableChoiceInput();
+                }
+              }, 800);
+            } else {
+              addMessage(message.type, message.text);
+            }
+          }, 500 + index * 1000);
+        });
+      }
+
+      function setConfirmMode() {
+        inputMode = "confirm";
+        chatInput.disabled = false;
+        chatSendButton.disabled = false;
+        chatInput.placeholder = "「はい」と入力してください";
+        chatInput.value = "";
+        chatInput.focus();
+      }
+
+      function submitChoice() {
+        const rawValue = chatInput.value.trim();
+        const normalizedValue = rawValue.toUpperCase();
+
+        if (rawValue.length !== 1 || !["A", "B", "C"].includes(normalizedValue)) {
+          chatError.textContent = "デモにつき A / B / C のいずれかを入力して送信してください";
+          chatError.classList.remove("hidden");
+          return;
+        }
+
+        chatError.classList.add("hidden");
+        addMessage("user", normalizedValue);
+
+        selectedTheme =
+          normalizedValue === "A"
+            ? "travel"
+            : normalizedValue === "B"
+              ? "flower"
+              : "book";
+
+        setTimeout(() => {
+          addTyping();
+          setTimeout(() => {
+            removeTyping();
+            addMessage("ai", "ありがとうございます。\nこの内容でプロフィールをまとめてもよろしいですか？\nよろしければ、入力欄に『はい』と入力して送信してください。");
+            setConfirmMode();
+          }, 800);
+        }, 300);
+      }
+
+      function submitConfirm() {
+        const rawValue = chatInput.value.trim();
+
+        if (rawValue !== "はい") {
+          chatError.textContent = "デモにつき「はい」と入力して送信してください";
+          chatError.classList.remove("hidden");
+          return;
+        }
+
+        chatError.classList.add("hidden");
+        addMessage("user", "はい");
+        loadingOverlay.classList.remove("hidden");
+        setTimeout(() => {
+          window.location.href = `profile_private.html?theme=${selectedTheme}`;
+        }, 1600);
+      }
+
+      chatInput.disabled = true;
+      chatSendButton.disabled = true;
 
       startButton.addEventListener("click", () => {
-        chatArea.classList.remove("hidden");
-        choiceArea.classList.remove("hidden");
+        if (hasStartedConversation) return;
+        hasStartedConversation = true;
         startButton.disabled = true;
         startButton.classList.add("opacity-60", "cursor-not-allowed");
         chatArea.scrollIntoView({ behavior: "smooth", block: "start" });
+        runConversation();
       });
 
       choiceButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          selectedTheme = button.dataset.theme;
+        button.addEventListener("click", () => {});
+      });
 
-          choiceButtons.forEach((item) => {
-            item.classList.remove("border-accent", "bg-accent", "text-white", "shadow-soft");
-            item.classList.add("border-slate-200", "bg-white");
-            item.querySelectorAll("span").forEach((span) => {
-              span.classList.remove("text-white");
-              if (span.classList.contains("font-semibold")) {
-                span.classList.add("text-heading");
-              } else {
-                span.classList.add("text-body");
-              }
-            });
-          });
+      chatInput.addEventListener("input", () => {
+        chatError.classList.add("hidden");
 
-          button.classList.remove("border-slate-200", "bg-white");
-          button.classList.add("border-accent", "bg-accent", "text-white", "shadow-soft");
-          button.querySelectorAll("span").forEach((span) => {
-            span.classList.remove("text-heading", "text-body");
-            span.classList.add("text-white");
-          });
+        if (inputMode === "choice" && chatInput.value.length > 1) {
+          chatError.textContent = "デモにつき A / B / C のいずれかを入力して送信してください";
+          chatError.classList.remove("hidden");
+        }
+      });
 
-          confirmArea.classList.remove("hidden");
-          confirmArea.scrollIntoView({ behavior: "smooth", block: "center" });
-        });
+      chatInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          if (inputMode === "choice") {
+            submitChoice();
+          } else if (inputMode === "confirm") {
+            submitConfirm();
+          }
+        }
+      });
+
+      chatSendButton.addEventListener("click", () => {
+        if (inputMode === "choice") {
+          submitChoice();
+        } else if (inputMode === "confirm") {
+          submitConfirm();
+        }
       });
 
       generateButton.addEventListener("click", () => {
