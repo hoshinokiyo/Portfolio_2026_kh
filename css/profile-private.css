@@ -248,3 +248,85 @@ body.theme-analysis .profile-hero-media {
   object-fit: cover;
   filter: saturate(1.05) brightness(1.02);
 }
+
+body.theme-interest {
+  background: linear-gradient(
+    180deg,
+    #EAF6FF 0%,
+    #FDFEFF 45%,
+    #FFF8EE 100%
+  );
+}
+
+body.theme-interest .profile-hero {
+  border-radius: 24px;
+  box-shadow: 0 14px 36px rgba(79, 163, 255, 0.18);
+  overflow: hidden;
+}
+
+body.theme-interest .profile-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.88) 0%,
+    rgba(234,246,255,0.72) 30%,
+    rgba(255,255,255,0.18) 65%,
+    rgba(255,255,255,0) 100%
+  );
+  z-index: 1;
+  border-radius: inherit;
+}
+
+body.theme-interest .profile-hero > div {
+  position: relative;
+  z-index: 2;
+}
+
+body.theme-interest .profile-heading-main {
+  color: #2E78D6;
+}
+
+body.theme-interest .profile-heading-section {
+  color: #2B5FA8;
+}
+
+body.theme-interest .profile-hero-tag:nth-child(3n+1),
+body.theme-interest .profile-skill-tag:nth-child(3n+1) {
+  background: #D9F0FF;
+  color: #1F355C;
+}
+
+body.theme-interest .profile-hero-tag:nth-child(3n+2),
+body.theme-interest .profile-skill-tag:nth-child(3n+2) {
+  background: #FDE2DA;
+  color: #1F355C;
+}
+
+body.theme-interest .profile-hero-tag:nth-child(3n+3),
+body.theme-interest .profile-skill-tag:nth-child(3n+3) {
+  background: #FFF1C9;
+  color: #1F355C;
+}
+
+body.theme-interest .profile-hero-tag,
+body.theme-interest .profile-skill-tag {
+  border-radius: 999px;
+  border: none;
+}
+
+body.theme-interest .profile-work-card,
+body.theme-interest .profile-portfolio-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+body.theme-interest .profile-accent-icon {
+  color: #4FA3FF;
+}
+
+body.theme-interest .profile-hero-media {
+  object-fit: cover;
+}
