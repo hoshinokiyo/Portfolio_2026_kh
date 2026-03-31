@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8"/>
@@ -318,7 +318,7 @@
         },
         {
           type: "ai",
-          text: "仕事以外で大切にしている時間に近いものを選んでください。\nA：旅行\nB：フラワーアレンジ\nC：読書\n\n入力欄に A / B / C を入力して送信してください。"
+          text: "最後に、プロフィールの仕上げ方について教えてください。\n\nどのようなイメージでプロフィールを仕上げますか？\n\nA：ビジネスライクに仕上げる\nB：AIの分析結果をもとに仕上げる\nC：好きなことや興味をもとに仕上げる\n\n入力欄に A / B / C を入力して送信してください。"
         }
       ];
 
@@ -437,10 +437,10 @@
 
         selectedTheme =
           normalizedValue === "A"
-            ? "travel"
+            ? "business"
             : normalizedValue === "B"
-              ? "flower"
-              : "book";
+              ? "analysis"
+              : "interest";
 
         setTimeout(() => {
           addTyping();
@@ -525,3 +525,5 @@
     </script>
 </body>
 </html>
+
+
