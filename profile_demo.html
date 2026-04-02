@@ -269,6 +269,7 @@
       const generateButton = document.getElementById("generateButton");
       const loadingOverlay = document.getElementById("loadingOverlay");
       const choiceButtons = document.querySelectorAll(".choice-button");
+      const finalQuestionText = "最後に、プロフィールの仕上げ方について教えてください。\n\nどのようなイメージでプロフィールを仕上げますか？\n\nA：ビジネスライクに仕上げる\nB：AIの分析結果をもとに仕上げる\nC：好きなことや興味をもとに仕上げる\n\n入力欄に A / B / C を入力して送信してください。";
 
       let selectedTheme = "";
       let inputMode = "disabled";
@@ -318,13 +319,16 @@
         },
         {
           type: "ai",
-          text: "最後に、プロフィールの仕上げ方について教えてください。\n\nどのようなイメージでプロフィールを仕上げますか？\n\nA：ビジネスライクに仕上げる\nB：AIの分析結果をもとに仕上げる\nC：好きなことや興味をもとに仕上げる\n\n入力欄に A / B / C を入力して送信してください。"
+          text: finalQuestionText
         }
       ];
 
       function addMessage(type, text) {
         const wrapper = document.createElement("div");
         wrapper.className = `flex ${type === "ai" ? "justify-start" : "justify-end"} fade-in`;
+        if (text === finalQuestionText) {
+          wrapper.id = "final-question";
+        }
 
         const row = document.createElement("div");
         row.className = `flex max-w-[92%] items-end gap-2 ${type === "ai" ? "" : "flex-row-reverse"}`;
@@ -411,6 +415,31 @@
         });
       }
 
+      function lockStartButton() {
+        startButton.disabled = true;
+        startButton.classList.add("opacity-60", "cursor-not-allowed");
+      }
+
+      function scrollToFinalQuestion() {
+        const finalQuestion = document.getElementById("final-question");
+        if (finalQuestion) {
+          finalQuestion.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+
+      function restoreFinalQuestionState() {
+        if (hasStartedConversation) return;
+        hasStartedConversation = true;
+        lockStartButton();
+        removeTyping();
+        chatMessages.innerHTML = "";
+        scriptedMessages.forEach((message) => addMessage(message.type, message.text));
+        enableChoiceInput();
+        setTimeout(() => {
+          scrollToFinalQuestion();
+        }, 150);
+      }
+
       function setConfirmMode() {
         inputMode = "confirm";
         chatInput.disabled = false;
@@ -477,8 +506,7 @@
       startButton.addEventListener("click", () => {
         if (hasStartedConversation) return;
         hasStartedConversation = true;
-        startButton.disabled = true;
-        startButton.classList.add("opacity-60", "cursor-not-allowed");
+        lockStartButton();
         chatArea.scrollIntoView({ behavior: "smooth", block: "start" });
         runConversation();
       });
@@ -522,6 +550,10 @@
           window.location.href = `profile_private.html?theme=${selectedTheme}`;
         }, 1600);
       });
+
+      if (window.location.hash === "#final-question") {
+        restoreFinalQuestionState();
+      }
     </script>
 </body>
 </html>
