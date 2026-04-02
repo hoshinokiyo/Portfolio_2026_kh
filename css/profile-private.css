@@ -330,3 +330,51 @@ body.theme-interest .profile-accent-icon {
 body.theme-interest .profile-hero-media {
   object-fit: cover;
 }
+
+body.theme-business .profile-breadcrumbs,
+body.theme-business .profile-breadcrumbs .material-symbols-outlined {
+  color: #64748b !important;
+}
+
+body.theme-business .profile-breadcrumb-link {
+  color: #475569 !important;
+  transition: color 0.2s ease;
+}
+
+body.theme-business .profile-breadcrumb-link:hover {
+  color: #1f2a44 !important;
+}
+
+body.theme-business .profile-breadcrumb-current {
+  color: #1f2a44 !important;
+}
+
+body.theme-business .profile-top-logout {
+  background: #f8fafc !important;
+  color: #334155 !important;
+  border: 1px solid #dbe2ea;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+body.theme-business .profile-top-logout:hover {
+  background: #eef2f7 !important;
+  color: #1f2a44 !important;
+  border-color: #cbd5e1;
+}
+
+body.theme-business .profile-bottom-cta {
+  background: #ffffff !important;
+  color: #1f2a44 !important;
+  border: 1px solid #dbe2ea;
+  border-radius: 9999px !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+body.theme-business .profile-bottom-cta:hover {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+  border-color: #94a3b8;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.08);
+  transform: translateY(-1px);
+}
