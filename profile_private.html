@@ -76,34 +76,23 @@
     </script>
 </head>
 <body class="bg-background text-on-surface font-body leading-relaxed theme-flower">
-<!-- TopNavBar -->
-<header class="bg-[#fbf9f5] dark:bg-stone-950 shadow-sm dark:shadow-none docked full-width top-0 z-50 sticky transition-all">
-<div class="flex justify-between items-center w-full px-6 py-3 max-w-7xl mx-auto">
-<div class="flex items-center gap-8">
-<a class="bg-[#E0B14B] px-3 py-1 rounded-sm text-lg font-bold text-white font-['Plus_Jakarta_Sans']" href="toppage.html">
-                    ひととなり.ai
-                </a>
-<nav class="hidden md:flex gap-6 items-center">
-<a class="text-[#7a5900] font-bold border-b-2 border-[#e0b14b] pb-1 font-['Plus_Jakarta_Sans'] text-sm tracking-tight transition-all" href="service.html">サービス紹介</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] font-['Plus_Jakarta_Sans'] text-sm tracking-tight hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors px-2 py-1 rounded" href="guide.html">採用担当の方へ</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] font-['Plus_Jakarta_Sans'] text-sm tracking-tight hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors px-2 py-1 rounded" href="for job seeker service.html">求職者の方へ</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] font-['Plus_Jakarta_Sans'] text-sm tracking-tight hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors px-2 py-1 rounded" href="contact.html">お問い合わせ</a>
-</nav>
-</div>
-<div class="flex items-center gap-4">
-<button class="text-[#7a5900] dark:text-[#e0b14b] font-['Plus_Jakarta_Sans'] text-sm tracking-tight px-4 py-2 hover:bg-stone-100 transition-colors rounded-lg">ログアウト</button>
-</div>
-</div>
-</header>
 <main class="max-w-7xl mx-auto px-6 py-12">
+<div class="flex justify-between items-center gap-4 mb-8">
 <!-- Breadcrumbs -->
-<nav class="flex items-center gap-2 mb-8 text-xs font-medium text-stone-500">
+<nav class="flex items-center gap-2 text-xs font-medium text-stone-500">
 <a class="hover:text-tertiary" href="#">TOP</a>
 <span class="material-symbols-outlined text-[14px]">chevron_right</span>
 <a class="hover:text-tertiary" href="profile_demo.html#final-question">プロフィール作成</a>
 <span class="material-symbols-outlined text-[14px]">chevron_right</span>
 <span class="text-on-surface">完成プロフィール</span>
 </nav>
+<a
+href="#"
+class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-[#EAF6FF] text-[#2E78D6] text-xs font-medium hover:bg-[#dceeff] transition"
+>
+<span class="material-symbols-outlined text-sm">logout</span>
+ログアウト </a>
+</div>
 <!-- Hero Section: Editorial Layout -->
 <section class="mb-16 profile-hero">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -284,11 +273,15 @@
 </div>
 </div>
 </section>
-<div class="mt-10 text-center">
-<a class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white text-[#2E78D6] text-sm font-medium shadow hover:bg-gray-100 transition" href="profile_demo.html#final-question">
+<div class="mt-12 flex justify-center gap-4">
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#4FA3FF] text-white text-sm font-medium shadow hover:opacity-90 transition" href="profile_demo.html#final-question">
 <span class="material-symbols-outlined text-base">edit</span>
-        仕上げ方を編集する
-      </a>
+    仕上げ方を編集する
+  </a>
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#EAF6FF] text-[#2E78D6] text-sm font-medium shadow hover:bg-[#dceeff] transition" href="#">
+<span class="material-symbols-outlined text-base">logout</span>
+    ログアウト
+  </a>
 </div>
 </main>
 <script>
@@ -313,18 +306,6 @@
         });
       })();
     </script>
-<!-- Footer -->
-<footer class="bg-[#EFD7A3]/20 dark:bg-stone-900/40 w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto font-['Plus_Jakarta_Sans'] text-xs leading-relaxed">
-<div class="mb-8 md:mb-0">
-<div class="text-lg font-bold text-[#7a5900] dark:text-[#e0b14b] mb-4">ひととなり.ai</div>
-<p class="text-stone-600 dark:text-stone-400">© ひととなり.ai All Rights Reserved.</p>
-</div>
-<div class="flex flex-wrap justify-center gap-6 md:gap-10">
-<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity" href="contact.html">お問い合わせ</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity" href="#">利用規約</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity underline font-medium" href="#">プライバシーポリシー</a>
-</div>
-</footer>
 </body></html>
 
 
