@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface": "#1b1c1a",
+              "on-primary-fixed": "#261900",
+              "surface-variant": "#e4e2de",
+              "surface-container-highest": "#e4e2de",
+              "on-tertiary-fixed-variant": "#00419d",
+              "inverse-surface": "#30312e",
+              "on-secondary": "#ffffff",
+              "outline": "#807664",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-container": "#9ab6ff",
+              "on-error": "#ffffff",
+              "surface-bright": "#fbf9f5",
+              "primary-container": "#e0b14b",
+              "on-surface-variant": "#4e4636",
+              "on-tertiary-fixed": "#001946",
+              "on-primary-fixed-variant": "#5c4300",
+              "on-secondary-fixed-variant": "#55451e",
+              "primary": "#7a5900",
+              "on-error-container": "#93000a",
+              "surface-tint": "#7a5900",
+              "secondary": "#6e5c33",
+              "on-primary-container": "#5e4400",
+              "inverse-primary": "#f0bf58",
+              "surface-container-low": "#f5f3ef",
+              "error": "#ba1a1a",
+              "on-secondary-fixed": "#251a00",
+              "tertiary-fixed-dim": "#b1c5ff",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#0043a1",
+              "primary-fixed-dim": "#f0bf58",
+              "on-secondary-container": "#746238",
+              "inverse-on-surface": "#f2f0ed",
+              "secondary-fixed": "#f8e0ab",
+              "primary-fixed": "#ffdea1",
+              "secondary-container": "#f8e0ab",
+              "tertiary": "#2359be",
+              "error-container": "#ffdad6",
+              "surface-dim": "#dbdad6",
+              "surface-container-high": "#eae8e4",
+              "surface-container": "#efeeea",
+              "secondary-fixed-dim": "#dbc491",
+              "on-primary": "#ffffff",
+              "outline-variant": "#d2c5b1",
+              "tertiary-fixed": "#d9e2ff",
+              "background": "#fbf9f5",
+              "on-background": "#1b1c1a",
+              "surface": "#fbf9f5"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container/30">
+<!-- TopNavBar -->
+<header class="bg-[#fbf9f5] dark:bg-stone-950 shadow-sm dark:shadow-none docked full-width top-0 z-50 sticky transition-all">
+<div class="flex justify-between items-center w-full px-6 py-3 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<a class="bg-[#E0B14B] px-3 py-1 rounded-sm text-lg font-bold text-white font-['Plus_Jakarta_Sans']" href="index.html">
+                    邵ｺ・ｲ邵ｺ・ｨ邵ｺ・ｨ邵ｺ・ｪ郢ｧ繝ｻai
+                </a>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-[#7a5900] font-bold border-b-2 border-[#e0b14b] pb-1 font-['Plus_Jakarta_Sans'] text-sm tracking-tight transition-all" href="service.html">郢ｧ・ｵ郢晢ｽｼ郢晁侭縺幃ｏ・ｹ闔峨・/a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] font-['Plus_Jakarta_Sans'] text-sm tracking-tight hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors px-2 py-1 rounded" href="guide.html">隰暦ｽ｡騾包ｽｨ隲｡繝ｻ・ｽ阮吶・隴・ｽｹ邵ｺ・ｸ</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#7a5900] font-['Plus_Jakarta_Sans'] text-sm tracking-tight hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors px-2 py-1 rounded" href="for job seeker service.html">雎弱ｊ繝ｻ髢繝ｻ繝ｻ隴・ｽｹ邵ｺ・ｸ</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#7a5900] dark:text-[#e0b14b] font-['Plus_Jakarta_Sans'] text-sm tracking-tight px-4 py-2 hover:bg-stone-100 transition-colors rounded-lg">郢晢ｽｭ郢ｧ・ｰ郢ｧ・､郢晢ｽｳ</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-16 pb-24 md:pt-24 md:pb-32 px-6">
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-fixed-variant text-xs font-bold mb-6">
+<span class="material-symbols-outlined text-sm">colors_spark</span>
+                        陞ｻ・･雎・ｽｴ隴厄ｽｸ邵ｺ・ｧ邵ｺ・ｯ髫穂ｹ昶斡邵ｺ・ｪ邵ｺ繝ｻﾂ竏ｽ・ｺ・ｺ邵ｺ・ｨ邵ｺ・ｪ郢ｧ鄙ｫ・定耳譏ｴ竏ｴ郢ｧ繝ｻ                    </div>
+<h1 class="text-5xl md:text-7xl font-extrabold text-on-surface leading-[1.1] mb-6 tracking-tight">
+                        陞ｻ・･雎・ｽｴ隴厄ｽｸ邵ｺ・ｧ邵ｺ・ｯ髫穂ｹ昶斡邵ｺ・ｪ邵ｺ繝ｻspan class="text-primary">邵ｲ蠕｡・ｺ・ｺ邵ｺ・ｨ邵ｺ・ｪ郢ｧ鄙ｫﾂ繝ｻ/span>邵ｺ荵晢ｽ芽沂荵昶穐郢ｧ蛹ｺ豐ｻ騾包ｽｨ
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-10 max-w-lg">
+                        驍ｨ譴ｧ・ｭ・ｴ邵ｺ・ｰ邵ｺ莉｣縲堤ｸｺ・ｯ髫穂ｹ昶斡邵ｺ・ｫ邵ｺ荳奇ｼ樒ｸｲ蠕｡・ｺ・ｺ邵ｺ・ｨ邵ｺ・ｪ郢ｧ鄙ｫﾂ髦ｪ・定ｬｨ・ｴ騾・・・邵ｲ繝ｻ謫・ｬ暦ｽ･陷鷹亂竊鍋ｸｺ雍具ｽｺ蛛ｵ・樒ｹｧ蝣､陦咲ｸｺ・｣邵ｺ貅ｽ諞ｾ隲ｷ荵昴定汞・ｾ髫ｧ・ｱ邵ｺ蠕後堤ｸｺ髦ｪ・狗ｹｧ蛹ｻ竕ｧ邵ｺ・ｫ邵ｺ蜉ｱ竏ｪ邵ｺ蜷ｶﾂ繧・・郢ｧ遒・ｼ・ｸｺ繝ｻ・・ｫ､譏ｴ・樣恷・ｼ邵ｺ・ｿ郢ｧ蜻茨ｽｸ蟶呻ｽ臥ｸｺ蜉ｱﾂ竏夲ｽ育ｹｧ鬘費ｽｴ讎奇ｽｾ邇ｲ笏邵ｺ・ｮ邵ｺ繧・ｽ玖怎・ｺ闔ｨ螢ｹ・樒ｸｺ・ｫ邵ｺ・､邵ｺ・ｪ邵ｺ蛛ｵ・狗ｸｺ貅假ｽ∫ｸｺ・ｮ郢ｧ・ｵ郢晢ｽｼ郢晁侭縺帷ｸｺ・ｧ邵ｺ蜷ｶﾂ繝ｻ                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="px-8 py-4 bg-secondary-fixed text-on-secondary-fixed-variant rounded-xl font-bold text-lg hover:shadow-lg transition-all flex items-center justify-center gap-2" href="guide.html">
+                            隰暦ｽ｡騾包ｽｨ隲｡繝ｻ・ｽ阮吶・隴・ｽｹ邵ｺ・ｯ邵ｺ阮吮蔓郢ｧ繝ｻ                            <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="px-8 py-4 bg-surface-container-high text-on-surface rounded-xl font-bold text-lg hover:bg-surface-container-highest transition-all flex items-center justify-center gap-2" href="for job seeker service.html">
+                            雎弱ｊ繝ｻ髢繝ｻ繝ｻ隴・ｽｹ邵ｺ・ｯ邵ｺ阮吮蔓郢ｧ繝ｻ                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-20 -right-20 w-96 h-96 bg-primary-container/20 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-20 -left-10 w-64 h-64 bg-tertiary-container/20 rounded-full blur-3xl"></div>
+<div class="relative bg-white rounded-3xl editorial-shadow p-4 overflow-hidden border border-white/50">
+<img alt="Main Visual" class="w-full h-[500px] object-cover rounded-2xl" data-alt="AI visualization of a person's core values and unique personality traits" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaW7WkxCrpymhA4uHFYD8xnSWLIpJJ64tQioH9iMmenLRrUvkCh7kvAzj9rF5FEWdFnkovwBBKn_qaR-dR7fDWiOyZD0rZHF4EboSlKkG_E6ycgBIQ25HBK5pECazDg1fGmOEFAQDlpPvBTA1n7suAqjlV9c9IzpMNq0bNjvSswu_FesYdVksWdOOXSeoyAu5m2RCTQ8Seq46y4CdjBfO0FrJFw_ZAId2go5dMW080zddLcmGW6FFsw2MTSFuL3VxXP5m4ulzxu_Kc"/>
+<div class="absolute bottom-8 left-8 right-8 bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-white/50 flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<div>
+<div class="text-xs font-bold text-primary mb-1">邵ｺ譏ｴ繝ｻ闔・ｺ郢ｧ蟲ｨ・邵ｺ霈披ｲ髫穂ｹ昶斡邵ｺ・ｦ邵ｺ荳奇ｽ・/div>
+<div class="text-sm text-on-surface font-medium">驍ｨ遒・ｽｨ阮吶・髢ｭ譴ｧ蜍ｹ郢ｧ繝ｻ・ｾ・｡陋滂ｽ､髫包ｽｳ邵ｺ蠕｡・ｼ譏ｴ・冗ｹｧ荵晢ｼ・ｸｺ・ｨ邵ｺ・ｧ邵ｲ繝ｻ謫・ｬ暦ｽ･陷鷹亂竊鍋ｸｺ雍具ｽｺ蛛ｵ・樒ｹｧ蝣､陦咲ｹｧ荵昶ｳ邵ｺ・｣邵ｺ荵晢ｿ邵ｺ・ｫ邵ｺ・ｪ郢ｧ鄙ｫ竏ｪ邵ｺ繝ｻ/div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Problems Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">隰暦ｽ｡騾包ｽｨ邵ｺ・ｫ邵ｺ鄙ｫ・郢ｧ蛹ｺ驥瑚氛蛟･繝ｻ髫ｱ・ｲ鬯倥・/h2>
+<p class="text-on-surface-variant">陟墓瑳謫らｸｺ・ｮ邵ｲ譴ｧ謫・脂・ｶ邵ｲ髦ｪ笆｡邵ｺ莉｣縲帝ｩ包ｽｸ邵ｺ・ｶ隰暦ｽ｡騾包ｽｨ邵ｺ蠕個竏ｬ・ｦ邇冶ｪ邵ｺ・ｨ邵ｺ蜉ｱ窶ｻ邵ｺ繝ｻ・狗ｹｧ繧・・邵ｺ蠕娯旺郢ｧ鄙ｫ竏ｪ邵ｺ繝ｻ/p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest p-8 rounded-2xl transition-transform hover:-translate-y-2">
+<div class="w-12 h-12 bg-error-container text-error rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">unfold_more</span>
+</div>
+<h3 class="text-xl font-bold mb-4">郢ｧ・ｹ郢ｧ・ｭ郢晢ｽｫ邵ｺ・ｮ郢ｧ・ｺ郢晢ｽｬ</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                            驍ｨ譴ｧ・ｭ・ｴ隴厄ｽｸ闕ｳ鄙ｫ繝ｻ郢ｧ・ｹ郢ｧ・ｭ郢晢ｽｫ邵ｺ・ｯ陷ｷ驛√・邵ｺ蜉ｱ窶ｻ邵ｺ繝ｻ窶ｻ郢ｧ繧・竏晢ｽｮ貊・怙邵ｺ・ｮ霑ｴ・ｾ陜｣・ｴ邵ｺ・ｧ雎弱ｅ・∫ｹｧ荵敖蠕｡・ｻ遨ゑｽｺ荵昴・鬨ｾ・ｲ郢ｧ竏ｵ蟀ｿ邵ｲ髦ｪ・・ｸｲ譴ｧﾂ譎・繝ｻ繝ｻ雎ｺ・ｱ邵ｺ霈板髦ｪ窶ｲ闕ｳﾂ髢ｾ・ｴ邵ｺ蜉ｱ竊醍ｸｺ繝ｻﾂ繝ｻ
+                        </p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-2xl transition-transform hover:-translate-y-2">
+<div class="w-12 h-12 bg-error-container text-error rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">door_front</span>
+</div>
+<h3 class="text-xl font-bold mb-4">郢ｧ・ｫ郢晢ｽｫ郢昶・ﾎ慕ｹ晢ｽｼ邵ｺ・ｮ陞｢繝ｻ/h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                            郢昶・繝ｻ郢晢｣ｰ邵ｺ・ｮ鬮ｮ・ｰ陜暦ｽｲ雎悟干・・耳竏ｵ・･・ｭ邵ｺ・ｮ關難ｽ｡陋滂ｽ､髫包ｽｳ邵ｺ・ｨ邵ｲ竏敖蜻ｵ・｣諛・繝ｻ繝ｻ郢昜ｻ｣繝ｻ郢ｧ・ｽ郢晉ｿｫﾎ懃ｹ昴・縺・ｸｺ謔溷桶邵ｺ・ｿ陷ｷ蛹ｻ・冗ｸｺ螢ｹﾂ竏ｬ繝ｻ陷牙ｸ呻ｽ定ｭ崢陞滂ｽｧ鬮ｯ蜊・験隰・ｮ邵ｺ・ｧ邵ｺ髦ｪ竊醍ｸｺ繝ｻﾂ繝ｻ
+                        </p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-2xl transition-transform hover:-translate-y-2">
+<div class="w-12 h-12 bg-error-container text-error rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">exit_to_app</span>
+</div>
+<h3 class="text-xl font-bold mb-4">隴鯉ｽｩ隴帶ｻ・ｱｬ髢ｨ・ｷ</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                            陷茨ｽ･驕会ｽｾ陟募ｾ娯・邵ｲ譴ｧﾂ譏ｴ笆ｲ邵ｺ・ｦ邵ｺ繝ｻ笳・ｸｺ・ｮ邵ｺ・ｨ鬩戊ｼ披鴬邵ｲ髦ｪ竊堤ｸｺ繝ｻ竕ｧ郢ｧ・ｮ郢晢ｽ｣郢昴・繝ｻ邵ｺ讙主験騾墓ｺ假ｼ邵ｲ竏ｫ豢定ｭ帶ｻ・ｿ｣邵ｺ・ｧ邵ｺ・ｮ鬮ｮ・｢髢ｨ・ｷ邵ｺ・ｫ驛｢荵昶ｲ邵ｺ・｣邵ｺ・ｦ邵ｺ蜉ｱ竏ｪ邵ｺ繝ｻﾂ繝ｻ
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Solution Section -->
+<section class="py-32 px-6">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1 space-y-8">
+<h2 class="text-4xl md:text-5xl font-bold leading-tight">
+<span class="text-primary">關難ｽ｡陋滂ｽ､髫包ｽｳ邵ｺ・ｨ髢ｭ譴ｧ蜍ｹ邵ｺ・ｮ陷ｿ・ｯ髫暮摩蝟ｧ邵ｲ繝ｻ/span>
+<br/>
+                        AI邵ｺ蠕娯旺邵ｺ・ｪ邵ｺ貅倥・郢ｧ・ｹ郢晏現繝ｻ郢晢ｽｪ郢晢ｽｼ郢ｧ蝣､・ｷ・ｨ邵ｺ・ｿ陷・ｽｺ邵ｺ蜷ｶﾂ繝ｻ
+                    </h2>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                        邵ｲ蠕後・邵ｺ・ｨ邵ｺ・ｨ邵ｺ・ｪ郢ｧ繝ｻai邵ｲ髦ｪ繝ｻ邵ｲ竏夲ｼ・ｹｧ蠕娯穐邵ｺ・ｧ邵ｺ・ｮ陞ｻ・･雎・ｽｴ隴厄ｽｸ邵ｺ・ｧ邵ｺ・ｯ隰撰ｽｨ邵ｺ・ｦ郢ｧ蟲ｨ・檎ｸｺ・ｦ邵ｺ繝ｻ笳・ｸｲ竏壺旺邵ｺ・ｪ邵ｺ貅倥・驍ｨ遒・ｽｨ阮卍竏ｬ蜊碑怏・ｴ邵ｲ竏壺落邵ｺ蜉ｱ窶ｻ陞滂ｽｧ陋ｻ繝ｻ竊鍋ｸｺ蜉ｱ窶ｻ邵ｺ繝ｻ・玖ｫ・ｳ邵ｺ繝ｻ・但I邵ｺ蠕｡・ｸ竏晢ｽｯ・ｧ邵ｺ・ｫ雎趣ｽｲ邵ｺ・ｿ陷ｿ謔ｶ・顔ｸｺ・ｾ邵ｺ蜷ｶﾂ繧・落郢ｧ蠕後・陷雁･竊醍ｹｧ荵昴Ι郢晢ｽｼ郢ｧ・ｿ邵ｺ・ｧ邵ｺ・ｯ邵ｺ・ｪ邵ｺ荳環竏ｽ・ｸﾂ闔・ｺ邵ｺ・ｮ闔・ｺ鬮｢阮吮・邵ｺ蜉ｱ窶ｻ邵ｺ・ｮ邵ｲ讙朱ｻ・坡讒ｭﾂ髦ｪ竊堤ｸｺ蜉ｱ窶ｻ闔ｨ竏ｵ・･・ｭ邵ｺ・ｫ陞ｻ鄙ｫ・郢ｧ蟲ｨ・檎ｸｺ・ｾ邵ｺ蜷ｶﾂ繝ｻ
+                    </p>
+<div class="grid grid-cols-2 gap-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
+<span class="font-bold">驍ｨ遒・ｽｨ阮吶・髯ｬ荳槭・邵ｺ・ｫ邵ｺ繧・ｽ玖ｫ｢荳橸ｽｿ繝ｻ/span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
+<span class="font-bold">隰ｨ・ｰ陋滂ｽ､陋ｹ謔ｶ縲堤ｸｺ髦ｪ竊醍ｸｺ繝ｻ・ｭ繝ｻ魘ｨ</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
+<span class="font-bold">驕抵ｽｺ邵ｺ荵昶・郢晄ｧｭ繝｣郢昶・ﾎｦ郢ｧ・ｰ驍奇ｽｾ陟趣ｽｦ</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
+<span class="font-bold">陝・ｽｾ髫ｧ・ｱ陜吩ｹ昴・郢晢ｽｭ郢晁ｼ斐≦郢晢ｽｼ郢晢ｽｫ</span>
+</div>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="absolute inset-0 bg-primary/5 rounded-[40px] transform rotate-3"></div>
+<div class="relative bg-white p-8 rounded-[40px] editorial-shadow border border-surface-variant">
+<img alt="Solution visualization" class="rounded-2xl w-full" data-alt="A modern office environment showing meaningful human connection and collaboration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxZ72fHnYySpj6IHXz6R2A-Lm74Stet4AOxYSVYiW3M9HYyClU6N_ZVXpcMTKFW51TPOJYGU8AuFALOuJ1I-V4m9XEU_OVk1euJ6LGpncdjIhB-XWU5_nwQoIKmLW3wufOnTgfFZWkCZu2cnELDRrY2KQ6DJlXc5dH0rw-mfR3u9Et2rHtNnSzP9m59D0mUQBelHAeFmDgut5QwrbzuFKS7ZywFvts1Nf2ercayfawimfq2MXoC6bjqyfcfgM8kAFDekOdISlxmg9T"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Features -->
+<section class="py-24 bg-surface-container-low px-6">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-primary mb-4">闕ｳ・ｻ邵ｺ・ｪ隶匁ｺｯ繝ｻ驍擾ｽｹ闔峨・/h2>
+<p class="text-on-surface-variant">邵ｲ蠕｡・ｺ・ｺ邵ｺ・ｨ邵ｺ・ｪ郢ｧ鄙ｫﾂ髦ｪ・定棔螟奇ｽｧ蝣､蝎ｪ邵ｺ・ｫ陋ｻ繝ｻ譴ｵ邵ｺ蜷ｶ・狗ｸｺ貅假ｽ∫ｸｺ・ｮ隴崢隴・ｽｰ郢昴・縺醍ｹ晏ｼｱﾎ溽ｹｧ・ｸ郢晢ｽｼ</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-white rounded-3xl p-8 editorial-shadow flex flex-col md:flex-row gap-8 items-center overflow-hidden">
+<div class="flex-1">
+<div class="w-12 h-12 bg-tertiary/10 text-tertiary rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">闔・ｺ邵ｺ・ｨ邵ｺ・ｪ郢ｧ鄙ｫ繝ｻ郢晢ｽｭ郢晁ｼ斐≦郢晢ｽｼ郢晢ｽｫ</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                                郢ｧ・､郢晢ｽｳ郢ｧ・ｿ郢晁侭ﾎ礼ｹ晢ｽｼ陟厄ｽ｢陟台ｸ翫・髮会ｽｪ陜荳岩・邵ｺ・ｮ陜玲ｨ抵ｽｭ譁青ｰ郢ｧ蟲ｨﾂ縲！邵ｺ蠕娯旺邵ｺ・ｪ邵ｺ貅倥・隲､譎・繝ｻ髻ｳ隲､・ｧ郢ｧ繝ｻ・ｾ・｡陋滂ｽ､髫包ｽｳ邵ｺ・ｮ髴・ｽｸ郢ｧ雋槭・隴ｫ闊鯉ｼ邵ｲ繝ｻ・ｭ繝ｻ魘ｨ騾ｧ繝ｻ竊鷹ｏ・ｹ闔牙玄譫夂ｹｧ螳壹・陷肴・蜃ｽ隰瑚・・邵ｺ・ｾ邵ｺ蜷ｶﾂ繝ｻ
+                            </p>
+</div>
+<div class="flex-1 -mr-12 -mb-12">
+<img alt="AI Profile" class="rounded-tl-2xl shadow-xl" data-alt="Abstract data visualization showing personality analysis patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPTUzi_pnTGeafHyEYWeRo3TACclHDK9QZcgNwkK0EylRgjhRaz-pYM82w4jlYybIlFSuK9RIvyy23kBk7IOCCrMjYEXvLuTGQoUsQY2Vg_Cbi-8Y-bCv5X5cvyEKt6XHeQ7Y5s-G9KyBfsUQm6RDTr1hJ3o2vTklU2XEsAAmXEr2GXn2hxCG_pwufBBZcMv20md5DfCuSaggbMPOkW5sfF2tGayrcv4bN6sVz_hsiT9KuzLL0fMECsdaXA60nhJT333b8_vDJk8mI"/>
+</div>
+</div>
+<div class="bg-primary text-white rounded-3xl p-8 editorial-shadow relative overflow-hidden group">
+<div class="relative z-10">
+<div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">history_edu</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">髢ｭ譴ｧ蜍ｹ郢ｧ・ｹ郢晏現繝ｻ郢晢ｽｪ郢晢ｽｼ</h3>
+<p class="text-white/80 leading-relaxed text-sm">
+                                陷雁･竊醍ｹｧ邇悶・雎・ｽｴ邵ｺ・ｰ邵ｺ莉｣縲堤ｸｺ・ｪ邵ｺ荳環竏壺落邵ｺ・ｮ隴弱ｅﾂ繝ｻ竊楢抄霈費ｽ定ｫ｢貅伉ｧ邵ｲ竏壺・邵ｺ繝ｻ・ｹ蜉ｱ・企屆鄙ｫ竏ｴ邵ｺ貅伉ｰ邵ｺ・ｨ邵ｺ繝ｻ竕ｧ邵ｲ迹壹Ξ隴趣ｽｯ邵ｲ髦ｪ竊鍋ｹ晁ｼ斐°郢晢ｽｼ郢ｧ・ｫ郢ｧ・ｹ邵ｺ蜉ｱ笳・ｿ夲ｽｩ髫ｱ讒ｭ・定抄諛医・邵ｲ繝ｻ
+                            </p>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-9xl opacity-10 group-hover:scale-110 transition-transform">menu_book</span>
+</div>
+<div class="bg-white rounded-3xl p-8 editorial-shadow">
+<div class="w-12 h-12 bg-secondary-container text-primary rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">dashboard_customize</span>
+</div>
+<h3 class="text-xl font-bold mb-4">闔・ｺ邵ｺ・ｨ邵ｺ・ｪ郢ｧ鄙ｫ窶ｲ闔ｨ譏ｴ・冗ｹｧ邇悶・陝ｾ・ｱ驍擾ｽｹ闔峨・/h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                            隰悟・譽｡霑夲ｽｩ邵ｲ竏ｵ閠ｳ髦ｮ・ｦ髢繝ｻ繝ｻ陞｢・ｰ邵ｲ竏ｬ・ｶ・｣陷ｻ・ｳ邵ｲ竏墅帷ｹｧ・､郢晁ｼ斐○郢ｧ・ｿ郢ｧ・､郢晢ｽｫ邵ｺ・ｪ邵ｺ・ｩ邵ｲ竏晢ｽ､螟先島騾ｧ繝ｻ竊鷹囓雋橸ｽｺ・ｦ邵ｺ荵晢ｽ蛾明・ｪ陋ｻ繝ｻ繝ｻ髴・ｽｫ郢ｧ螳夲ｽ｡・ｨ霑ｴ・ｾ邵ｺ・ｧ邵ｺ髦ｪ・狗ｹｧ・ｫ郢ｧ・ｹ郢ｧ・ｿ郢晢｣ｰ郢ｧ・ｨ郢晢ｽｪ郢ｧ・｢邵ｲ繝ｻ
+                        </p>
+</div>
+<div class="md:col-span-2 bg-white rounded-3xl p-8 editorial-shadow flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1 order-2 md:order-1">
+<div class="grid grid-cols-5 gap-2">
+<div class="h-24 bg-primary-container/20 rounded-lg"></div>
+<div class="h-32 bg-primary-container/40 rounded-lg"></div>
+<div class="h-40 bg-primary-container/60 rounded-lg"></div>
+<div class="h-32 bg-primary-container/40 rounded-lg"></div>
+<div class="h-24 bg-primary-container/20 rounded-lg"></div>
+</div>
+</div>
+<div class="flex-1 order-1 md:order-2">
+<h3 class="text-2xl font-bold mb-4">關難ｽ｡陋滂ｽ､髫包ｽｳ邵ｺ・ｮ髫穂ｹ昶斡郢ｧ蜿･蝟ｧ</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                                髯ｦ謔溯劒驍ｨ譴ｧ・ｸ莠･・ｭ・ｦ邵ｺ・ｨ陟｢繝ｻ轤願氛・ｦ邵ｺ・ｫ陜難ｽｺ邵ｺ・･邵ｺ繝ｻ笳・ｿ｢・ｬ髢ｾ・ｪ邵ｺ・ｮ郢ｧ・｢郢晢ｽｫ郢ｧ・ｴ郢晢ｽｪ郢ｧ・ｺ郢晢｣ｰ邵ｺ・ｧ邵ｲ竏壹Γ郢晢ｽｼ郢晢｣ｰ邵ｺ・ｫ邵ｺ鄙ｫ・郢ｧ蜿･・ｽ・ｹ陷托ｽｲ郢ｧ繝ｻ・ｼ・ｷ邵ｺ・ｿ郢ｧ蛛ｵ繝ｳ郢ｧ・ｸ郢晢ｽ･郢ｧ・｢郢晢ｽｫ陋ｹ謔ｶﾂ繝ｻ
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Steps Section -->
+<section class="py-24 px-6">
+<div class="max-w-5xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-primary mb-4">陋ｻ・ｩ騾包ｽｨ郢ｧ・､郢晢ｽ｡郢晢ｽｼ郢ｧ・ｸ</h2>
+<p class="text-on-surface-variant">邵ｺ貅倪夢邵ｺ繝ｻ邵ｺ・､邵ｺ・ｮ郢ｧ・ｹ郢昴・繝｣郢晏干縲堤ｸｲ竏ｫ轤願ｫ・ｳ邵ｺ・ｮ隰暦ｽ｡騾包ｽｨ邵ｺ謔滂ｽｧ荵昶穐郢ｧ鄙ｫ竏ｪ邵ｺ繝ｻ/p>
+</div>
+<div class="space-y-12">
+<div class="flex flex-col md:flex-row items-center gap-8">
+<div class="w-20 h-20 rounded-full bg-secondary-container flex items-center justify-center text-3xl font-black text-primary shrink-0">1</div>
+<div class="flex-1 bg-surface-container-lowest p-8 rounded-2xl border border-surface-variant/30 flex items-center justify-between">
+<div>
+<h3 class="text-xl font-bold mb-2">郢晏干ﾎ溽ｹ晁ｼ斐≦郢晢ｽｼ郢晢ｽｫ闖ｴ諛医・</h3>
+<p class="text-on-surface-variant">AI邵ｺ・ｨ邵ｺ・ｮ陝・ｽｾ髫ｧ・ｱ郢ｧ蟶敖螢ｹﾂｧ邵ｺ・ｦ邵ｲ竏壺旺邵ｺ・ｪ邵ｺ貅倥・隲・ｳ邵ｺ繝ｻ・・お遒・ｽｨ阮呻ｽ定ｱｺ・ｱ隰怜･・顔ｸｺ蜉ｱ竏ｪ邵ｺ蜷ｶﾂ繝ｻ/p>
+</div>
+<span class="material-symbols-outlined text-4xl text-primary/30">edit_note</span>
+</div>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-8">
+<div class="w-20 h-20 rounded-full bg-secondary-container flex items-center justify-center text-3xl font-black text-primary shrink-0">2</div>
+<div class="flex-1 bg-surface-container-lowest p-8 rounded-2xl border border-surface-variant/30 flex items-center justify-between">
+<div>
+<h3 class="text-xl font-bold mb-2">闔・ｺ邵ｺ・ｨ邵ｺ・ｪ郢ｧ鄙ｫ・帝￡・ｺ髫ｱ繝ｻ/h3>
+<p class="text-on-surface-variant">關難ｽ｡陋滂ｽ､髫包ｽｳ邵ｺ・ｮ陷ｷ蛹ｻ竕ｧ闔ｨ竏ｵ・･・ｭ郢ｧ繝ｻﾂ蜻ｵ・｣諛・繝ｻ・但I邵ｺ迹壹・陷崎ｼ斐堤ｹ晢ｽｬ郢ｧ・ｳ郢晢ｽ｡郢晢ｽｳ郢晏ｳｨ・邵ｺ・ｾ邵ｺ蜷ｶﾂ繝ｻ/p>
+</div>
+<span class="material-symbols-outlined text-4xl text-primary/30">handshake</span>
+</div>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-8">
+<div class="w-20 h-20 rounded-full bg-secondary-container flex items-center justify-center text-3xl font-black text-primary shrink-0">3</div>
+<div class="flex-1 bg-surface-container-lowest p-8 rounded-2xl border border-surface-variant/30 flex items-center justify-between">
+<div>
+<h3 class="text-xl font-bold mb-2">鬮ｱ・｢隰暦ｽ･郢晢ｽｻ陝・ｽｾ髫ｧ・ｱ邵ｺ・ｸ邵ｺ・､邵ｺ・ｪ邵ｺ蛛ｵ・・/h3>
+<p class="text-on-surface-variant">闔蛛ｵ・樒ｸｺ・ｮ邵ｲ蠕｡・ｺ・ｺ邵ｺ・ｨ邵ｺ・ｪ郢ｧ鄙ｫﾂ髦ｪ・帝・・・ｧ・｣邵ｺ蜉ｱ笳・ｿ･・ｶ隲ｷ荵昴堤ｸｲ竏ｵ・ｷ・ｱ邵ｺ繝ｻ・ｯ・ｾ髫ｧ・ｱ郢ｧ蛛ｵ縺帷ｹｧ・ｿ郢晢ｽｼ郢晏現ﾂ繝ｻ/p>
+</div>
+<span class="material-symbols-outlined text-4xl text-primary/30">verified</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-surface-container-high px-6 overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-3xl font-bold text-center mb-16">陋ｻ・ｩ騾包ｽｨ髢繝ｻ繝ｻ陞｢・ｰ</h2>
+<div class="flex gap-8 no-scrollbar overflow-x-auto pb-8">
+<div class="min-w-[400px] bg-white p-8 rounded-3xl editorial-shadow">
+<div class="flex items-center gap-4 mb-6">
+<img alt="User 1" class="w-14 h-14 rounded-full object-cover" data-alt="Portrait of a female HR manager smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7jXHVPYrejdcc7Stjxi8pjOGc-y_8rqRm9exU8a7_xP9HxSgjIVNW7kxEIi-TNox6qDhX6udkCitclVXwCn14ebH7Kh-ONENRFHewz3XEPdTIUa4PBPGnSDbKif5vt3-Jy8f4w1Ge5Q9gQuWyMsPWDH5zZumljo7aP1WfYPz1T50CPHuK3c-5bujyNtZJ_7G845PcdYEECACChxtfWmax-_5IYfOtUXpb9OAdh8V1AsqsZ6Y8xFeJfUu5wt_m2eO2i3VGHX1Xgftf"/>
+<div>
+<div class="font-bold">隴ｬ・ｪ陟台ｸ茨ｽｼ螟ゑｽ､・ｾ郢昴・繝｣郢ｧ・ｯ郢晢ｽｪ郢晢ｽｼ郢敖郢晢ｽｼ</div>
+<div class="text-sm text-on-surface-variant">隰暦ｽ｡騾包ｽｨ髮具ｽｬ闔会ｽｻ髢繝ｻA.S隶偵・/div>
+</div>
+</div>
+<p class="italic text-on-surface-variant leading-relaxed">
+                            邵ｲ蠕後○郢ｧ・ｭ郢晢ｽｫ郢晄ｧｭ繝｣郢昶・笆｡邵ｺ莉｣縲堤ｸｺ・ｯ陋ｻ繝ｻﾂｰ郢ｧ蟲ｨ竊醍ｸｺ荵昶夢邵ｺ貅ｷﾂ蜻ｵ・｣諛・繝ｻ繝ｻ"霎ｭ・ｱ鬩･繝ｻ邵ｺ蠕個縲！郢晏干ﾎ溽ｹ晁ｼ斐≦郢晢ｽｼ郢晢ｽｫ郢ｧ蟶敖螢ｹﾂｧ邵ｺ・ｦ隰・ｹ昶・陷ｿ謔ｶ・狗ｹｧ蛹ｻ竕ｧ邵ｺ・ｫ郢ｧ荳環ｰ郢ｧ鄙ｫ竏ｪ邵ｺ蜉ｱ笳・ｸｲ繧区島隰暦ｽ･邵ｺ・ｧ邵ｺ・ｮ陝・ｽｾ髫ｧ・ｱ邵ｺ譴ｧ・ｰ・ｼ隹ｿ・ｵ邵ｺ・ｫ雎ｺ・ｱ邵ｺ荳岩・郢ｧ鄙ｫ竏ｪ邵ｺ蜉ｱ笳・ｸｲ繧・繝ｻ
+                        </p>
+</div>
+<div class="min-w-[400px] bg-white p-8 rounded-3xl editorial-shadow">
+<div class="flex items-center gap-4 mb-6">
+<img alt="User 2" class="w-14 h-14 rounded-full object-cover" data-alt="Portrait of a male software engineer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8BpzBCKzknEbEYnVQgqSKjgQzwigIEwOQpYLZDf8PVBamxrknRgcpO1odc-sGvy_83F6LmOSsphAYVb8u_pdKsNQ_W8jaffHjYr0fwJpx6KytiuWKtTGBOlRxhihkQSknqS-xrTw9Ff1UqZSxttJEreLB5-9V-w5vt6tLLw705GjFHhe9nquaaFOqk3hkYCR6vRpAXrFVyN1zRH4Hh-EDKW3nY55X0-EimRxwmUzQoyPj1Wk8LfSTJ1Vfltgk4-hlOw3WB9PXf21s"/>
+<div>
+<div class="font-bold">郢ｧ・ｹ郢ｧ・ｿ郢晢ｽｼ郢晏現縺・ｹ昴・繝ｻ V驕会ｽｾ</div>
+<div class="text-sm text-on-surface-variant">郢ｧ・ｨ郢晢ｽｳ郢ｧ・ｸ郢昜ｹ昴＞隰暦ｽ｡騾包ｽｨ隴ｫ・ｰ陷茨ｽ･驕会ｽｾ M.T隶偵・/div>
+</div>
+</div>
+<p class="italic text-on-surface-variant leading-relaxed">
+                            邵ｲ迹壹・陋ｻ繝ｻ窶ｲ髫ｪﾂ髣｡蟲ｨ竊鍋ｸｺ蜉ｱ窶ｳ郢ｧ蠕娯・邵ｺ荵昶夢邵ｺ貊会ｽｻ遨ゑｽｺ荵昶・邵ｺ・ｮ隲・ｳ邵ｺ繝ｻ・但I邵ｺ迹夲ｽｨﾂ髫ｱ讒ｫ蝟ｧ邵ｺ蜉ｱ窶ｻ邵ｺ荳奇ｽ檎ｸｺ貅倪凰邵ｺ荵晢ｿ｡邵ｺ・ｧ邵ｲ竏ｵ謔ｽ陟冶侭竊楢嵩・｡陋滂ｽ､髫包ｽｳ邵ｺ・ｮ陷ｷ蛹ｻ竕ｧ隴崢鬯ｮ蛟･繝ｻ郢昶・繝ｻ郢晢｣ｰ邵ｺ・ｫ陷・ｽｺ闔ｨ螢ｹ竕ｧ邵ｺ阮吮・邵ｺ蠕後堤ｸｺ髦ｪ竏ｪ邵ｺ蜉ｱ笳・ｸｲ繧・繝ｻ
+                        </p>
+</div>
+<div class="min-w-[400px] bg-white p-8 rounded-3xl editorial-shadow">
+<div class="flex items-center gap-4 mb-6">
+<img alt="User 3" class="w-14 h-14 rounded-full object-cover" data-alt="Portrait of a creative director" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpBam8sio1cx6OOsYbbVdWSyYZDtm26N9XrC9yxZGAD1Fv09VVdcqL1COMC1EyfGrD_wwBv95pt8f8mpktAD_NKxy32ULSjnzjZFHa9cdO7W8Bu7PQo09Yj4EmC6VFzsXbeCAfrMSxWzIOmnboCv84NTvEqn5UaHsVLO-GYNDXG5-w9YY4bwcSZgRpvHKX7lzx6W9bCBHjVxRD2TfNHOvCZdhR8phXIjf2KHxNX4waf0we1TShJYH9DR8dWmnUuLbPIoB1SYv8dNGo"/>
+<div>
+<div class="font-bold">郢昴・縺倡ｹｧ・､郢晢ｽｳ郢晁ｼ斐＜郢晢ｽｼ郢晢｣ｰ O</div>
+<div class="text-sm text-on-surface-variant">闔会ｽ｣髯ｦ・ｨ陷ｿ荵滂ｽｷ・ｰ陟厄ｽｹ S.K隶偵・/div>
+</div>
+</div>
+<p class="italic text-on-surface-variant leading-relaxed">
+                            邵ｲ蠕後″郢晢ｽｫ郢昶・ﾎ慕ｹ晢ｽｼ郢晁ｼ斐≦郢昴・繝ｨ郢ｧ蜻域呵怕・ｪ陷亥現笘・ｹｧ蜿･・ｼ鬘費ｽ､・ｾ邵ｺ・ｫ邵ｺ・ｨ邵ｺ・｣邵ｺ・ｦ邵ｲ竏ｬ繝ｬ隴趣ｽｯ郢ｧ・ｹ郢晏現繝ｻ郢晢ｽｪ郢晢ｽｼ隶匁ｺｯ繝ｻ邵ｺ・ｯ隹ｺ・ｰ邵ｺ荵昶雷邵ｺ・ｪ邵ｺ繝ｻ繝､郢晢ｽｼ郢晢ｽｫ邵ｺ・ｫ邵ｺ・ｪ郢ｧ鄙ｫ竏ｪ邵ｺ蜉ｱ笳・ｸｲ繧・醍ｹｧ・ｹ郢晄ｧｭ繝｣郢昶・窶ｲ邵ｺ・ｻ邵ｺ・ｼ郢ｧ・ｼ郢晢ｽｭ邵ｺ・ｫ邵ｺ・ｪ邵ｺ・｣邵ｺ・ｦ邵ｺ繝ｻ竏ｪ邵ｺ蜷ｶﾂ繧・繝ｻ
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 px-6">
+<div class="max-w-5xl mx-auto bg-warm-gradient rounded-[40px] p-12 md:p-20 text-center text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+<div class="relative z-10">
+<h2 class="text-4xl md:text-5xl font-bold mb-8">邵ｺ譏ｴ・檎ｸｺ讒ｭ・檎ｸｺ・ｮ郢ｧ・ｵ郢晢ｽｼ郢晁侭縺幄怙繝ｻ・ｮ・ｹ邵ｺ・ｮ邵ｺ逍ｲ・｡莠･繝ｻ</h2>
+<p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+                        邵ｺ譏ｴ・檎ｸｺ讒ｭ・檎ｸｺ・ｫ陷ｷ蛹ｻ・冗ｸｺ蟶吮螺郢ｧ・ｵ郢晢ｽｼ郢晁侭縺帷ｹｧ蛛ｵ・・包ｽｨ隲｢荳奇ｼ邵ｺ・ｦ邵ｺ繝ｻ竏ｪ邵ｺ蜷ｶﾂ繝ｻbr class="hidden md:block"/>
+                        髫ｧ・ｲ陟冶侭笘・ｹｧ蛹ｺ蟀ｿ郢ｧ蟶昶・郢ｧ阮吶堤ｸｲ竏ｬ・ｩ・ｳ邵ｺ蜉ｱ・櫁怙繝ｻ・ｮ・ｹ郢ｧ蛛ｵ・・￡・ｺ髫ｱ髦ｪ・･邵ｺ・ｰ邵ｺ霈費ｼ樒ｸｲ繝ｻ                    </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<a class="px-8 py-4 bg-secondary-fixed text-on-secondary-fixed-variant rounded-xl font-bold text-lg hover:shadow-lg transition-all flex items-center justify-center gap-2" href="guide.html">
+                            隰暦ｽ｡騾包ｽｨ隲｡繝ｻ・ｽ阮吶・隴・ｽｹ邵ｺ・ｯ邵ｺ阮吮蔓郢ｧ繝ｻ                            <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="px-8 py-4 bg-surface-container-high text-on-surface rounded-xl font-bold text-lg hover:bg-surface-container-highest transition-all flex items-center justify-center gap-2" href="for job seeker service.html">
+                            雎弱ｊ繝ｻ髢繝ｻ繝ｻ隴・ｽｹ邵ｺ・ｯ邵ｺ阮吮蔓郢ｧ繝ｻ                            <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#EFD7A3]/20 dark:bg-stone-900/40 w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto font-['Plus_Jakarta_Sans'] text-xs leading-relaxed">
+<div class="mb-8 md:mb-0">
+<div class="text-lg font-bold text-[#7a5900] dark:text-[#e0b14b] mb-4">邵ｺ・ｲ邵ｺ・ｨ邵ｺ・ｨ邵ｺ・ｪ郢ｧ繝ｻai</div>
+<p class="text-stone-600 dark:text-stone-400">・ゑｽｩ 邵ｺ・ｲ邵ｺ・ｨ邵ｺ・ｨ邵ｺ・ｪ郢ｧ繝ｻai All Rights Reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 md:gap-10">
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity" href="index.html">郢晏現繝｣郢昴・/a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity" href="guide.html">隰暦ｽ｡騾包ｽｨ隲｡繝ｻ・ｽ阮吶・隴・ｽｹ邵ｺ・ｸ</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity" href="for job seeker service.html">雎弱ｊ繝ｻ髢繝ｻ繝ｻ隴・ｽｹ邵ｺ・ｸ</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity" href="#">陋ｻ・ｩ騾包ｽｨ髫募・・ｴ繝ｻ/a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity underline font-medium" href="#">郢晏干ﾎ帷ｹｧ・､郢晁・縺咏ｹ晢ｽｼ郢晄亢ﾎ懃ｹｧ・ｷ郢晢ｽｼ</a>
+</div>
+</footer>
+</body></html>
