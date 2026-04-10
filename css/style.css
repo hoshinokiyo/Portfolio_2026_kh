@@ -203,3 +203,73 @@
   background: rgba(255, 253, 249, 0.96);
   box-shadow: 0 20px 40px rgba(201, 130, 30, 0.08);
 }
+
+.features-section {
+  background: linear-gradient(180deg, #FFFDF9 0%, #F8F2E8 100%);
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(232, 221, 208, 0.92);
+  box-shadow: 0 16px 34px rgba(43, 47, 56, 0.06);
+}
+
+.feature-card-illustration {
+  background: linear-gradient(180deg, rgba(255, 253, 249, 0.98) 0%, rgba(248, 242, 232, 0.92) 100%);
+}
+
+.feature-icon {
+  background: linear-gradient(135deg, #FFF4E3 0%, #F8F2E8 100%);
+  color: #C9821E;
+}
+
+.feature-copy {
+  color: #6B7280;
+}
+
+.feature-story-card {
+  background: linear-gradient(180deg, #A06A2C 0%, #8A5B23 100%);
+  color: #FFFFFF;
+}
+
+.feature-story-icon {
+  background: rgba(255, 255, 255, 0.18);
+  color: #FFFDF9;
+}
+
+.feature-story-copy {
+  color: rgba(255, 250, 244, 0.86);
+}
+
+.feature-bar-soft {
+  background: rgba(233, 162, 59, 0.22);
+}
+
+.feature-bar-mid {
+  background: rgba(233, 162, 59, 0.4);
+}
+
+.feature-bar-strong {
+  background: linear-gradient(180deg, rgba(233, 162, 59, 0.72) 0%, rgba(74, 144, 226, 0.24) 100%);
+}
+
+.steps-section {
+  background: linear-gradient(180deg, #FFFDF9 0%, #FFF4E3 100%);
+}
+
+.step-badge {
+  background: linear-gradient(135deg, #FFF4E3 0%, #F8F2E8 100%);
+  color: #C9821E;
+  border: 1px solid rgba(232, 221, 208, 0.92);
+  box-shadow: 0 10px 24px rgba(201, 130, 30, 0.08);
+}
+
+.step-card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(232, 221, 208, 0.78);
+  box-shadow: 0 14px 30px rgba(43, 47, 56, 0.05);
+}
+
+.step-icon {
+  color: rgba(201, 130, 30, 0.34);
+}
