@@ -94,6 +94,18 @@
   border: 1px solid rgba(233, 162, 59, 0.18);
 }
 
+.hero-chip-cool {
+  background: #EAF3FF;
+  color: #4A90E2;
+  border-color: rgba(74, 144, 226, 0.18);
+}
+
+.hero-chip-cool-strong {
+  background: #4A90E2;
+  color: #FFFFFF;
+  border-color: rgba(74, 144, 226, 0.42);
+}
+
 .hero-title {
   color: #2B2F38;
 }
@@ -129,6 +141,10 @@
   box-shadow: 0 14px 26px rgba(201, 130, 30, 0.1);
 }
 
+.hero-secondary-btn-accent {
+  border: 2px solid #E9A23B;
+}
+
 .hero-glow-blue {
   background: rgba(248, 242, 232, 0.78);
 }
@@ -153,8 +169,17 @@
   color: #FFFFFF;
 }
 
+.hero-note-icon-cool {
+  background: #EAF3FF;
+  color: #4A90E2;
+}
+
 .hero-note-eyebrow {
   color: #C9821E;
+}
+
+.hero-note-eyebrow-cool {
+  color: #4A90E2;
 }
 
 .problems-section {
