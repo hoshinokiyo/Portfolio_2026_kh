@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -89,19 +90,19 @@
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-secondary-container">
 <!-- TopNavBar -->
-<header class="bg-[#fbf9f5] dark:bg-stone-950 shadow-sm dark:shadow-none docked full-width top-0 z-50 sticky transition-all">
+<header class="site-header shadow-sm dark:shadow-none docked full-width top-0 z-50 sticky transition-all">
 <div class="flex justify-between items-center w-full px-6 py-3 max-w-7xl mx-auto">
 <div class="flex items-center gap-8">
 <a class="inline-flex items-center px-2 py-1 rounded-lg transition-all hover:opacity-80 hover:bg-stone-100 hover:-translate-y-0.5 hover:shadow-md" href="index.html">
 <img alt="ひととなり.ai" class="h-16 w-auto" src="images/Logo.png"/>
 </a>
 <nav class="hidden md:flex gap-6 items-center">
-<a class="text-[#7a5900] font-bold border-b-2 border-[#e0b14b] pb-1 font-['Plus_Jakarta_Sans'] text-sm tracking-tight transition-all hover:opacity-80 hover:bg-stone-100 hover:-translate-y-0.5 hover:shadow-md rounded-md px-2" href="service.html">採用担当の方へ</a>
-<a class="text-[#7a5900] font-bold border-b-2 border-[#e0b14b] pb-1 font-['Plus_Jakarta_Sans'] text-sm tracking-tight transition-all hover:opacity-80 hover:bg-stone-100 hover:-translate-y-0.5 hover:shadow-md rounded-md px-2" href="for-job-seeker-service.html">求職者の方へ</a>
+<a class="header-link header-link-hover font-bold border-b-2 border-[#BFD6F7] pb-1 font-['Plus_Jakarta_Sans'] text-sm tracking-tight transition-all hover:opacity-80 hover:-translate-y-0.5 hover:shadow-md rounded-md px-2" href="service.html">採用担当の方へ</a>
+<a class="header-link header-link-hover text-[#C9821E] font-bold border-b-2 border-[#E9A23B] pb-1 font-['Plus_Jakarta_Sans'] text-sm tracking-tight transition-all hover:opacity-80 hover:-translate-y-0.5 hover:shadow-md rounded-md px-2" href="for-job-seeker-service.html">求職者の方へ</a>
 </nav>
 </div>
 <div class="flex items-center gap-4">
-<a class="text-[#7a5900] dark:text-[#e0b14b] font-['Plus_Jakarta_Sans'] text-sm tracking-tight px-4 py-2 hover:bg-stone-100 hover:opacity-80 hover:-translate-y-0.5 hover:shadow-md transition-all rounded-lg" href="login.html">ログイン</a>
+<a class="header-login font-['Plus_Jakarta_Sans'] text-sm tracking-tight px-4 py-2 hover:opacity-80 hover:-translate-y-0.5 hover:shadow-md transition-all rounded-lg" href="login.html">ログイン</a>
 </div>
 </div>
 </header>
@@ -245,14 +246,14 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-[#EFD7A3]/20 dark:bg-stone-900/40 w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto font-['Plus_Jakarta_Sans'] text-xs leading-relaxed">
+<footer class="site-footer w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto font-['Plus_Jakarta_Sans'] text-xs leading-relaxed">
 <div class="mb-8 md:mb-0">
-<div class="text-lg font-bold text-[#7a5900] dark:text-[#e0b14b] mb-4">ひととなり.ai</div>
-<p class="text-stone-600 dark:text-stone-400">© ひととなり.ai All Rights Reserved.</p>
+<div class="site-footer-brand text-lg font-bold mb-4">ひととなり.ai</div>
+<p class="site-footer-copy">© ひととなり.ai All Rights Reserved.</p>
 </div>
 <div class="flex flex-wrap justify-center gap-6 md:gap-10">
-<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity" href="#" onclick="alert('ただいま準備中です。公開までしばらくお待ちください'); return false;">利用規約</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-[#AA7D1D] transition-opacity underline font-medium" href="#" onclick="alert('ただいま準備中です。公開までしばらくお待ちください'); return false;">プライバシーポリシー</a>
+<a class="site-footer-link" href="#" onclick="alert('ただいま準備中です。公開までしばらくお待ちください'); return false;">利用規約</a>
+<a class="site-footer-link underline font-medium" href="#" onclick="alert('ただいま準備中です。公開までしばらくお待ちください'); return false;">プライバシーポリシー</a>
 </div>
 </footer>
 </body></html>
