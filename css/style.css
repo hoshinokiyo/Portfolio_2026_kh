@@ -387,3 +387,26 @@
   color: #C9821E;
   opacity: 0.92;
 }
+
+.hero-shell .hero-frame.rotate-2 {
+  transform: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 0.86;
+  max-height: 500px;
+}
+
+.hero-shell .hero-frame.rotate-2 > img {
+  transform: none;
+}
+
+.hero-shell .hero-note-card.absolute.-bottom-6.-left-6.-rotate-2 {
+  left: 50%;
+  bottom: -1.25rem;
+  width: calc(100% - 4rem);
+  max-width: 34rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 1.5rem;
+  transform: translateX(-50%);
+}
