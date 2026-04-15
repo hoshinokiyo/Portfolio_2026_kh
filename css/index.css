@@ -38,6 +38,10 @@
     justify-content: center;
   }
 
+  .hero-shell > .max-w-7xl > .relative .hero-frame {
+    overflow: visible;
+  }
+
   .hero-shell > .max-w-7xl > .relative .hero-frame img {
     height: auto;
     max-height: 420px;
