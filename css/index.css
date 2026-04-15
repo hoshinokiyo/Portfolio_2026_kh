@@ -20,6 +20,9 @@
 
 .hero-tagline {
   width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 13px;
 }
 
 @media (max-width: 767px) {
