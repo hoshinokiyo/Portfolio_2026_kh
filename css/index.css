@@ -26,6 +26,9 @@
   font-weight: 600;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 9999px;
 }
 
 @media (max-width: 767px) {
