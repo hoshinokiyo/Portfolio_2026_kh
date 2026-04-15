@@ -23,6 +23,7 @@
   margin-left: auto;
   margin-right: auto;
   font-size: 13px;
+  font-weight: 600;
 }
 
 @media (max-width: 767px) {
