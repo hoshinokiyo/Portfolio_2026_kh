@@ -4,4 +4,7 @@
 }
 
 .hero-left-col {
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
 }
