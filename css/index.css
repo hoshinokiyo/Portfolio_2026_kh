@@ -1,6 +1,7 @@
 /* index page specific styles */
 
 .hero-cta-row {
+  gap: 1rem;
 }
 
 .hero-left-col {
