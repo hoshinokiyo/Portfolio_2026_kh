@@ -20,3 +20,46 @@
 
 .hero-tagline {
 }
+
+@media (max-width: 767px) {
+  .hero-left-col {
+    display: contents;
+  }
+
+  .hero-tagline {
+    order: 1;
+  }
+
+  .hero-title {
+    order: 2;
+  }
+
+  .hero-shell > .max-w-7xl > .relative {
+    order: 3;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-shell > .max-w-7xl > .relative .hero-frame {
+    width: min(100%, 28rem);
+  }
+
+  .hero-shell > .max-w-7xl > .relative .hero-frame img {
+    height: auto;
+    max-height: 420px;
+  }
+
+  .hero-shell > .max-w-7xl > .relative .hero-note-card {
+    bottom: 0.75rem;
+    left: 1rem;
+    right: 1rem;
+  }
+
+  .hero-copy {
+    order: 5;
+  }
+
+  .hero-cta-row {
+    order: 6;
+  }
+}
