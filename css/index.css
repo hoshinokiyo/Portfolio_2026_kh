@@ -44,7 +44,7 @@
   }
 
   .hero-shell > .max-w-7xl > .relative .hero-note-card {
-    bottom: 4px;
+    bottom: -48px;
     left: 12px;
     right: 12px;
   }
