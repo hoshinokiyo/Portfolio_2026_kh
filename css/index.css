@@ -13,4 +13,9 @@
   max-width: 560px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.hero-tagline {
 }
