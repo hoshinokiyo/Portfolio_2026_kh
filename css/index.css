@@ -98,4 +98,28 @@
     inset: auto !important;
     margin: 12px 12px 0 !important;
   }
+
+  .solution-section .section-warm-display {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  .solution-section .section-warm-display br {
+    display: none;
+  }
+
+  .final-cta-shell h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    max-width: 12ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .final-cta-shell .final-cta-copy {
+    font-size: 1rem;
+    line-height: 1.75;
+    max-width: 28ch;
+  }
 }
