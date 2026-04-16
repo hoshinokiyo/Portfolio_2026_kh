@@ -41,6 +41,10 @@
 .hero-cta-block {
 }
 
+.solution-title-subline {
+  display: block;
+}
+
 @media (max-width: 767px) {
   .hero-shell > .max-w-7xl {
     display: flex;
@@ -100,13 +104,14 @@
   }
 
   .solution-section .section-warm-display {
-    font-size: 2.2rem;
-    line-height: 1.2;
+    font-size: 1.85rem;
+    line-height: 1.25;
     letter-spacing: -0.02em;
   }
 
-  .solution-section .section-warm-display br {
-    display: none;
+  .solution-section .solution-title-accent,
+  .solution-section .solution-title-subline {
+    white-space: normal;
   }
 
   .final-cta-shell h2 {
