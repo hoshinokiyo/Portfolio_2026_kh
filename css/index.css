@@ -53,20 +53,3 @@
     right: 12px;
   }
 }
-
-@media (min-width: 768px) {
-  .hero-visual-col {
-    grid-column: 2;
-    grid-row: 1 / span 3;
-  }
-
-  .hero-copy {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  .hero-cta-row {
-    grid-column: 1;
-    grid-row: 3;
-  }
-}
