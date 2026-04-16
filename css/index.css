@@ -33,21 +33,21 @@
 }
 
 @media (max-width: 767px) {
-  .hero-shell > .max-w-7xl > .relative {
+  .hero-visual-col {
     display: flex;
     justify-content: center;
   }
 
-  .hero-shell > .max-w-7xl > .relative .hero-frame {
+  .hero-visual-frame {
     overflow: visible;
   }
 
-  .hero-shell > .max-w-7xl > .relative .hero-frame img {
+  .hero-visual-frame img {
     height: auto;
     max-height: 420px;
   }
 
-  .hero-shell > .max-w-7xl > .relative .hero-note-card {
+  .hero-visual-note {
     bottom: -60px;
     left: 12px;
     right: 12px;
