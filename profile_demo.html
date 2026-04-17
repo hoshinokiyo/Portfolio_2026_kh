@@ -439,6 +439,19 @@
         }, 150);
       }
 
+      function restoreChoiceOnlyState() {
+        if (hasStartedConversation) return;
+        hasStartedConversation = true;
+        lockStartButton();
+        removeTyping();
+        chatMessages.innerHTML = "";
+        scriptedMessages.forEach((message) => addMessage(message.type, message.text));
+        enableChoiceInput();
+        setTimeout(() => {
+          scrollToFinalQuestion();
+        }, 150);
+      }
+
       function setConfirmMode() {
         inputMode = "confirm";
         chatInput.disabled = false;
@@ -550,7 +563,11 @@
         }, 1600);
       });
 
-      if (window.location.hash === "#final-question") {
+      const urlParams = new URLSearchParams(window.location.search);
+
+      if (urlParams.get("entry") === "final-choice") {
+        restoreChoiceOnlyState();
+      } else if (window.location.hash === "#final-question") {
         restoreFinalQuestionState();
       }
     </script>
