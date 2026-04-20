@@ -16,6 +16,22 @@
   display: block;
 }
 
+@media (min-width: 768px) {
+  .service-hero > div:first-child {
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service-hero-copy {
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+
 @media (max-width: 767px) {
   .service-hero-tagline {
     text-align: center;
