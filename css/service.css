@@ -1,4 +1,20 @@
-/* service.html専用の調整はこのファイルに追加する */
+﻿/* service.html専用の調整はこのファイルに追加する */
+
+.service-hero-title .hero-title-accent {
+  display: inline;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  white-space: normal !important;
+  margin: 0 !important;
+}
+
+.service-hero-title br {
+  display: none;
+}
+
+.service-hero-title .service-hero-title-break {
+  display: block;
+}
 
 @media (max-width: 767px) {
   .service-hero-tagline {
