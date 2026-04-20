@@ -49,6 +49,10 @@
   display: block;
 }
 
+.solution-title-centered {
+  text-align: center;
+}
+
 @media (max-width: 767px) {
   .hero-shell > .max-w-7xl {
     display: flex;
