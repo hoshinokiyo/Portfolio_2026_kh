@@ -85,7 +85,33 @@
 
 <body class="bg-background text-on-surface font-body leading-relaxed theme-flower">
   <main class="max-w-7xl mx-auto px-6 py-12">
-    <div class="flex justify-between items-center gap-4 mb-8 profile-breadcrumbs-row">
+    <div class="flex md:hidden items-center justify-between gap-4 mb-6 profile-mobile-menu-row">
+      <a class="text-sm font-semibold text-on-surface hover:text-tertiary transition-colors" href="#portfolio">ポートフォリオ</a>
+      <button type="button" id="mobileMenuToggle" aria-expanded="false" aria-controls="mobileMenuPanel"
+        class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#EAF6FF] text-[#2E78D6] transition-colors hover:bg-[#dceeff]">
+        <span class="sr-only">メニューを開く</span>
+        <span class="relative block h-4 w-5">
+          <span class="absolute left-0 top-0 block h-0.5 w-5 rounded-full bg-current transition-all duration-300 ease-out" data-menu-line="top"></span>
+          <span class="absolute left-0 top-[7px] block h-0.5 w-5 rounded-full bg-current transition-all duration-300 ease-out" data-menu-line="middle"></span>
+          <span class="absolute left-0 top-[14px] block h-0.5 w-5 rounded-full bg-current transition-all duration-300 ease-out" data-menu-line="bottom"></span>
+        </span>
+      </button>
+    </div>
+    <div id="mobileMenuPanel"
+      class="md:hidden mb-8 overflow-hidden rounded-2xl bg-white/95 shadow-sm ring-1 ring-[#E9E2D6] max-h-0 opacity-0 -translate-y-2 pointer-events-none transition-all duration-300 ease-out">
+      <div class="px-5 py-4 space-y-3">
+        <a class="block text-sm font-medium text-stone-600 hover:text-tertiary transition-colors" href="index.html">TOP</a>
+        <a class="block text-sm font-medium text-stone-600 hover:text-tertiary transition-colors" href="profile_demo.html">プロフィール作成</a>
+        <span class="block text-sm font-semibold text-on-surface">完成プロフィール</span>
+        <a class="block text-sm font-medium text-stone-600 hover:text-tertiary transition-colors" href="#portfolio">ポートフォリオ</a>
+        <a href="login.html"
+          class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-[#EAF6FF] text-[#2E78D6] text-xs font-medium hover:bg-[#dceeff] transition">
+          <span class="material-symbols-outlined text-sm">logout</span>
+          ログアウト
+        </a>
+      </div>
+    </div>
+    <div class="hidden md:flex justify-between items-center gap-4 mb-8 profile-breadcrumbs-row">
       <!-- Breadcrumbs -->
       <nav class="flex items-center gap-2 text-xs font-medium text-stone-500 profile-breadcrumbs">
         <a class="hover:text-tertiary profile-breadcrumb-link" href="index.html">TOP</a>
@@ -379,6 +405,44 @@
         document.querySelectorAll("[data-icon-travel][data-icon-flower][data-icon-book], [data-icon-business]").forEach((icon) => {
           const nextIcon = icon.getAttribute(`data-icon-${theme}`);
           if (nextIcon) icon.textContent = nextIcon;
+        });
+      })();
+
+      (function () {
+        const toggle = document.getElementById("mobileMenuToggle");
+        const panel = document.getElementById("mobileMenuPanel");
+        if (!toggle || !panel) return;
+
+        const lines = {
+          top: toggle.querySelector('[data-menu-line="top"]'),
+          middle: toggle.querySelector('[data-menu-line="middle"]'),
+          bottom: toggle.querySelector('[data-menu-line="bottom"]'),
+        };
+
+        const setOpen = (isOpen) => {
+          toggle.setAttribute("aria-expanded", String(isOpen));
+          panel.classList.toggle("max-h-0", !isOpen);
+          panel.classList.toggle("opacity-0", !isOpen);
+          panel.classList.toggle("-translate-y-2", !isOpen);
+          panel.classList.toggle("pointer-events-none", !isOpen);
+          panel.classList.toggle("max-h-80", isOpen);
+          panel.classList.toggle("opacity-100", isOpen);
+          panel.classList.toggle("translate-y-0", isOpen);
+          panel.classList.toggle("pointer-events-auto", isOpen);
+
+          if (lines.top && lines.middle && lines.bottom) {
+            lines.top.classList.toggle("translate-y-[7px]", isOpen);
+            lines.top.classList.toggle("rotate-45", isOpen);
+            lines.middle.classList.toggle("opacity-0", isOpen);
+            lines.bottom.classList.toggle("-translate-y-[7px]", isOpen);
+            lines.bottom.classList.toggle("-rotate-45", isOpen);
+          }
+        };
+
+        setOpen(false);
+        toggle.addEventListener("click", () => {
+          const next = toggle.getAttribute("aria-expanded") !== "true";
+          setOpen(next);
         });
       })();
   </script>
