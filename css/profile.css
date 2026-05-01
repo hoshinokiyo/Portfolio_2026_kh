@@ -139,3 +139,45 @@ body {
     font-size: 11px;
   }
 }
+
+.ai-list {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-snap-type: x proximity;
+}
+
+.ai-card {
+  background: #f8fafc;
+  border: 1px solid #d9dee7;
+  border-radius: 10px;
+  flex: 0 0 260px;
+  padding: 16px;
+  scroll-snap-align: start;
+}
+
+.ai-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.ai-copy {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.ai-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ai-tags span {
+  background: #eef2f7;
+  border-radius: 6px;
+  font-size: 12px;
+  padding: 4px 8px;
+}
