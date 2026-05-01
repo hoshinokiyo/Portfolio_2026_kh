@@ -34,18 +34,12 @@ body {
   max-width: 1200px;
 }
 
-.top-row {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr;
-  margin-bottom: 20px;
-}
-
 .section {
   background: #ffffff;
   border: 1px solid #d9dee7;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+  margin-bottom: 20px;
   min-height: 220px;
   padding: 24px;
 }
@@ -125,9 +119,5 @@ body {
 @media (min-width: 768px) {
   .page {
     padding: 32px 24px 48px;
-  }
-
-  .top-row {
-    grid-template-columns: 1fr 1fr;
   }
 }
