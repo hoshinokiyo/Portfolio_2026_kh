@@ -95,6 +95,35 @@
       </div>
       <div class="section ai">
         <h2>AI Matching</h2>
+        <div class="ai-list">
+          <div class="ai-card">
+            <div class="ai-title">Candidate A</div>
+            <div class="ai-copy">Builds trust through careful communication.</div>
+            <div class="ai-tags">
+              <span>#empathy</span>
+              <span>#teamwork</span>
+              <span>#support</span>
+            </div>
+          </div>
+          <div class="ai-card">
+            <div class="ai-title">Candidate B</div>
+            <div class="ai-copy">Strong sense of ownership in every project.</div>
+            <div class="ai-tags">
+              <span>#ownership</span>
+              <span>#growth</span>
+              <span>#challenge</span>
+            </div>
+          </div>
+          <div class="ai-card">
+            <div class="ai-title">Candidate C</div>
+            <div class="ai-copy">Creates positive team environments.</div>
+            <div class="ai-tags">
+              <span>#culture</span>
+              <span>#communication</span>
+              <span>#leadership</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
