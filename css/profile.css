@@ -66,9 +66,23 @@ body {
 
 .stat {
   background: #f1f3f7;
+  border: 1px solid #d9dee7;
   border-radius: 8px;
+  cursor: pointer;
   padding: 6px 10px;
   font-size: 13px;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.stat:hover {
+  background: #eef2ff;
+  border-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.stat:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
 }
 
 .calendar-months {
