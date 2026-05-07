@@ -11,6 +11,10 @@ body {
   line-height: 1.5;
 }
 
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
 .page {
   padding: 24px 16px 40px;
 }
@@ -37,9 +41,11 @@ body {
 .top-nav-breadcrumbs a {
   color: #2563eb;
   text-decoration: none;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 .top-nav-breadcrumbs a:hover {
+  color: #1d4ed8;
   text-decoration: underline;
 }
 
@@ -47,13 +53,30 @@ body {
   color: #5e6470;
 }
 
+.top-nav-current {
+  color: #2f3440;
+  font-weight: 700;
+}
+
 .top-nav-logout {
+  align-items: center;
+  background: #eaf6ff;
+  border-radius: 999px;
   color: #2563eb;
+  display: inline-flex;
+  gap: 6px;
+  padding: 6px 12px;
   text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .top-nav-logout:hover {
-  text-decoration: underline;
+  background: #dceeff;
+}
+
+.top-nav-logout .material-symbols-outlined {
+  font-size: 14px;
+  line-height: 1;
 }
 
 .title {
