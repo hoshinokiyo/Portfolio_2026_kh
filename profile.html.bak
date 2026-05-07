@@ -9,9 +9,9 @@
 <body>
   <div class="page">
     <div class="top-nav">
-      <a href="index.html">Top</a>
+      <a href="index.html">トップ</a>
       <span>/</span>
-      <span>Logout</span>
+      <span>ログアウト</span>
     </div>
     <h1 class="title">Admin Demo</h1>
     <div class="container">
@@ -206,22 +206,22 @@
           </div>
         </div>
         <div class="upcoming">
-          <h3>Upcoming</h3>
+          <h3>今後の予定</h3>
           <div class="upcoming-list">
             <div class="upcoming-item">
-              <div class="upcoming-label">Today</div>
+              <div class="upcoming-label">今日</div>
               <div class="upcoming-detail">11:00 Yamamoto / Interview / Confirmed</div>
             </div>
             <div class="upcoming-item">
-              <div class="upcoming-label">Tomorrow</div>
+              <div class="upcoming-label">明日</div>
               <div class="upcoming-detail">14:00 Tamura / Casual meeting / Tentative</div>
             </div>
             <div class="upcoming-item">
-              <div class="upcoming-label">In 3 days</div>
+              <div class="upcoming-label">3日後</div>
               <div class="upcoming-detail">16:30 Mori / Portfolio review / Confirmed</div>
             </div>
             <div class="upcoming-item">
-              <div class="upcoming-label">Next week</div>
+              <div class="upcoming-label">来週</div>
               <div class="upcoming-detail">10:00 Ishii / Final interview / Tentative</div>
             </div>
           </div>
