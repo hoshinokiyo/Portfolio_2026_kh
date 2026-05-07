@@ -46,18 +46,18 @@
         </div>
       </div>
       <div class="section calendar">
-        <h2>Calendar</h2>
+        <h2>カレンダー</h2>
         <div class="calendar-months">
           <div class="month-calendar">
-            <div class="month-title">Apr 2026</div>
+            <div class="month-title">2026年4月</div>
             <div class="week-row">
-              <div>Mon</div>
-              <div>Tue</div>
-              <div>Wed</div>
-              <div>Thu</div>
-              <div>Fri</div>
-              <div>Sat</div>
-              <div>Sun</div>
+              <div>月</div>
+              <div>火</div>
+              <div>水</div>
+              <div>木</div>
+              <div>金</div>
+              <div>土</div>
+              <div>日</div>
             </div>
             <div class="day-grid">
               <div class="day muted"></div>
@@ -98,15 +98,15 @@
             </div>
           </div>
           <div class="month-calendar current-month">
-            <div class="month-title">May 2026</div>
+            <div class="month-title">2026年5月</div>
             <div class="week-row">
-              <div>Mon</div>
-              <div>Tue</div>
-              <div>Wed</div>
-              <div>Thu</div>
-              <div>Fri</div>
-              <div>Sat</div>
-              <div>Sun</div>
+              <div>月</div>
+              <div>火</div>
+              <div>水</div>
+              <div>木</div>
+              <div>金</div>
+              <div>土</div>
+              <div>日</div>
             </div>
             <div class="day-grid">
               <div class="day muted"></div>
@@ -115,7 +115,7 @@
               <div class="day muted"></div>
               <div class="day today">
                 <span class="day-number">1</span>
-                <span class="event-count">1 event</span>
+                <span class="event-count">1件</span>
               </div>
               <div class="day">2</div>
               <div class="day">3</div>
@@ -129,13 +129,13 @@
               <div class="day">11</div>
               <div class="day">
                 <span class="day-number">12</span>
-                <span class="event-count">2 events</span>
+                <span class="event-count">2件</span>
               </div>
               <div class="day">13</div>
               <div class="day">14</div>
               <div class="day">
                 <span class="day-number">15</span>
-                <span class="event-count">1 event</span>
+                <span class="event-count">1件</span>
               </div>
               <div class="day">16</div>
               <div class="day">17</div>
@@ -156,15 +156,15 @@
             </div>
           </div>
           <div class="month-calendar">
-            <div class="month-title">Jun 2026</div>
+            <div class="month-title">2026年6月</div>
             <div class="week-row">
-              <div>Mon</div>
-              <div>Tue</div>
-              <div>Wed</div>
-              <div>Thu</div>
-              <div>Fri</div>
-              <div>Sat</div>
-              <div>Sun</div>
+              <div>月</div>
+              <div>火</div>
+              <div>水</div>
+              <div>木</div>
+              <div>金</div>
+              <div>土</div>
+              <div>日</div>
             </div>
             <div class="day-grid">
               <div class="day">1</div>
@@ -210,19 +210,19 @@
           <div class="upcoming-list">
             <div class="upcoming-item">
               <div class="upcoming-label">今日</div>
-              <div class="upcoming-detail">11:00 Yamamoto / Interview / Confirmed</div>
+              <div class="upcoming-detail">11:00 Yamamoto / 面接 / 確定</div>
             </div>
             <div class="upcoming-item">
               <div class="upcoming-label">明日</div>
-              <div class="upcoming-detail">14:00 Tamura / Casual meeting / Tentative</div>
+              <div class="upcoming-detail">14:00 Tamura / カジュアル面談 / 仮予定</div>
             </div>
             <div class="upcoming-item">
               <div class="upcoming-label">3日後</div>
-              <div class="upcoming-detail">16:30 Mori / Portfolio review / Confirmed</div>
+              <div class="upcoming-detail">16:30 Mori / ポートフォリオ確認 / 確定</div>
             </div>
             <div class="upcoming-item">
               <div class="upcoming-label">来週</div>
-              <div class="upcoming-detail">10:00 Ishii / Final interview / Tentative</div>
+              <div class="upcoming-detail">10:00 Ishii / 最終面接 / 仮予定</div>
             </div>
           </div>
         </div>
