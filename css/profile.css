@@ -17,22 +17,43 @@ body {
 
 .top-nav {
   color: #5e6470;
+  display: flex;
   font-size: 13px;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
   margin: 0 auto 16px;
   max-width: 1200px;
+  flex-wrap: wrap;
 }
 
-.top-nav a {
+.top-nav-breadcrumbs {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.top-nav-breadcrumbs a {
   color: #2563eb;
   text-decoration: none;
 }
 
-.top-nav a:hover {
+.top-nav-breadcrumbs a:hover {
   text-decoration: underline;
 }
 
-.top-nav span {
-  margin-left: 6px;
+.top-nav-breadcrumbs span {
+  color: #5e6470;
+}
+
+.top-nav-logout {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.top-nav-logout:hover {
+  text-decoration: underline;
 }
 
 .title {
