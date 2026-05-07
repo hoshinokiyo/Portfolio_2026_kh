@@ -42,6 +42,13 @@ body {
   max-width: 1200px;
 }
 
+.page-lead {
+  color: #5e6470;
+  font-size: 14px;
+  margin: -12px auto 24px;
+  max-width: 1200px;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1200px;
@@ -60,6 +67,12 @@ body {
 .section h2 {
   font-size: 20px;
   font-weight: 700;
+}
+
+.section-lead {
+  color: #5e6470;
+  font-size: 13px;
+  margin-top: 6px;
 }
 
 .site-block {
