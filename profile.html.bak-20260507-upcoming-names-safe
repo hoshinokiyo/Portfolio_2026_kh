@@ -220,19 +220,19 @@
           <div class="upcoming-list">
             <div class="upcoming-item">
               <div class="upcoming-label">今日</div>
-              <div class="upcoming-detail">11:00 山本 智志 / 面接 / 確定</div>
+              <div class="upcoming-detail">11:00 Yamamoto / 面接 / 確定</div>
             </div>
             <div class="upcoming-item">
               <div class="upcoming-label">明日</div>
-              <div class="upcoming-detail">14:00 田村 知子 / カジュアル面談 / 仮予定</div>
+              <div class="upcoming-detail">14:00 Tamura / カジュアル面談 / 仮予定</div>
             </div>
             <div class="upcoming-item">
               <div class="upcoming-label">3日後</div>
-              <div class="upcoming-detail">16:30 森 華子 / ポートフォリオ確認 / 確定</div>
+              <div class="upcoming-detail">16:30 Mori / ポートフォリオ確認 / 確定</div>
             </div>
             <div class="upcoming-item">
               <div class="upcoming-label">来週</div>
-              <div class="upcoming-detail">10:00 石井 正樹 / 最終面接 / 仮予定</div>
+              <div class="upcoming-detail">10:00 Ishii / 最終面接 / 仮予定</div>
             </div>
           </div>
         </div>
