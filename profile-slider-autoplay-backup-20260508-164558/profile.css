@@ -444,14 +444,6 @@ body {
   object-position: center 34%;
 }
 
-.ai-image-card5 {
-  object-position: center 18%;
-}
-
-.ai-image-card6 {
-  object-position: center 40%;
-}
-
 .ai-badge {
   display: inline-flex;
   align-items: center;
@@ -631,38 +623,6 @@ body {
   background: #f59e0b;
 }
 
-.ai-card-variant-e {
-  background:
-    radial-gradient(circle at 12% 12%, rgba(59, 130, 246, 0.12), transparent 38%),
-    linear-gradient(180deg, #eef2ff 0%, #ffffff 36%);
-}
-
-.ai-card-variant-f {
-  background:
-    radial-gradient(circle at 92% 12%, rgba(244, 114, 182, 0.14), transparent 36%),
-    linear-gradient(180deg, #f9fafb 0%, #ffffff 36%);
-}
-
-.ai-card-variant-e .ai-badge::before,
-.ai-card-variant-e .ai-feature-head {
-  border-left-color: #3b82f6;
-  background: none;
-}
-
-.ai-card-variant-f .ai-badge::before,
-.ai-card-variant-f .ai-feature-head {
-  border-left-color: #f472b6;
-  background: none;
-}
-
-.ai-card-variant-e .ai-badge::before {
-  background: #3b82f6;
-}
-
-.ai-card-variant-f .ai-badge::before {
-  background: #f472b6;
-}
-
 .ai-card-featured .ai-tag-b1,
 .ai-card-featured .ai-tag-c1,
 .ai-card-featured .ai-tag-d2 {
@@ -682,22 +642,4 @@ body {
 .ai-card-featured .ai-tag-d1 {
   background: rgba(251, 191, 36, 0.18);
   color: #f59e0b;
-}
-
-.ai-card-featured .ai-tag-e1,
-.ai-card-featured .ai-tag-f2 {
-  background: #eef2ff;
-  color: #3b82f6;
-}
-
-.ai-card-featured .ai-tag-e2,
-.ai-card-featured .ai-tag-f1 {
-  background: rgba(251, 191, 36, 0.18);
-  color: #f59e0b;
-}
-
-.ai-card-featured .ai-tag-e3,
-.ai-card-featured .ai-tag-f3 {
-  background: rgba(244, 114, 182, 0.14);
-  color: #f472b6;
 }

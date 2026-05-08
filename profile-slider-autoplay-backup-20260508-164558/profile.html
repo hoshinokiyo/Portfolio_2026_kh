@@ -332,48 +332,6 @@
               この人となりを知る <span class="match-card-link-arrow" aria-hidden="true">→</span>
             </button>
           </div>
-          <div class="ai-card ai-card-featured ai-card-variant-e">
-            <img class="ai-card-image ai-image-card5" src="images/hero-analysis.png" alt="AI推薦カードイメージ">
-            <div class="ai-badge">AI対話分析より</div>
-            <div class="ai-title">相手の言葉を受け止めながら、安心できる対話をつくれる人</div>
-            <div class="ai-feature-head">対話から見えた人となり</div>
-            <div class="ai-copy">自分の意見を急いで出すよりも、相手の考えを理解しながら言葉を選ぶ傾向があります。</div>
-            <div class="ai-feature-head">AIが見つけた相性</div>
-            <ul class="ai-points">
-              <li>聞く姿勢を大切にできる</li>
-              <li>相手の不安に寄り添える</li>
-              <li>落ち着いた対話ができる</li>
-            </ul>
-            <div class="ai-tags">
-              <span class="ai-tag-e1">#傾聴力</span>
-              <span class="ai-tag-e2">#安心感</span>
-              <span class="ai-tag-e3">#共感力</span>
-            </div>
-            <button class="match-card-link match-card-disabled" type="button" data-match-disabled>
-              この人となりを知る <span class="match-card-link-arrow" aria-hidden="true">→</span>
-            </button>
-          </div>
-          <div class="ai-card ai-card-featured ai-card-variant-f">
-            <img class="ai-card-image ai-image-card6" src="images/card3.png" alt="AI推薦カードイメージ">
-            <div class="ai-badge">AI対話分析より</div>
-            <div class="ai-title">小さな変化に気づき、周囲をそっと支えられる人</div>
-            <div class="ai-feature-head">対話から見えた人となり</div>
-            <div class="ai-copy">目立つ役割よりも、周囲が動きやすくなるように気づいたことを自然に補う傾向があります。</div>
-            <div class="ai-feature-head">AIが見つけた相性</div>
-            <ul class="ai-points">
-              <li>周囲の変化に気づける</li>
-              <li>支える役割を自然に担える</li>
-              <li>丁寧に物事を整えられる</li>
-            </ul>
-            <div class="ai-tags">
-              <span class="ai-tag-f1">#気配り</span>
-              <span class="ai-tag-f2">#支える力</span>
-              <span class="ai-tag-f3">#丁寧さ</span>
-            </div>
-            <button class="match-card-link match-card-disabled" type="button" data-match-disabled>
-              この人となりを知る <span class="match-card-link-arrow" aria-hidden="true">→</span>
-            </button>
-          </div>
         </div>
         </div>
       </div>
@@ -423,45 +381,6 @@
 
       nextButton.addEventListener("click", () => {
         track.scrollBy({ left: getStep(), behavior: "smooth" });
-      });
-
-      const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-      if (motionQuery.matches) return;
-
-      let autoplayTimer = null;
-      let isPaused = false;
-      const AUTOPLAY_MS = 3600;
-
-      const runAutoplayStep = () => {
-        if (isPaused) return;
-        const step = getStep();
-        const maxLeft = track.scrollWidth - track.clientWidth;
-        if (maxLeft <= 0) return;
-        const nextLeft = track.scrollLeft + step;
-        if (nextLeft >= maxLeft - 8) {
-          track.scrollTo({ left: 0, behavior: "smooth" });
-          return;
-        }
-        track.scrollBy({ left: step, behavior: "smooth" });
-      };
-
-      const startAutoplay = () => {
-        if (autoplayTimer) clearInterval(autoplayTimer);
-        autoplayTimer = setInterval(runAutoplayStep, AUTOPLAY_MS);
-      };
-
-      startAutoplay();
-      track.addEventListener("mouseenter", () => {
-        isPaused = true;
-      });
-      track.addEventListener("mouseleave", () => {
-        isPaused = false;
-      });
-      track.addEventListener("focusin", () => {
-        isPaused = true;
-      });
-      track.addEventListener("focusout", () => {
-        isPaused = false;
       });
     })();
   </script>
