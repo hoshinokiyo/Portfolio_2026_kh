@@ -258,9 +258,6 @@
               <span class="ai-tag-care">#気配り</span>
               <span class="ai-tag-support">#支える力</span>
             </div>
-            <a class="match-card-link" href="profile_private.html?theme=analysis">
-              この人となりを知る <span class="match-card-link-arrow" aria-hidden="true">→</span>
-            </a>
           </div>
           <div class="ai-card ai-card-featured ai-card-variant-b">
             <img class="ai-card-image" src="images/card2.png" alt="AI推薦カードイメージ">
@@ -279,9 +276,6 @@
               <span class="ai-tag-b2">#チーム視点</span>
               <span class="ai-tag-b3">#落ち着き</span>
             </div>
-            <button class="match-card-link match-card-disabled" type="button" data-match-disabled>
-              この人となりを知る <span class="match-card-link-arrow" aria-hidden="true">→</span>
-            </button>
           </div>
           <div class="ai-card ai-card-featured ai-card-variant-c">
             <img class="ai-card-image" src="images/card3.png" alt="AI推薦カードイメージ">
@@ -300,9 +294,6 @@
               <span class="ai-tag-c2">#関係構築</span>
               <span class="ai-tag-c3">#協調性</span>
             </div>
-            <button class="match-card-link match-card-disabled" type="button" data-match-disabled>
-              この人となりを知る <span class="match-card-link-arrow" aria-hidden="true">→</span>
-            </button>
           </div>
           <div class="ai-card ai-card-featured ai-card-variant-d">
             <img class="ai-card-image" src="images/card4.png" alt="AI推薦カードイメージ">
@@ -321,36 +312,10 @@
               <span class="ai-tag-d2">#安心感</span>
               <span class="ai-tag-d3">#柔軟性</span>
             </div>
-            <button class="match-card-link match-card-disabled" type="button" data-match-disabled>
-              この人となりを知る <span class="match-card-link-arrow" aria-hidden="true">→</span>
-            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="match-toast" id="matchToast" role="status" aria-live="polite">
-    このプロフィール詳細は現在準備中です
-  </div>
-  <script>
-    (function () {
-      const toast = document.getElementById("matchToast");
-      const disabledLinks = document.querySelectorAll("[data-match-disabled]");
-      if (!toast || disabledLinks.length === 0) return;
-
-      let hideTimer = null;
-      const showToast = () => {
-        toast.classList.add("is-visible");
-        if (hideTimer) clearTimeout(hideTimer);
-        hideTimer = setTimeout(() => {
-          toast.classList.remove("is-visible");
-        }, 2400);
-      };
-
-      disabledLinks.forEach((button) => {
-        button.addEventListener("click", showToast);
-      });
-    })();
-  </script>
 </body>
 </html>

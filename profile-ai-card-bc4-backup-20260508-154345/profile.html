@@ -258,99 +258,28 @@
               <span class="ai-tag-care">#気配り</span>
               <span class="ai-tag-support">#支える力</span>
             </div>
-            <a class="match-card-link" href="profile_private.html?theme=analysis">
-              この人となりを知る <span class="match-card-link-arrow" aria-hidden="true">→</span>
-            </a>
           </div>
-          <div class="ai-card ai-card-featured ai-card-variant-b">
-            <img class="ai-card-image" src="images/card2.png" alt="AI推薦カードイメージ">
-            <div class="ai-badge">AI対話分析より</div>
-            <div class="ai-title">チーム全体を見ながら、静かに調整役を担える人</div>
-            <div class="ai-feature-head">対話から見えた人となり</div>
-            <div class="ai-copy">自分だけが前に出るよりも、周囲の状況を見ながら必要な人や情報をつなぐ傾向があります。</div>
-            <div class="ai-feature-head">AIが見つけた相性</div>
-            <ul class="ai-points">
-              <li>全体を見ながら動ける</li>
-              <li>人と人の間に入り調整できる</li>
-              <li>チームの空気を落ち着かせられる</li>
-            </ul>
+          <div class="ai-card">
+            <div class="ai-title">候補者B</div>
+            <div class="ai-copy">あらゆる案件で強い当事者意識を持つ。</div>
             <div class="ai-tags">
-              <span class="ai-tag-b1">#調整力</span>
-              <span class="ai-tag-b2">#チーム視点</span>
-              <span class="ai-tag-b3">#落ち着き</span>
+              <span>#主体性</span>
+              <span>#成長意欲</span>
+              <span>#挑戦力</span>
             </div>
-            <button class="match-card-link match-card-disabled" type="button" data-match-disabled>
-              この人となりを知る <span class="match-card-link-arrow" aria-hidden="true">→</span>
-            </button>
           </div>
-          <div class="ai-card ai-card-featured ai-card-variant-c">
-            <img class="ai-card-image" src="images/card3.png" alt="AI推薦カードイメージ">
-            <div class="ai-badge">AI対話分析より</div>
-            <div class="ai-title">相手に合わせながら、関係を丁寧につないでいける人</div>
-            <div class="ai-feature-head">対話から見えた人となり</div>
-            <div class="ai-copy">相手の立場や状況をくみ取りながら、無理に進めず、少しずつ信頼関係を築いていく傾向があります。</div>
-            <div class="ai-feature-head">AIが見つけた相性</div>
-            <ul class="ai-points">
-              <li>相手のペースを尊重できる</li>
-              <li>関係性を丁寧に育てられる</li>
-              <li>周囲と協力して進められる</li>
-            </ul>
+          <div class="ai-card">
+            <div class="ai-title">候補者C</div>
+            <div class="ai-copy">前向きなチーム環境をつくる。</div>
             <div class="ai-tags">
-              <span class="ai-tag-c1">#共感力</span>
-              <span class="ai-tag-c2">#関係構築</span>
-              <span class="ai-tag-c3">#協調性</span>
+              <span>#組織文化</span>
+              <span>#対話力</span>
+              <span>#リーダーシップ</span>
             </div>
-            <button class="match-card-link match-card-disabled" type="button" data-match-disabled>
-              この人となりを知る <span class="match-card-link-arrow" aria-hidden="true">→</span>
-            </button>
-          </div>
-          <div class="ai-card ai-card-featured ai-card-variant-d">
-            <img class="ai-card-image" src="images/card4.png" alt="AI推薦カードイメージ">
-            <div class="ai-badge">AI対話分析より</div>
-            <div class="ai-title">忙しい場面でも、空気を荒らさずに動ける人</div>
-            <div class="ai-feature-head">対話から見えた人となり</div>
-            <div class="ai-copy">慌ただしい状況でも感情的になりすぎず、落ち着いた受け答えで周囲に安心感を与える傾向があります。</div>
-            <div class="ai-feature-head">AIが見つけた相性</div>
-            <ul class="ai-points">
-              <li>冷静に状況を受け止められる</li>
-              <li>相手に安心感を与えられる</li>
-              <li>変化の中でも丁寧に対応できる</li>
-            </ul>
-            <div class="ai-tags">
-              <span class="ai-tag-d1">#冷静さ</span>
-              <span class="ai-tag-d2">#安心感</span>
-              <span class="ai-tag-d3">#柔軟性</span>
-            </div>
-            <button class="match-card-link match-card-disabled" type="button" data-match-disabled>
-              この人となりを知る <span class="match-card-link-arrow" aria-hidden="true">→</span>
-            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="match-toast" id="matchToast" role="status" aria-live="polite">
-    このプロフィール詳細は現在準備中です
-  </div>
-  <script>
-    (function () {
-      const toast = document.getElementById("matchToast");
-      const disabledLinks = document.querySelectorAll("[data-match-disabled]");
-      if (!toast || disabledLinks.length === 0) return;
-
-      let hideTimer = null;
-      const showToast = () => {
-        toast.classList.add("is-visible");
-        if (hideTimer) clearTimeout(hideTimer);
-        hideTimer = setTimeout(() => {
-          toast.classList.remove("is-visible");
-        }, 2400);
-      };
-
-      disabledLinks.forEach((button) => {
-        button.addEventListener("click", showToast);
-      });
-    })();
-  </script>
 </body>
 </html>
