@@ -265,7 +265,7 @@
               <span class="ai-tag-care">#気配り</span>
               <span class="ai-tag-support">#支える力</span>
             </div>
-            <a class="match-card-link" href="profile_private.html?theme=analysis">
+            <a class="match-card-link" href="profile_private.html?type=B">
               この人となりを知る <span class="match-card-link-arrow" aria-hidden="true">→</span>
             </a>
           </div>
@@ -408,24 +408,6 @@
       const nextButton = document.getElementById("matchSliderNext");
       if (!track || !prevButton || !nextButton) return;
 
-      const originalCards = Array.from(track.children);
-      const originalCount = originalCards.length;
-      if (originalCount === 0) return;
-
-      // Duplicate cards once so the list can loop seamlessly.
-      originalCards.forEach((card) => {
-        const clone = card.cloneNode(true);
-        clone.classList.add("is-clone");
-        clone.setAttribute("aria-hidden", "true");
-        clone.querySelectorAll("a, button").forEach((interactive) => {
-          interactive.setAttribute("tabindex", "-1");
-          interactive.setAttribute("aria-hidden", "true");
-          if (interactive.tagName === "A") interactive.removeAttribute("href");
-          if (interactive.tagName === "BUTTON") interactive.disabled = true;
-        });
-        track.appendChild(clone);
-      });
-
       const getStep = () => {
         const card = track.querySelector(".ai-card");
         if (!card) return 320;
@@ -435,52 +417,32 @@
         return cardWidth + (Number.isNaN(gap) ? 16 : gap);
       };
 
-      const getGap = () => {
-        const styles = window.getComputedStyle(track);
-        const gap = parseFloat(styles.columnGap || styles.gap || "16");
-        return Number.isNaN(gap) ? 16 : gap;
-      };
+      prevButton.addEventListener("click", () => {
+        track.scrollBy({ left: -getStep(), behavior: "smooth" });
+      });
 
-      let cycleWidth = 0;
-      const recalcCycleWidth = () => {
-        const gap = getGap();
-        cycleWidth =
-          originalCards.reduce((sum, card) => sum + card.getBoundingClientRect().width, 0) +
-          gap * Math.max(originalCount - 1, 0);
-      };
-
-      const normalizeAfterMove = () => {
-        if (cycleWidth <= 0) return;
-        if (track.scrollLeft >= cycleWidth) {
-          track.scrollTo({ left: track.scrollLeft - cycleWidth, behavior: "auto" });
-        }
-      };
-
-      const moveBy = (direction) => {
-        const step = getStep();
-        if (direction < 0 && track.scrollLeft <= 2 && cycleWidth > 0) {
-          track.scrollTo({ left: track.scrollLeft + cycleWidth, behavior: "auto" });
-        }
-        track.scrollBy({ left: step * direction, behavior: "smooth" });
-        window.setTimeout(normalizeAfterMove, 420);
-      };
-
-      recalcCycleWidth();
-      window.addEventListener("resize", recalcCycleWidth);
-
-      prevButton.addEventListener("click", () => moveBy(-1));
-      nextButton.addEventListener("click", () => moveBy(1));
+      nextButton.addEventListener("click", () => {
+        track.scrollBy({ left: getStep(), behavior: "smooth" });
+      });
 
       const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
       if (motionQuery.matches) return;
 
       let autoplayTimer = null;
       let isPaused = false;
-      const AUTOPLAY_MS = 3000;
+      const AUTOPLAY_MS = 3600;
 
       const runAutoplayStep = () => {
         if (isPaused) return;
-        moveBy(1);
+        const step = getStep();
+        const maxLeft = track.scrollWidth - track.clientWidth;
+        if (maxLeft <= 0) return;
+        const nextLeft = track.scrollLeft + step;
+        if (nextLeft >= maxLeft - 8) {
+          track.scrollTo({ left: 0, behavior: "smooth" });
+          return;
+        }
+        track.scrollBy({ left: step, behavior: "smooth" });
       };
 
       const startAutoplay = () => {
