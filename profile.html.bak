@@ -250,8 +250,7 @@
         <div class="ai-list match-slider-track" id="matchSliderTrack">
           <div
             class="ai-card ai-card-featured ai-card-special"
-            data-profile-card
-            data-profile-href="profile_private.html?theme=analysis"
+            data-profile-link="profile_private.html?theme=analysis"
             tabindex="0"
             aria-label="周囲が自然と相談したくなる人の詳細プロフィールを開く"
           >
@@ -422,16 +421,24 @@
       // Duplicate cards once so the list can loop seamlessly.
       originalCards.forEach((card) => {
         const clone = card.cloneNode(true);
+        const profileLink = clone.getAttribute("data-profile-link");
         clone.classList.add("is-clone");
-        clone.setAttribute("aria-hidden", "true");
-        clone.removeAttribute("tabindex");
-        clone.removeAttribute("aria-label");
-        clone.removeAttribute("data-profile-card");
-        clone.removeAttribute("data-profile-href");
-        clone.classList.remove("ai-card-special");
-        const specialLabel = clone.querySelector(".ai-card-special-label");
-        if (specialLabel) specialLabel.remove();
+        if (profileLink) {
+          clone.removeAttribute("aria-hidden");
+          clone.setAttribute("tabindex", "0");
+        } else {
+          clone.setAttribute("aria-hidden", "true");
+          clone.removeAttribute("tabindex");
+          clone.removeAttribute("aria-label");
+        }
         clone.querySelectorAll("a, button").forEach((interactive) => {
+          if (profileLink) {
+            interactive.removeAttribute("tabindex");
+            interactive.removeAttribute("aria-hidden");
+            if (interactive.tagName === "BUTTON") interactive.disabled = false;
+            if (interactive.tagName === "A") interactive.setAttribute("href", profileLink);
+            return;
+          }
           interactive.setAttribute("tabindex", "-1");
           interactive.setAttribute("aria-hidden", "true");
           if (interactive.tagName === "A") interactive.removeAttribute("href");
@@ -518,26 +525,29 @@
     })();
 
     (function () {
-      const card = document.querySelector(".ai-card-special:not(.is-clone)");
-      if (!card) return;
+      const track = document.getElementById("matchSliderTrack");
+      if (!track) return;
 
-      const href = card.getAttribute("data-profile-href");
-      if (!href) return;
-
-      const openProfile = () => {
+      const getProfileCard = (target) => target.closest("[data-profile-link]");
+      const openProfile = (card) => {
+        const href = card?.getAttribute("data-profile-link");
+        if (!href) return;
         window.location.href = href;
       };
 
-      card.addEventListener("click", (event) => {
+      track.addEventListener("click", (event) => {
+        const card = getProfileCard(event.target);
+        if (!card || !track.contains(card)) return;
         if (event.target.closest("a, button")) return;
-        openProfile();
+        openProfile(card);
       });
 
-      card.addEventListener("keydown", (event) => {
-        if (event.target !== card) return;
+      track.addEventListener("keydown", (event) => {
+        const card = getProfileCard(event.target);
+        if (!card || event.target !== card) return;
         if (event.key !== "Enter" && event.key !== " ") return;
         event.preventDefault();
-        openProfile();
+        openProfile(card);
       });
     })();
   </script>
