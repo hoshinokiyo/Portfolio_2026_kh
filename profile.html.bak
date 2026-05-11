@@ -237,15 +237,18 @@
           </div>
         </div>
       </div>
-      <div class="section ai">
+      <div class="section ai ai-section-feature">
         <div class="match-slider-header">
-          <h2>AIマッチング</h2>
+          <div class="match-slider-title-group">
+            <span class="match-slider-kicker">AI Matching Preview</span>
+            <h2>AIマッチング</h2>
+          </div>
           <div class="match-slider-controls" aria-label="AI推薦カードの移動">
             <button class="match-slider-button" type="button" id="matchSliderPrev" aria-label="前のカードへ">←</button>
             <button class="match-slider-button" type="button" id="matchSliderNext" aria-label="次のカードへ">→</button>
           </div>
         </div>
-        <p class="section-lead">スキルだけではなく、人となりも含めた候補者提案を行います。</p>
+        <p class="section-lead match-slider-lead">AIとの対話から見えてきた、その人らしさや空気感まで。<br>“この人と話してみたい”と思える出会いを提案します。</p>
         <div class="match-slider">
         <div class="ai-list match-slider-track" id="matchSliderTrack">
           <div
@@ -385,6 +388,14 @@
           </div>
         </div>
         </div>
+        <div class="match-slider-cosmos" aria-hidden="true">
+          <div class="match-slider-starlane">
+            <span class="match-slider-starlane-base"></span>
+            <span class="match-slider-starlane-active"></span>
+            <span class="match-slider-starlane-star">✦</span>
+          </div>
+        </div>
+        <p class="match-slider-note">※表示される内容は、AIとの対話から分析された一部情報です。</p>
       </div>
     </div>
   </div>
@@ -552,7 +563,7 @@
         if (contactToastTimer) clearTimeout(contactToastTimer);
         contactToastTimer = setTimeout(() => {
           contactToast.classList.remove("is-visible");
-        }, 2600);
+        }, 5000);
       };
 
       track.addEventListener("click", (event) => {

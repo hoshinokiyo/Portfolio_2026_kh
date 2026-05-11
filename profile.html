@@ -237,15 +237,18 @@
           </div>
         </div>
       </div>
-      <div class="section ai">
+      <div class="section ai ai-section-feature">
         <div class="match-slider-header">
-          <h2>AIマッチング</h2>
+          <div class="match-slider-title-group">
+            <span class="match-slider-kicker">AI Matching Preview</span>
+            <h2>AIマッチング</h2>
+          </div>
           <div class="match-slider-controls" aria-label="AI推薦カードの移動">
             <button class="match-slider-button" type="button" id="matchSliderPrev" aria-label="前のカードへ">←</button>
             <button class="match-slider-button" type="button" id="matchSliderNext" aria-label="次のカードへ">→</button>
           </div>
         </div>
-        <p class="section-lead">スキルだけではなく、人となりも含めた候補者提案を行います。</p>
+        <p class="section-lead match-slider-lead">AIとの対話から見えてきた、その人らしさや空気感まで。<br>“この人と話してみたい”と思える出会いを提案します。</p>
         <div class="match-slider">
         <div class="ai-list match-slider-track" id="matchSliderTrack">
           <div
@@ -385,6 +388,8 @@
           </div>
         </div>
         </div>
+        <div class="match-slider-pagination" id="matchSliderPagination" aria-label="AI推薦カードのページ移動"></div>
+        <p class="match-slider-note">※表示される内容は、AIとの対話から分析された一部情報です。</p>
       </div>
     </div>
   </div>
@@ -421,11 +426,25 @@
       const track = document.getElementById("matchSliderTrack");
       const prevButton = document.getElementById("matchSliderPrev");
       const nextButton = document.getElementById("matchSliderNext");
-      if (!track || !prevButton || !nextButton) return;
+      const pagination = document.getElementById("matchSliderPagination");
+      if (!track || !prevButton || !nextButton || !pagination) return;
 
       const originalCards = Array.from(track.children);
       const originalCount = originalCards.length;
       if (originalCount === 0) return;
+
+      const paginationButtons = originalCards.map((card, index) => {
+        const title = card.querySelector(".ai-title")?.textContent?.trim() || `カード ${index + 1}`;
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "match-slider-page";
+        button.setAttribute("aria-label", `${index + 1}件目の候補者へ移動: ${title}`);
+        button.setAttribute("data-match-page", String(index));
+        button.innerHTML =
+          '<span class="match-slider-page-track"><span class="match-slider-page-fill"></span><span class="match-slider-page-star" aria-hidden="true">✦</span></span>';
+        pagination.appendChild(button);
+        return button;
+      });
 
       // Duplicate cards once so the list can loop seamlessly.
       originalCards.forEach((card) => {
@@ -479,11 +498,35 @@
           gap * Math.max(originalCount - 1, 0);
       };
 
+      const getNormalizedLeft = () => {
+        if (cycleWidth <= 0) return track.scrollLeft;
+        let normalizedLeft = track.scrollLeft % cycleWidth;
+        if (normalizedLeft < 0) normalizedLeft += cycleWidth;
+        return normalizedLeft;
+      };
+
+      const updatePagination = () => {
+        if (paginationButtons.length === 0) return;
+        const step = getStep();
+        const normalizedLeft = getNormalizedLeft();
+        const activeIndex = Math.min(
+          originalCount - 1,
+          Math.max(0, Math.round(normalizedLeft / Math.max(step, 1)))
+        );
+
+        paginationButtons.forEach((button, index) => {
+          const isActive = index === activeIndex;
+          button.classList.toggle("is-active", isActive);
+          button.setAttribute("aria-current", isActive ? "true" : "false");
+        });
+      };
+
       const normalizeAfterMove = () => {
         if (cycleWidth <= 0) return;
         if (track.scrollLeft >= cycleWidth) {
           track.scrollTo({ left: track.scrollLeft - cycleWidth, behavior: "auto" });
         }
+        updatePagination();
       };
 
       const moveBy = (direction) => {
@@ -495,11 +538,36 @@
         window.setTimeout(normalizeAfterMove, 420);
       };
 
+      const moveToIndex = (index) => {
+        const step = getStep();
+        const currentSetOffset = cycleWidth > 0 && track.scrollLeft >= cycleWidth ? cycleWidth : 0;
+        let targetLeft = currentSetOffset + step * index;
+
+        if (cycleWidth > 0) {
+          const diff = targetLeft - track.scrollLeft;
+          if (diff > cycleWidth / 2) targetLeft -= cycleWidth;
+          if (diff < -cycleWidth / 2) targetLeft += cycleWidth;
+        }
+
+        track.scrollTo({ left: targetLeft, behavior: "smooth" });
+        window.setTimeout(normalizeAfterMove, 420);
+      };
+
       recalcCycleWidth();
       window.addEventListener("resize", recalcCycleWidth);
+      window.addEventListener("resize", updatePagination);
 
       prevButton.addEventListener("click", () => moveBy(-1));
       nextButton.addEventListener("click", () => moveBy(1));
+      pagination.addEventListener("click", (event) => {
+        const pageButton = event.target.closest("[data-match-page]");
+        if (!pageButton || !pagination.contains(pageButton)) return;
+        const index = Number(pageButton.getAttribute("data-match-page"));
+        if (Number.isNaN(index)) return;
+        moveToIndex(index);
+      });
+      track.addEventListener("scroll", updatePagination, { passive: true });
+      updatePagination();
 
       const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
       if (motionQuery.matches) return;
