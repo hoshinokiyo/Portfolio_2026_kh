@@ -443,15 +443,15 @@ body {
   transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.ai-card-special:not(.is-clone):hover,
-.ai-card-special:not(.is-clone):focus-visible {
+.ai-card-special:hover,
+.ai-card-special:focus-visible {
   border-color: #60a5fa;
   box-shadow: 0 16px 32px rgba(37, 99, 235, 0.22);
   transform: translateY(-6px);
 }
 
-.ai-card-special:not(.is-clone):hover .ai-card-special-label,
-.ai-card-special:not(.is-clone):focus-visible .ai-card-special-label {
+.ai-card-special:hover .ai-card-special-label,
+.ai-card-special:focus-visible .ai-card-special-label {
   background: rgba(59, 130, 246, 0.96);
   box-shadow: 0 10px 22px rgba(59, 130, 246, 0.24);
   transform: translateY(-1px);
@@ -474,8 +474,8 @@ body {
   transition: transform 0.28s ease, filter 0.28s ease;
 }
 
-.ai-card-special:not(.is-clone):hover .ai-card-image,
-.ai-card-special:not(.is-clone):focus-visible .ai-card-image {
+.ai-card-special:hover .ai-card-image,
+.ai-card-special:focus-visible .ai-card-image {
   transform: scale(1.02);
   filter: saturate(1.02);
 }
@@ -607,8 +607,8 @@ body {
   text-decoration: underline;
 }
 
-.ai-card-special:not(.is-clone):hover .match-card-link-primary,
-.ai-card-special:not(.is-clone):focus-visible .match-card-link-primary,
+.ai-card-special:hover .match-card-link-primary,
+.ai-card-special:focus-visible .match-card-link-primary,
 .match-card-link-primary:hover,
 .match-card-link-primary:focus-visible {
   color: #1d4ed8;
@@ -630,8 +630,8 @@ body {
 
 .match-card-link:hover .match-card-link-arrow,
 .match-card-link:focus-visible .match-card-link-arrow,
-.ai-card-special:not(.is-clone):hover .match-card-link-arrow,
-.ai-card-special:not(.is-clone):focus-visible .match-card-link-arrow {
+.ai-card-special:hover .match-card-link-arrow,
+.ai-card-special:focus-visible .match-card-link-arrow {
   transform: translateX(4px);
 }
 
