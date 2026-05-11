@@ -512,15 +512,18 @@ body {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translate(-50%, -50%) scale(0.88);
+  transform: translate(-50%, -50%) scale(0.92);
   color: #fbbf24;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 700;
   line-height: 1;
   opacity: 0;
   text-shadow:
-    0 0 12px rgba(251, 191, 36, 0.4),
-    0 0 16px rgba(244, 114, 182, 0.14);
-  transition: left 0.4s ease, opacity 0.24s ease, transform 0.24s ease;
+    0 0 14px rgba(251, 191, 36, 0.48),
+    0 0 20px rgba(244, 114, 182, 0.18),
+    0 0 1px rgba(255, 255, 255, 0.65);
+  filter: drop-shadow(0 0 3px rgba(251, 191, 36, 0.22));
+  transition: left 0.4s ease, opacity 0.24s ease, transform 0.24s ease, filter 0.24s ease;
 }
 
 .match-slider-page.is-active .match-slider-page-track {
@@ -535,7 +538,8 @@ body {
 .match-slider-page.is-active .match-slider-page-star {
   left: 100%;
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1.04);
+  transform: translate(-50%, -50%) scale(1.12);
+  filter: drop-shadow(0 0 5px rgba(251, 191, 36, 0.3));
 }
 
 .match-slider-page:hover .match-slider-page-track,
@@ -598,15 +602,19 @@ body {
   0%,
   100% {
     text-shadow:
-      0 0 10px rgba(251, 191, 36, 0.34),
-      0 0 14px rgba(244, 114, 182, 0.12);
-    transform: translate(-50%, -50%) scale(0.98);
+      0 0 12px rgba(251, 191, 36, 0.4),
+      0 0 18px rgba(244, 114, 182, 0.14),
+      0 0 1px rgba(255, 255, 255, 0.72);
+    transform: translate(-50%, -50%) scale(1.04);
+    filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.22));
   }
   50% {
     text-shadow:
-      0 0 14px rgba(251, 191, 36, 0.44),
-      0 0 18px rgba(244, 114, 182, 0.18);
-    transform: translate(-50%, -50%) scale(1.08);
+      0 0 18px rgba(251, 191, 36, 0.52),
+      0 0 24px rgba(244, 114, 182, 0.22),
+      0 0 2px rgba(255, 255, 255, 0.82);
+    transform: translate(-50%, -50%) scale(1.16);
+    filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.3));
   }
 }
 
