@@ -274,6 +274,9 @@
             <a class="match-card-link match-card-link-primary match-card-cta--featured" href="profile_private.html?theme=analysis">
               この人となりを知る <span class="match-card-link-arrow" aria-hidden="true">→</span>
             </a>
+            <button class="match-contact-cta match-card-contact" type="button" data-match-contact>
+              この人となりに連絡を取る
+            </button>
           </div>
           <div class="ai-card ai-card-featured ai-card-variant-b">
             <img class="ai-card-image ai-image-card2" src="images/card2.png" alt="AI推薦カードイメージ">
@@ -387,6 +390,12 @@
   </div>
   <div class="match-toast" id="matchToast" role="status" aria-live="polite">
     このプロフィール詳細は現在準備中です
+  </div>
+  <div class="match-toast match-contact-toast" id="matchContactToast" role="status" aria-live="polite">
+    ここから、<br>
+    プロフィール提供者へ<br>
+    スカウト・面談・面接希望などの<br>
+    メッセージを送れます。
   </div>
   <script>
     (function () {
@@ -526,16 +535,35 @@
 
     (function () {
       const track = document.getElementById("matchSliderTrack");
+      const contactToast = document.getElementById("matchContactToast");
       if (!track) return;
 
       const getProfileCard = (target) => target.closest("[data-profile-link]");
+      let contactToastTimer = null;
       const openProfile = (card) => {
         const href = card?.getAttribute("data-profile-link");
         if (!href) return;
         window.location.href = href;
       };
 
+      const showContactToast = () => {
+        if (!contactToast) return;
+        contactToast.classList.add("is-visible");
+        if (contactToastTimer) clearTimeout(contactToastTimer);
+        contactToastTimer = setTimeout(() => {
+          contactToast.classList.remove("is-visible");
+        }, 5000);
+      };
+
       track.addEventListener("click", (event) => {
+        const contactCta = event.target.closest(".match-contact-cta");
+        if (contactCta && track.contains(contactCta)) {
+          event.preventDefault();
+          event.stopPropagation();
+          showContactToast();
+          return;
+        }
+
         const card = getProfileCard(event.target);
         if (!card || !track.contains(card)) return;
         if (event.target.closest("a, button")) return;
