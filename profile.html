@@ -248,8 +248,15 @@
         <p class="section-lead">スキルだけではなく、人となりも含めた候補者提案を行います。</p>
         <div class="match-slider">
         <div class="ai-list match-slider-track" id="matchSliderTrack">
-          <div class="ai-card ai-card-featured">
+          <div
+            class="ai-card ai-card-featured ai-card-special"
+            data-profile-card
+            data-profile-href="profile_private.html?theme=analysis"
+            tabindex="0"
+            aria-label="周囲が自然と相談したくなる人の詳細プロフィールを開く"
+          >
             <img class="ai-card-image ai-image-analysis" src="images/hero-analysis.png" alt="AI推薦カードイメージ">
+            <span class="ai-card-special-label">詳細プロフィールあり</span>
             <div class="ai-badge">AI対話分析より</div>
             <div class="ai-title">周囲が自然と相談したくなる人</div>
             <div class="ai-feature-head">対話から見えた人となり</div>
@@ -265,7 +272,7 @@
               <span class="ai-tag-care">#気配り</span>
               <span class="ai-tag-support">#支える力</span>
             </div>
-            <a class="match-card-link" href="profile_private.html?theme=analysis">
+            <a class="match-card-link match-card-link-primary" href="profile_private.html?theme=analysis">
               この人となりを知る <span class="match-card-link-arrow" aria-hidden="true">→</span>
             </a>
           </div>
@@ -417,6 +424,13 @@
         const clone = card.cloneNode(true);
         clone.classList.add("is-clone");
         clone.setAttribute("aria-hidden", "true");
+        clone.removeAttribute("tabindex");
+        clone.removeAttribute("aria-label");
+        clone.removeAttribute("data-profile-card");
+        clone.removeAttribute("data-profile-href");
+        clone.classList.remove("ai-card-special");
+        const specialLabel = clone.querySelector(".ai-card-special-label");
+        if (specialLabel) specialLabel.remove();
         clone.querySelectorAll("a, button").forEach((interactive) => {
           interactive.setAttribute("tabindex", "-1");
           interactive.setAttribute("aria-hidden", "true");
@@ -500,6 +514,30 @@
       });
       track.addEventListener("focusout", () => {
         isPaused = false;
+      });
+    })();
+
+    (function () {
+      const card = document.querySelector(".ai-card-special:not(.is-clone)");
+      if (!card) return;
+
+      const href = card.getAttribute("data-profile-href");
+      if (!href) return;
+
+      const openProfile = () => {
+        window.location.href = href;
+      };
+
+      card.addEventListener("click", (event) => {
+        if (event.target.closest("a, button")) return;
+        openProfile();
+      });
+
+      card.addEventListener("keydown", (event) => {
+        if (event.target !== card) return;
+        if (event.key !== "Enter" && event.key !== " ") return;
+        event.preventDefault();
+        openProfile();
       });
     })();
   </script>
